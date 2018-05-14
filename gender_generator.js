@@ -16,15 +16,27 @@ var gender_articles = [
 * appropriate to include in a random generator.
 */
 // TODO: it would be great to have pronoun tags related to gender article
-// TODO: Add switch to include genders from other cultures, to avoid exclusion, such as Hijra, Two-spirit, and other Third genders.
+// TODO: Add switch to include genders from other cultures, to avoid exclusion,
+// such as Hijra, Two-spirit, and other Third genders.
 
 var pronouns = [
-  'ey/em', 'gein/gein', 'he/him', 'one/one', 'she/her', 'sie/sie', 'tey/ter', 'they/them',
-  've/ver', 'zie/zim',
+  'ey/em', 'gein/gein', 'he/him', 'one/one', 'she/her', 'sie/sie', 'tey/ter',
+  'they/them','ve/ver', 'zie/zim',
 ];
 // Note: gein is a gender nuetral pronoun in my storytelling used by dragons
 // Note: Honestly, I'd love to weigh these pronouns, based on gender_article
 // TODO: gein switch.
+
+var attraction_descriptor = [
+  'a', 'bi-', 'demi(bi)-', 'demi(hetero)-',
+  'demi(homo)-', 'demi(pan)-', 'fray(bi)-',
+  'fray(hetero)-','fray(homo)-', 'fray(pan)-',
+  'gray(bi)-', 'gray(hetero)-', 'gray(homo)-',
+  'gray(pan)-', 'hetero-', 'hetero-flexible-',
+  'homo-flexible-', 'pan',
+];
+// TODO: Weight this table so descriptors gray/fray/demi etc are equally likely as not...
+
 
 function _randomizer(array){
   return  array[Math.floor(Math.random()* array.length)];
@@ -37,3 +49,11 @@ function generate_gender() {
 function generate_pronoun() {
   return _randomizer(pronouns);
 }
+
+function generate_attraction() {
+  return _randomizer(attraction_descriptor) + 'romantic ' + randomizer(attraction_descriptor) + 'sexual';
+}
+
+
+generate_pronoun();
+generate_attraction();
