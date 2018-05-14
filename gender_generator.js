@@ -28,14 +28,13 @@ var pronouns = [
 // TODO: gein switch.
 
 var attraction_descriptor = [
-  'a', 'bi-', 'demi(bi)-', 'demi(hetero)-',
-  'demi(homo)-', 'demi(pan)-', 'fray(bi)-',
-  'fray(hetero)-','fray(homo)-', 'fray(pan)-',
-  'gray(bi)-', 'gray(hetero)-', 'gray(homo)-',
-  'gray(pan)-', 'hetero-', 'hetero-flexible-',
-  'homo-flexible-', 'pan',
+  ['a'], ['bi-'], ['demi(bi)-', 'demi(hetero)-',
+  'demi(homo)-', 'demi(pan)-'], ['fray(bi)-',
+  'fray(hetero)-','fray(homo)-', 'fray(pan)-'],
+  ['gray(bi)-', 'gray(hetero)-', 'gray(homo)-',
+  'gray(pan)-'], ['hetero-', 'hetero-flexible-'],
+  ['homo-', 'homo-flexible-'], ['pan'],
 ];
-// TODO: Weight this table so descriptors gray/fray/demi etc are equally likely as not...
 
 
 function _randomizer(array){
@@ -51,9 +50,8 @@ function generate_pronoun() {
 }
 
 function generate_attraction() {
-  return _randomizer(attraction_descriptor) + 'romantic ' + randomizer(attraction_descriptor) + 'sexual';
+  var tempattraction_rom =  _randomizer(attraction_descriptor);
+  var tempattraction_sex =  _randomizer(attraction_descriptor);
+  return _randomizer(tempattraction_rom) + 'romantic' + '/' +
+    _randomizer(tempattraction_sex) + 'sexual';
 }
-
-
-generate_pronoun();
-generate_attraction();
