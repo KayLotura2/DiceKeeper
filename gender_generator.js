@@ -18,11 +18,22 @@ var gender_articles = [
 // TODO: it would be great to have pronoun tags related to gender article
 // TODO: Add switch to include genders from other cultures, to avoid exclusion, such as Hijra, Two-spirit, and other Third genders.
 
+var pronouns = [
+  'ey/em', 'gein/gein', 'he/him', 'one/one', 'she/her', 'sie/sie', 'tey/ter', 'they/them',
+  've/ver', 'zie/zim',
+];
+// Note: gein is a gender nuetral pronoun in my storytelling used by dragons
+// Note: Honestly, I'd love to weigh these pronouns, based on gender_article
+// TODO: gein switch.
 
-function randomizer(array){
+function _randomizer(array){
   return  array[Math.floor(Math.random()* array.length)];
 }
 
 function generate_gender() {
-  return randomizer(gender_descriptors) + ' ' + randomizer(gender_articles);
+  return _randomizer(gender_descriptors) + ' ' + randomizer(gender_articles);
+}
+
+function generate_pronoun() {
+  return _randomizer(pronouns);
 }
