@@ -1,3 +1,5 @@
+//The goal of this module is to create vibrant multifacited gender profiles.
+
 var gender_descriptors = [
   '', 'androgynous', 'butch', 'bigender', 'demi', 'femme', 'fluid', 'hairy',
   'hard', 'masculine', 'non-binary', 'non-conforming', 'pangender', 'sparkle',
