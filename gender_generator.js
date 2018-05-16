@@ -1,13 +1,14 @@
 var gender_descriptors = [
-  '', 'androgynous', 'butch', 'bigender', 'demi', 'fake', 'femme', 'fluid',
-  'hairy','non-binary', 'non-conforming', 'pangender', 'sparkle', 'spooky',
+  '', 'androgynous', 'butch', 'bigender', 'demi', 'femme', 'fluid', 'hairy',
+  'masculine', 'non-binary', 'non-conforming', 'pangender', 'sparkle', 'spooky',
   'trans',
 ];
+
 // TODO: 'bigender' and 'pangender' tags to have 2 or 3 gender articles.
 
 var gender_articles = [
-  'agender', 'boy', 'enby', 'epicine', 'ghost', 'goth', 'girl', 'intersex',
-  'man', 'neutrois', 'gender-questioning', 'queer', 'woman',
+  'agender', 'boy', 'enby', 'epicine', 'girl', 'man', 'neutrois',
+  'gender-questioning', 'queer', 'woman',
 ];
 /* I have left out cultural genders that are not a part of my culture, as that
 * I intend to use this for storytelling, and do not feel comfortable co-opting
@@ -42,7 +43,7 @@ function _randomizer(array){
 }
 
 function generate_gender() {
-  return _randomizer(gender_descriptors) + ' ' + randomizer(gender_articles);
+  return _randomizer(gender_descriptors) + ' ' + _randomizer(gender_articles);
 }
 
 function generate_pronoun() {
@@ -54,4 +55,12 @@ function generate_attraction() {
   var tempattraction_sex =  _randomizer(attraction_descriptor);
   return _randomizer(tempattraction_rom) + 'romantic' + '/' +
     _randomizer(tempattraction_sex) + 'sexual';
+}
+
+
+function generate_personality() {
+  var attraction = generate_attraction();
+  var pronoun = generate_pronoun();
+  var gender = generate_gender();
+  return gender + ' with ' + pronoun + ' pronouns, who is ' + attraction;
 }
