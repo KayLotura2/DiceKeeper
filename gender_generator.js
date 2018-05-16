@@ -3,7 +3,9 @@ var gender_descriptors = [
   'hard', 'masculine', 'non-binary', 'non-conforming', 'pangender', 'sparkle',
   'trans',
 ];
-// TODO: 'bigender' and 'pangender' tags to have 2 or 3 gender articles.
+// TODO: 'bigender' and 'pangender' tags to have 2 or 3 gender roots.
+// Question: How does that work with weighting?
+// Probably weight towards they/them.
 
 var gender_roots = [
   {gen:'agender', pron: 'they/them'}, {gen:'boy', pron: 'he/him'},
@@ -21,7 +23,7 @@ var gender_roots = [
 * appropriate to include in a random generator.
 */
 // TODO: Add switch to include genders from other cultures, to avoid exclusion,
-// such as Hijra, Two-spirit, and other Third genders.
+// such as hijra, two-spirit, and other third genders.
 
 var pronouns = [
   'ey/em', 'gein/gein', 'he/him', 'she/her', 'sie/sie', 'tey/ter',
@@ -39,11 +41,12 @@ var attraction_descriptor = [
   ['homo-', 'homo-flexible-'], ['pan'],
 ];
 
-
+// Takes in an array, and returns a value from a random index.
 function _randomizer(array){
   return  array[Math.floor(Math.random()* array.length)];
 }
 
+// Uses randomizer to randomly return true or false.
 function flipcoin() {
   var coin = [0,1];
   var flip = _randomizer(coin);
@@ -54,12 +57,16 @@ function flipcoin() {
   }
 }
 
+// Returns a complex gender object.
+// Example: {rt: {gen:'girl', pron: 'she/her'}, desc: ['androgynous'] }
+// TODO clean this the heck up.
 function generate_gender() {
   var root = _randomizer(gender_roots);
   var descriptor = _randomizer(gender_descriptors);
   return {rt: root, desc: descriptor};
 }
 
+// Retruns a string which describes a persons romantic and sexual attractions.
 function generate_attraction() {
   var tempattraction_rom =  _randomizer(attraction_descriptor);
   var tempattraction_sex =  _randomizer(attraction_descriptor);
@@ -67,11 +74,13 @@ function generate_attraction() {
     _randomizer(tempattraction_sex) + 'sexual';
 }
 
+// Retruns a string of a random pronoun.
 function generate_pronoun() {
   return _randomizer(pronouns);
 }
 
-
+// Retruns a string describing a persons gender, pronouns, and their attraction.
+// Pronouns are weighted ~50%/50% of being the typical pronoun for said gender.
 function generate_personality() {
   var attraction = generate_attraction();
   var gender = generate_gender();
@@ -83,5 +92,3 @@ function generate_personality() {
   }
   return gender.desc + ' ' + gender.rt.gen + ' with ' + pronoun + ' pronouns, who is ' + attraction;
 }
-
-generate_personality();
