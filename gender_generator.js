@@ -3,7 +3,6 @@ var gender_descriptors = [
   'masculine', 'non-binary', 'non-conforming', 'pangender', 'sparkle', 'spooky',
   'trans',
 ];
-
 // TODO: 'bigender' and 'pangender' tags to have 2 or 3 gender articles.
 
 var gender_articles = [
@@ -16,7 +15,11 @@ var gender_articles = [
 * and above all respect would be nescisary, as such I don't think it's
 * appropriate to include in a random generator.
 */
-// TODO: it would be great to have pronoun tags related to gender article
+// TODO: it would be great to have pronoun tags related to gender article, in
+// order to pursue this goal, I will want to make gender_artciles objects with
+// a gender noun, and a weight_pronoun. Then go for a 50%/50% chance the weighted
+// pronoun is used.
+//
 // TODO: Add switch to include genders from other cultures, to avoid exclusion,
 // such as Hijra, Two-spirit, and other Third genders.
 
@@ -44,10 +47,6 @@ function _randomizer(array){
 
 function generate_gender() {
   return _randomizer(gender_descriptors) + ' ' + _randomizer(gender_articles);
-}
-
-function generate_pronoun() {
-  return _randomizer(pronouns);
 }
 
 function generate_attraction() {
