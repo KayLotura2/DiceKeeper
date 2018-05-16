@@ -1,5 +1,7 @@
 //The goal of this module is to create vibrant multifacited gender profiles.
 
+import { randomizer, flipcoin } from './randomizers.js';
+
 var gender_descriptors = [
   '', 'androgynous', 'butch', 'bigender', 'demi', 'femme', 'fluid', 'hairy',
   'hard', 'masculine', 'non-binary', 'non-conforming', 'pangender', 'sparkle',
@@ -43,42 +45,28 @@ var attraction_descriptor = [
   ['homo-', 'homo-flexible-'], ['pan'],
 ];
 
-// Takes in an array, and returns a value from a random index.
-function _randomizer(array){
-  return  array[Math.floor(Math.random()* array.length)];
-}
 
-// Uses randomizer to randomly return true or false.
-function flipcoin() {
-  var coin = [0,1];
-  var flip = _randomizer(coin);
-  if (flip === 1) {
-    return true;
-  } else {
-    return false;
-  }
-}
 
 // Returns a complex gender object.
 // Example: {rt: {gen:'girl', pron: 'she/her'}, desc: ['androgynous'] }
 // TODO clean this the heck up.
 function generate_gender() {
-  var root = _randomizer(gender_roots);
-  var descriptor = _randomizer(gender_descriptors);
+  var root = randomizer(gender_roots);
+  var descriptor = randomizer(gender_descriptors);
   return {rt: root, desc: descriptor};
 }
 
 // Retruns a string which describes a persons romantic and sexual attractions.
 function generate_attraction() {
-  var tempattraction_rom =  _randomizer(attraction_descriptor);
-  var tempattraction_sex =  _randomizer(attraction_descriptor);
-  return _randomizer(tempattraction_rom) + 'romantic' + '/' +
-    _randomizer(tempattraction_sex) + 'sexual';
+  var tempattraction_rom =  randomizer(attraction_descriptor);
+  var tempattraction_sex =  randomizer(attraction_descriptor);
+  return randomizer(tempattraction_rom) + 'romantic' + '/' +
+    randomizer(tempattraction_sex) + 'sexual';
 }
 
 // Retruns a string of a random pronoun.
 function generate_pronoun() {
-  return _randomizer(pronouns);
+  return randomizer(pronouns);
 }
 
 // Retruns a string describing a persons gender, pronouns, and their attraction.
