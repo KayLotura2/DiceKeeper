@@ -1,5 +1,6 @@
 //The goal of this module is to create vibrant ancestry profiles for nonplayer characters.
 
+import { randomizer, flipcoin } from './randomizers.js';
 
 var ancestry_objects = [
   {
