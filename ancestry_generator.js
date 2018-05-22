@@ -1,8 +1,8 @@
 //The goal of this module is to create vibrant ancestry profiles for nonplayer characters.
 
-import { randomizer, flipcoin } from './randomizers.js';
+// import { randomizer, flipcoin } from './randomizers.js';
 
-var ancestry_objects = [
+var ancestryObjects = [
   {
     rt: 'Dragonborn',
     subs: [
@@ -79,7 +79,6 @@ var ancestry_objects = [
     ]
   },
 ];
-
 
 var templates = [
   'Demigod',
