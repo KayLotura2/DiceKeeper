@@ -6,14 +6,21 @@ function randomizer(array){
 }
 
 // Uses randomizer to randomly return true or false.
-function flipcoin() {
+function flipCoin() {
   var coin = [0,1];
-  var flip = _randomizer(coin);
+  var flip = randomizer(coin);
   if (flip === 1) {
     return true;
   } else {
     return false;
   }
+}
+
+// takes in an integer for die size, and returns a random result for that die.
+function dieRoll (diesize) {
+  var die = [...Array(diesize).keys()];
+  var result = (randomizer(die) + 1);
+  return result;
 }
 
 export {randomizer, flipcoin};
