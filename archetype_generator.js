@@ -30,27 +30,17 @@ var exceptionalArchetypes = [
 // TODO be sure to marry these to a relevant link or source (or both!)
 
 
-// Expand!
-var secretMonsters = [
-  'dragon', 'illithid', 'lich', 'ogre mage'
-];
-
-
 // Retruns a weighted archetype
-// TODO add silly thing for monster archetype to be
+// TODO add silly thing for secret monster as archetype
 function generateArchetype() {
-  var weightRoll = dieRoll(100)
+  var weightRoll = dieRoll(100);
   if (weightRoll <= 50) {
-    return "commoner (" + randomizer(commonerArchetypes) + ")"
+    return "commoner (" + randomizer(commonerArchetypes) + ")";
   } else if (weightRoll <= 75) {
-    return "guard (" + randomizer(guardArchetypes) + ")"
+    return "guard (" + randomizer(guardArchetypes) + ")";
   } else if (weightRoll <= 95) {
-    return randomizer(otherArchetypes)
-  } else if (weightRoll <= 99) {
-    return randomizer(exceptionalArchetypes)
-  } else if (weightRoll <= 100) {
-    return randomizer(secretMonsters)
+    return randomizer(otherArchetypes);
   } else {
-    return 'ERROR! generate archetype broke?'
+    return randomizer(exceptionalArchetypes);
   }
-};
+}
