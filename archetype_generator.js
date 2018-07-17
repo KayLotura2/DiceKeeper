@@ -38,7 +38,7 @@ var secretMonsters = [
 
 // Retruns a weighted archetype
 // TODO add silly thing for monster archetype to be
-function generate_archetype() {
+function generateArchetype() {
   var weightRoll = dieRoll(100)
   if (weightRoll <= 50) {
     return "commoner (" + randomizer(commonerArchetypes) + ")"
@@ -53,3 +53,4 @@ function generate_archetype() {
   } else {
     return 'ERROR! generate archetype broke?'
   }
+};
