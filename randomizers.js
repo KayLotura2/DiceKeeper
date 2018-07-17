@@ -1,3 +1,5 @@
+"use strict";
+
 // This module holds the randomizers.
 
 // Takes in an array, and returns a value from a random index.
@@ -22,5 +24,3 @@ function dieRoll (diesize) {
   var result = (randomizer(die) + 1);
   return result;
 }
-
-export {randomizer, flipcoin};

@@ -1,6 +1,6 @@
+"use strict";
 //The goal of this module is to create vibrant multifacited gender profiles.
 
-import { randomizer, flipcoin } from './randomizers.js';
 
 var gender_descriptors = [
   '', 'androgynous', 'butch', 'bigender', 'demi', 'femme', 'fluid', 'hairy',
@@ -46,7 +46,6 @@ var attraction_descriptor = [
 ];
 
 
-
 // Returns a complex gender object.
 // Example: {rt: {gen:'girl', pron: 'she/her'}, desc: ['androgynous'] }
 // TODO clean this the heck up.
@@ -74,8 +73,8 @@ function generate_pronoun() {
 function generate_personality() {
   var attraction = generate_attraction();
   var gender = generate_gender();
-  var prnoun = '';
-  if (flipcoin()) {
+  var pronoun = '';
+  if (flipCoin()) {
     pronoun = gender.rt.pron;
   } else {
     pronoun = generate_pronoun();

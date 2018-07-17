@@ -1,5 +1,5 @@
+"use strict";
 //The goal of this module is to create vibrant ancestry profiles for nonplayer characters.
-import { randomizer, dieRoll } from './randomizers.js';
 
 var ancestryObjects = [
   {
@@ -105,7 +105,7 @@ var templates = [
   'Vampire',
 ];
 
-// this function just resturns a constrcuted ancestry string from random
+// this function just returns a constrcuted ancestry string from random
 // ancestryObject and a random subrace from the ancestryObject, with a 10% chance
 // of returning a templated ancestry.
 function generateAncestry() {
@@ -120,5 +120,3 @@ function generateAncestry() {
     return ancestrySub + " " + ancestryRoot;
   }
 }
-
-generateAncestry();

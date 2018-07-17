@@ -5,6 +5,13 @@
     <title>Dice Keeper</title>
   </head>
   <body>
-
+    <p id="npc"></p>
+    <p id="ancestry"></p>
   </body>
 </html>
+<script src="randomizers.js"></script>
+<script src="gender_generator.js"></script>
+<script src="ancestry_generator.js"></script>
+<script>
+  document.getElementById("npc").innerHTML = "A(n): " + generateAncestry() + " " + generate_personality();
+</script>
