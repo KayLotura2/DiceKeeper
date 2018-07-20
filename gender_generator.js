@@ -70,7 +70,7 @@ function generate_pronoun() {
 
 // Retruns a string describing a persons gender, pronouns, and their attraction.
 // Pronouns are weighted ~50%/50% of being the typical pronoun for said gender.
-function generate_personality() {
+function generatePersonality() {
   var attraction = generate_attraction();
   var gender = generate_gender();
   var pronoun = '';
