@@ -13,9 +13,12 @@
   <body>
     <p id="npc"></p>
     <p id="ancestry"></p>
+    <p id="profile"></p>
+    <p id="archetype"></p>
   </body>
 </html>
 <script>
-  document.getElementById("npc").innerHTML = "A(n): " + generateAncestry() + " "
-  + generatePersonality() + " " + generateArchetype();
+  document.getElementById("ancestry").innerHTML = "A(n) " + generateAncestry() + ".";
+  document.getElementById("profile").innerHTML = "Who is a(n) " + generatePersonality() + ".";
+  document.getElementById("archetype").innerHTML = "And aslo is a " + generateArchetype() + ".";
 </script>

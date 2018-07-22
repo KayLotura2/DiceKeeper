@@ -34,15 +34,15 @@ function generate_gender() {
 
 // Retruns a string which describes a persons romantic and sexual attractions.
 function generate_attraction() {
-  var tempattraction_rom =  randomizer(attraction_descriptor);
-  var tempattraction_sex =  randomizer(attraction_descriptor);
+  var tempattraction_rom =  randomizer(genderJSON.attractionDescriptors);
+  var tempattraction_sex =  randomizer(genderJSON.attractionDescriptors);
   return randomizer(tempattraction_rom) + 'romantic' + '/' +
     randomizer(tempattraction_sex) + 'sexual';
 }
 
 // Retruns a string of a random pronoun.
 function generate_pronoun() {
-  return randomizer(pronouns);
+  return randomizer(genderJSON.pronouns);
 }
 
 // Retruns a string describing a persons gender, pronouns, and their attraction.
