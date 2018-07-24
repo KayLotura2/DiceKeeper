@@ -22,7 +22,7 @@ var archetypeJSON = {
 		"sailor",
 		"scribe"
 	],
-	"gaurdArchetypes": [
+	"guardArchetypes": [
 		"captain",
 		"crossbower",
 		"customs",
@@ -218,9 +218,10 @@ var archetypeJSON = {
 		"I want to see the wicked burn for the evil they’ve brought on us.",
 		"I feel the sin being purged from me as I help cleanse the world."
 	],
-	"archetypeIdeals": [{
+	"archetypeIdeals": [
+    {
 			"name": "Respect",
-			"desc:": "People deserve to be treated with dignity and respect."
+			"desc": "People deserve to be treated with dignity and respect."
 		},
 		{
 			"name": "Fairness",
