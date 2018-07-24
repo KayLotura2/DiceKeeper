@@ -7,18 +7,22 @@
 function generateBaseArchetype() {
   var weightRoll = dieRoll(100);
   if (weightRoll <= 50) {
-    return "commoner (" + randomizer(commonerArchetypes) + ")";
+    return "commoner (" + randomizer(archetypeJSON.commonerArchetypes) + ")";
   } else if (weightRoll <= 75) {
-    return "guard (" + randomizer(guardArchetypes) + ")";
+    return "guard (" + randomizer(archetypeJSON.guardArchetypes) + ")";
   } else if (weightRoll <= 95) {
-    return randomizer(otherArchetypes);
+    return randomizer(archetypeJSON.basicArchetypes);
   } else {
-    return randomizer(exceptionalArchetypes);
+    return randomizer(archetypeJSON.exceptionalArchetypes);
   }
 }
 
 // Returns Archetype & Traits
 // Currently only takes in commoner traits
 function generateArchetype() {
-  return generateBaseArchetype() + " Trait: " + randomizer(archetypes.commoner.traits) + " Ideal: " + randomizer(archetypes.commoner.ideals) + " Flaw: " + randomizer(archetypes.commoner.flaws)
-}
+  var baseArchetype = generateBaseArchetype();
+  var ideal = randomizer(archetypeJSON.archetypeIdeals);
+  var trait = randomizer(archetypeJSON.archetypeTraits);
+  var flaw = randomizer(archetypeJSON.archetypeFlaws);
+  return {baseArchetype: baseArchetype, ideal: ideal, trait: trait, flaw: flaw};
+  }

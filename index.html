@@ -5,20 +5,25 @@
     <title>Dice Keeper</title>
     <script src="JSON/ancestry.JSON"></script>
     <script src="JSON/gender.JSON"></script>
+    <script src="JSON/archetype.JSON"></script>
     <script src="randomizers.js"></script>
     <script src="ancestry_generator.js"></script>
     <script src="gender_generator.js"></script>
     <script src="archetype_generator.js"></script>
   </head>
   <body>
-    <p id="npc"></p>
     <p id="ancestry"></p>
     <p id="profile"></p>
     <p id="archetype"></p>
+    <p id="trait"></p>
+    <p id="ideal"></p>
   </body>
 </html>
 <script>
-  document.getElementById("ancestry").innerHTML = "A(n) " + generateAncestry() + ".";
-  document.getElementById("profile").innerHTML = "Who is a(n) " + generatePersonality() + ".";
-  document.getElementById("archetype").innerHTML = "And aslo is a " + generateArchetype() + ".";
+  var archetype = generateArchetype();
+  document.getElementById("ancestry").innerHTML = "<strong>Ancestry: </strong>" + generateAncestry();
+  document.getElementById("profile").innerHTML = "<strong>Profile: </strong>" + generatePersonality();
+  document.getElementById("archetype").innerHTML = "<strong>Archetype: </strong>" + archetype.baseArchetype ;
+  document.getElementById("trait").innerHTML = "<strong>Trait: </strong>" + archetype.trait;
+  document.getElementById("ideal").innerHTML = "<strong>" + archetype.ideal.name + ": </strong>" + archetype.ideal.desc;
 </script>
