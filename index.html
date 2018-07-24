@@ -17,6 +17,7 @@
     <p id="archetype"></p>
     <p id="trait"></p>
     <p id="ideal"></p>
+    <p id="flaw"></p>
   </body>
 </html>
 <script>
@@ -26,4 +27,5 @@
   document.getElementById("archetype").innerHTML = "<strong>Archetype: </strong>" + archetype.baseArchetype ;
   document.getElementById("trait").innerHTML = "<strong>Trait: </strong>" + archetype.trait;
   document.getElementById("ideal").innerHTML = "<strong>" + archetype.ideal.name + ": </strong>" + archetype.ideal.desc;
+  document.getElementById("flaw").innerHTML = "<strong>Flaw: </strong>" + archetype.flaw;
 </script>

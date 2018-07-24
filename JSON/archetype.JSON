@@ -242,7 +242,351 @@ var archetypeJSON = {
 		{
 			"name": "Destiny",
 			"desc": "Nothing and no one can steer me away from my higher calling."
-		}
+		},
+    {
+      "name": "Tradition",
+      "desc": "The ancient traditions of worship and sacrifice must be preserved."
+    },
+    {
+      "name": "Charity",
+      "desc": " I always try to help those in need, no matter what the cost."
+    },
+    {
+      "name": "Change",
+      "desc": "We must help bring about the changes the gods are constantly working in the world."
+    },
+    {
+      "name": "Power",
+      "desc": "I hope to one day rise to the top of my group's hierarchy."
+    },
+    {
+      "name": "Faith",
+      "desc": "I trust that my deity will guide my actions, I have faith that if I work hard, things will go well."
+    },
+    {
+      "name": "Aspiration",
+      "desc": "I seek to prove myself worthy of my god’s favor by matching my actions against their teachings."
+    },
+    {
+      "name": "Independence",
+      "desc": "I am a free spirit— no one tells me what to do."
+    },
+    {
+      "name": "Fairness",
+      "desc": "I always help the people who can't afford to get by."
+    },
+    {
+      "name": "Charity",
+      "desc": "I distribute the money I acquire to the people who really need it."
+    },
+    {
+      "name": "Creativity",
+      "desc": "I never try the same approach twice."
+    },
+    {
+      "name": "Friendship",
+      "desc": "Material goods come and go. Bonds of friendship last forever."
+    },
+    {
+      "name": "Aspiration",
+      "desc": "I’m determined to make something of myself."
+    },
+    {
+      "name": "Honor",
+      "desc": "My word is my bond, and my people are my family."
+    },
+    {
+      "name": "Freedom",
+      "desc": "Chains are meant to be broken, as are those who would forge them."
+    },
+    {
+      "name": "Charity",
+      "desc": "I steal from the wealthy so that I can help people in need."
+    },
+    {
+      "name": "Greed",
+      "desc": "I will do whatever it takes to become wealthy."
+    },
+    {
+      "name": "People",
+      "desc": "Friends before morals or ethics. Everyone else can take a leap."
+    },
+    {
+      "name": "Redemption",
+      "desc": "I walked a dark path, now I seek the spark of good in everyone."
+    },
+    {
+      "name": "Beauty",
+      "desc": "I want to make the world a better place than it was."
+    },
+    {
+      "name": "Traditions",
+      "desc": "The stories, legends, and songs of the past must never be forgotten."
+    },
+    {
+      "name": "Creativity",
+      "desc": "The world is in need of new ideas and bold actions."
+    },
+    {
+      "name": "Greed",
+      "desc": "I’m only in it for the money and even more for the fame."
+    },
+    {
+      "name": "People",
+      "desc": "My work is entirely motivated by the smiles on people's faces"
+    },
+    {
+      "name": "Honesty",
+      "desc": "Art should reflect the soul, it should come from within and reveal who we really are."
+    },
+    {
+      "name": "Community",
+      "desc": "It is the duty of all civilized people to strengthen the bonds of community."
+    },
+    {
+      "name": "Generosity",
+      "desc": "My talents were given to me so that I could use them to benefit the world."
+    },
+    {
+      "name": "Freedom",
+      "desc": "Everyone should be free to pursue their own livelihood."
+    },
+    {
+      "name": "Greed",
+      "desc": "I want to know everyone's secrets."
+    },
+    {
+      "name": "Dignity",
+      "desc": "People deserve to be given the chance to hold themself as nobly as they can."
+    },
+    {
+      "name": "Aspiration",
+      "desc": "One day I will be the best at what I do."
+    },
+    {
+      "name": "Benevolence",
+      "desc": "My gifts are meant to be shared with all, not used for my own benefit."
+    },
+    {
+      "name": "Logic",
+      "desc": "Emotions must not cloud our sense of what is right and true."
+    },
+    {
+      "name": "Curiosity",
+      "desc": "Free thinking and inquiry and are the pillars of progress."
+    },
+    {
+      "name": "Power",
+      "desc": "Solitude and contemplation are paths toward mystical or magical power."
+    },
+    {
+      "name": "Tranquility",
+      "desc": "Live and Let Live. Meddling in the affairs of others only causes trouble."
+    },
+    {
+      "name": "Inspiration",
+      "desc": "If you know yourself, there’s nothing left to know."
+    },
+    {
+      "name": "Authority",
+      "desc": "Respect is due to those in charge. Pay respect or pay the price."
+    },
+    {
+      "name": "Responsibility",
+      "desc": "With our stations come obligations that must be met."
+    },
+    {
+      "name": "Independence",
+      "desc": "I must prove that I can handle myself without the coddling of my family."
+    },
+    {
+      "name": "Independence",
+      "desc": "I must prove that I can handle myself without the coddling of my family."
+    },
+    {
+      "name": "Power",
+      "desc": "If I can attain more power, no one will tell me what to do."
+    },
+    {
+      "name": "Family",
+      "desc": "My direct relatives are more important than anything else to me."
+    },
+    {
+      "name": "Chivalry",
+      "desc": "It is my duty to protect and care for the people beneath me."
+    },
+    {
+      "name": "Change",
+      "desc": "Life is like the seasons, in constant change, and we must change with it."
+    },
+    {
+      "name": "Community",
+      "desc": "Our actions must benefit the people of the society we live in."
+    },
+    {
+      "name": "Honor",
+      "desc": "If I dishonor myself, I dishonor everything I stand for."
+    },
+    {
+      "name": "Might",
+      "desc": "The strongest are meant to rule the weak."
+    },
+    {
+      "name": "Nature",
+      "desc": "The natural world is more important than all the constructs of civilization."
+    },
+    {
+      "name": "Glory",
+      "desc": "I must earn glory in battle, for everything I stand for."
+    },
+    {
+      "name": "Knowledge",
+      "desc": "The path to power and self-improvement is through knowledge."
+    },
+    {
+      "name": "Beauty",
+      "desc": "What is beautiful points us beyond itself toward what is true."
+    },
+    {
+      "name": "Emotions",
+      "desc": "Our hearts cannot be clouded by stean unfeeling thinking."
+    },
+    {
+      "name": "Potential",
+      "desc": "Nothing should fetter the infinite possibility inherent in all existence."
+    },
+    {
+      "name": "Cosmetics",
+      "desc": "I am always the best dressed and the most put together in any room."
+    },
+    {
+      "name": "Enlightenment",
+      "desc": "The goal of a life of study is the betterment of oneself."
+    },
+    {
+      "name": "Respect",
+      "desc": "The thing that keeps a ship together is mutual respect between captain and crew."
+    },
+    {
+      "name": "Fairness",
+      "desc": "We all do the work, so we all share in all rewards."
+    },
+    {
+      "name": "Freedom",
+      "desc": "The laws of mortals cannot contain the freedom the gods bestowed upon us."
+    },
+    {
+      "name": "Mastery",
+      "desc": "Every day I wake up, eager to sharpen my skills and hone my ability."
+    },
+    {
+      "name": "Love",
+      "desc": "There is no force greater than the emotional bond between people."
+    },
+    {
+      "name": "Justice",
+      "desc": "The strong must protect the weak, and even so, everyone has a place."
+    },
+    {
+      "name": "Loyalty",
+      "desc": "Our leaders know what is best, and I would lay down my life for them."
+    },
+    {
+      "name": "Obedience",
+      "desc": "I do what I must, and follow my orders to the letter."
+    },
+    {
+      "name": "Independence",
+      "desc": "When people follow orders blindly, they embrace tyranny."
+    },
+    {
+      "name": "Might",
+      "desc": "Life is a war, and the gods are on the side with more strength."
+    },
+    {
+      "name": "Repentance",
+      "desc": "I seek forgiveness for a greivous sin I have once committed"
+    },
+    {
+      "name": "Nation",
+      "desc": "My city, nation, or people are all that matter."
+    },
+    {
+      "name": "Solidarity",
+      "desc": "The worthy must respect the worthy. We're all in this together."
+    },
+    {
+      "name": "Knowledge",
+      "desc": "We must cultivate nimble minds to perceive the wonders beyond our senses."
+    },
+    {
+      "name": "Endurance",
+      "desc": "We must withstand the boundless slings and arrows of life."
+    },
+    {
+      "name": "Faith",
+      "desc": "The worthy shall strive for greatness in the afterlife."
+    },
+    {
+      "name": "Zeal",
+      "desc": "Passionate energy is the only evidence of conviction."
+    },
+    {
+      "name": "Retribution",
+      "desc": "None shall harm another, lest they suffer the pain seven-fold."
+    },
+    {
+      "name": "Solidarity",
+      "desc": "None shall harm another, lest they suffer the pain seven-fold."
+    },
+    {
+      "name": "Honesty",
+      "desc": "The smallest deception paves the way to grievous sin."
+    },
+    {
+      "name": "Piety",
+      "desc": "Devotion to the church is all that keeps the world from destruction."
+    },
+    {
+      "name": "Order",
+      "desc": "The laws we forge are meant to preserve the social order—everything in its proper place."
+    },
+    {
+      "name": "Compassion",
+      "desc": "Life is to be cherished and preserved against the horrors of the night."
+    },
+    {
+      "name": "Productivity",
+      "desc": "We all must pitch in and contribute to the creation of our society."
+    },
+    {
+      "name": "Punishment",
+      "desc": "It is better for the innocent to suffer than for the guilty to escape their due."
+    },
+    {
+      "name": "Curiosity",
+      "desc": "I am always eager to try new things. Variety is the spice of life."
+    },
+    {
+      "name": "Caution",
+      "desc": "I would rather be silent, than accidentally say something untoward."
+    },
+    {
+      "name": "Adventure",
+      "desc": "I yearn for something exciting in my life."
+    },
+    {
+      "name": "Cunning",
+      "desc": "Strategy and preparation can overcome any odds."
+    },
+    {
+      "name": "Joy",
+      "desc": "Our brief existences should be over-filled with worldly delights."
+    },
+    {
+      "name": "Preservation",
+      "desc": "We are fragile creatures, we must be wary of the intentions of others."
+    }
 	],
 	"archetypeFlaws": [
 		"I have the enynimity of the local authorities.",
