@@ -1,0 +1,78 @@
+var ancestryJSON = {
+	"ancestries": [{
+		"rt": "dragonborn",
+		"subs": [
+			"deep", "desert", "ethereal", "forest", "glimmering", "howling", "mountain",
+			"ocean", "petite kobold", "prismatic", "storm", "styx", "swamp", "tundra",
+			"winged kobold"
+		]
+	}, {
+		"rt": "dryad",
+		"subs": [
+			"cactid", "deku", "mycanoid", "folian", "thorne", "spriggan"
+		]
+	}, {
+		"rt": "dwarf",
+		"subs": [
+			"deep", "desert", "frost", "hill", "mountain", "shovel"
+		]
+	}, {
+		"rt": "elf",
+		"subs": [
+			"deep", "high", "gold", "grey", "wood", "winged"
+		]
+	}, {
+		"rt": "faunus",
+		"subs": [
+			"armand", "bah'it", "bullywog", "carcharodon", "darfallen", "dortakoid",
+			"gekkin", "gnoll", "kenku", "kitsune", "lacertillian", "remm", "sarukai",
+			"stricade", "taurin", "tawaki", "thri-kreen", "ursine"
+		]
+	}, {
+		"rt": "halfling",
+		"subs": [
+			"deep gnome", "foreset gnome", "kender", "lightfoot", "rock gnome",
+			"stout", "tallfellow", "tinker gnome"
+		]
+	}, {
+		"rt": "human",
+		"subs": [
+			"changeling", "cyclops", "elan", "gerudo", "siarran", "weaver", "zshar"
+		]
+	}, {
+		"rt": "jotborn",
+		"subs": [
+			"goliath", "goron", "formian kith", "varl"
+		]
+	}, {
+		"rt": "merfolk",
+		"subs": [
+			"malenti", "syren", "merrow", "zora"
+		]
+	}, {
+		"rt": "planarborn",
+		"subs": [
+			"aaismar", "air genasi", "death genasi", "earth genasi", "fire genasi",
+			"life genasi", "water genasi", "maeluth", "mechantri", "neraphim",
+			"norani", "shyft", "tanaruk", "tiefling", "zerythri", "gith"
+		]
+	}, {
+		"rt": "transforged",
+		"subs": [
+			"adamantine", "darkwood", "deep-crystal", "mithral"
+		]
+	}, {
+		"rt": "vogul",
+		"subs": [
+			"bugbear", "blue", "goblin", "hobgoblin", "orc", "troll"
+		]
+
+	}],
+	"templates": [
+		"demigod", "dvati", "eleti", "half dragonborn", "half dryad", "half dwarf",
+		"half elf", "half faunus", "half halfling", "half human", "half jotborn",
+		"half merfolk", "half planarborn", "half transforged", "half vogul",
+		"gargoyle", "kentari", "lich", "shade", "soulstiched", "spellwarped",
+		"therianthrope", "vampire"
+	]
+}
