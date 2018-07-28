@@ -5,14 +5,13 @@
 // ancestryObject and a random subrace from the ancestryObject, with a 10% chance
 // of returning a templated ancestry.
 function generateAncestry() {
-  var ancestryObject =  randomizer(ancestryJSON.ancestries);
-  var ancestryRoot = ancestryObject.rt;
-  var ancestrySub = randomizer(ancestryObject.subs);
+  var ancestryObj =  randomizer(ancestryJSON.ancestries);
+  var ancestrySubObj = randomizer(ancestryObj.subs);
   var tenPercent = dieRoll(10);
   if (tenPercent === 10) {
-    var templateSub = randomizer(ancestryJSON.templates);
-    return templateSub + " (" + ancestrySub + ") " + ancestryRoot;
+    var templateSubObj = randomizer(ancestryJSON.templates);
+    return ancestrySubObj.size + " " + templateSubObj.name + " (" +  ancestrySubObj.name + ") " + ancestryObj.rt + " (" + ancestryObj.desc + ")";
   } else {
-    return ancestrySub + " " + ancestryRoot;
+    return ancestrySubObj.size + " " + ancestrySubObj.name + " " + ancestryObj.rt  + "(" + ancestryObj.desc + ", " + ancestrySubObj.newSubtyp + ")";
   }
 }
