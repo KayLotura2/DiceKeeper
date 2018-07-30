@@ -22,18 +22,20 @@ function generateAncestry() {
       newTypes = ", "+ templateObj.newTypes.join(", ") + " ";
     }
     if (templateObj.beasts) {
-    beast = randomizer(templateObj.beasts);
+    var beastChoice = randomizer(templateObj.beasts);
+    beast = `${beastChoice}-`
   }
     return {
-      types: ancestrySubObj.size + " " + newSize + ancestryObj.types.
-      join("/") + newTypes + " (" +  ancestryObj.subTypes.
-      join(", ") + ", " +  templateObj.newsubTypes.
-      join(", ")  +")",
-      ancestry:  templateObj.name + " " + ancestryObj.rt};
+      types: `${ancestrySubObj.size} ${newSize} ${ancestryObj.types.
+      join("/")} ${newTypes} (${ancestryObj.subTypes.
+      join(", ")}, ${templateObj.newsubTypes.
+      join(", ")})`,
+      ancestry:  `${beast}${templateObj.name} ${ancestryObj.rt}${beast}`
+    };
   } else {
     return {
-      types: ancestrySubObj.size + " " + ancestryObj.rt + " (" + ancestryObj.subTypes.join(", ") + ")",
-      ancestry: ancestrySubObj.name + " " + ancestryObj.rt
+      types: `${ancestrySubObj.size} ${ancestryObj.rt} (${ancestryObj.subTypes.join(", ")})`,
+      ancestry: `${ancestrySubObj.name} ${ancestryObj.rt}`
     }
   }
 }
