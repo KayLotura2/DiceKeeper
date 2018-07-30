@@ -1,7 +1,8 @@
 var ancestryJSON = {
 	"ancestries": [{
 			"rt": "dragonborn",
-			"desc": "kinfolk/dragon (dragonborn)",
+			"types": ["kinfolk", "dragon"],
+			"subTypes": ["dragonborn"],
 			"baseSize": "medium",
 			"subs": [{
 				"name": "deep",
@@ -51,7 +52,8 @@ var ancestryJSON = {
 			}]
 		}, {
 			"rt": "dryad",
-			"desc": "kinfolk/plant (dryad)",
+			"types": ["kinfolk", "plant"],
+			"subTypes": ["dryad"],
 			"baseSize": "small",
 			"subs": [{
 				"name": "cactid",
@@ -75,7 +77,8 @@ var ancestryJSON = {
 		},
 		{
 			"rt": "dwarf",
-			"desc": "kinfolk (dwarf)",
+			"types": ["kinfolk"],
+			"subTypes": ["dwarf"],
 			"baseSize": "medium",
 			"subs": [{
 				"name": "deep",
@@ -99,7 +102,8 @@ var ancestryJSON = {
 		},
 		{
 			"rt": "elf",
-			"desc": "kinfolk (elf)",
+			"types": ["kinfolk"],
+			"subTypes": ["elf"],
 			"baseSize": "medium",
 			"subs": [{
 				"name": "high",
@@ -120,7 +124,8 @@ var ancestryJSON = {
 		},
 		{
 			"rt": "faunus",
-			"desc": "kinfolk/beast (faunus)",
+			"types": ["kinfolk", "beast"],
+			"subTypes": ["faunus"],
 			"baseSize": "medium",
 			"subs": [{
 				"name": "armand",
@@ -183,6 +188,8 @@ var ancestryJSON = {
 		},
 		{
 			"rt": "halfling",
+			"types": ["kinfolk"],
+			"subTypes": ["halfling"],
 			"desc": "kinfolk (halfling)",
 			"baseSize": "small",
 			"subs": [{
@@ -216,7 +223,8 @@ var ancestryJSON = {
 		},
 		{
 			"rt": "human",
-			"desc": "kinfolk (human)",
+			"types": ["kinfolk"],
+			"subTypes": ["human"],
 			"baseSize": "medium",
 			"subs": [{
 				"name": "changeling",
@@ -237,13 +245,14 @@ var ancestryJSON = {
 				"name": "weaver",
 				"size": "medium"
 			}, {
-				"name": "weaver",
-				"size": "zshar"
+				"name": "zshar",
+				"size": "medium"
 			}]
 		},
 		{
 			"rt": "jotborn",
-			"desc": "kinfolk/giant (jotborn)",
+			"types": ["kinfolk", "giant"],
+			"subTypes": ["jotborn"],
 			"baseSize": "medium (powerful build)",
 			"subs": [{
 				"name": "goliath",
@@ -262,7 +271,8 @@ var ancestryJSON = {
 		{
 			"rt": "merfolk",
 			"baseSize": "medium",
-			"desc": "kinfolk (merfolk)",
+			"types": ["kinfolk"],
+			"subTypes": ["merfolk"],
 			"subs": [{
 				"name": "malenti",
 				"size": "medium"
@@ -280,7 +290,8 @@ var ancestryJSON = {
 		{
 			"rt": "planarborn",
 			"baseSize": "medium",
-			"desc": "kinfolk/eidolon (planarborn)",
+			"types": ["kinfolk", "eidolon"],
+			"subTypes": ["planarborn"],
 			"subs": [{
 				"name": "aaismar",
 				"size": "medium"
@@ -315,7 +326,6 @@ var ancestryJSON = {
 				"name": "norani",
 				"size": "medium"
 			}, {
-
 				"name": "shyft",
 				"size": "medium"
 			}, {
@@ -340,7 +350,8 @@ var ancestryJSON = {
 		},
 		{
 			"rt": "transforged",
-			"desc": "kinfolk/construct (living contstruct, transforged)",
+			"types": ["kinfolk", "construct"],
+			"subTypes": ["living construct", "transforged"],
 			"baseSize": "medium",
 			"subs": [{
 				"name": "adamantine",
@@ -358,7 +369,8 @@ var ancestryJSON = {
 		},
 		{
 			"rt": "vogul",
-			"desc": "kinfolk (vogal)",
+			"types": ["kinfolk"],
+			"subTypes": ["vogul"],
 			"baseSize": "medium",
 			"subs": [{
 				"name": "bugbear",
@@ -372,7 +384,6 @@ var ancestryJSON = {
 			}, {
 				"name": "hobgoblin",
 				"size": "medium"
-
 			}, {
 				"name": "orc",
 				"size": "medium"
@@ -383,140 +394,87 @@ var ancestryJSON = {
 		}
 	],
 	"templates": [{
-		"subs": [{
-			"id": "t0",
-			"name": "demigod",
-			"sizeChange": false,
-			"typeChange": "eidolon",
-			"newSubtype": "demigod"
-		}, {
-			"id": "t1",
-			"name": "dvati",
-			"sizeChange": false,
-			"typeChange": false,
-			"newSubtype": "dvati"
-		}, {
-			"id": "t2",
-			"name": "eleti",
-			"sizeChange": false,
-			"typeChange": "undead",
-			"newSubtype": "eleti"
-		}, {
-			"id": "t3",
-			"name": "half-dragonborn",
-			"sizeChange": false,
-			"typeChange": "dragon",
-			"newSubtype": "dragonborn"
-		}, {
-			"id": "t4",
-			"name": "half-dryad",
-			"sizeChange": false,
-			"typeChange": "plant",
-			"newSubtype": "dryad"
-		}, {
-			"id": "t5",
-			"name": "half-dwarf",
-			"sizeChange": false,
-			"typeChange": false,
-			"newSubtype": "dwarf"
-		}, {
-
-			"id": "t6",
-			"name": "half-elf",
-			"sizeChange": false,
-			"typeChange": false,
-			"newSubtype": "elf"
-
-		}, {
-			"id": "t7",
-			"name": "half-faunus",
-			"sizeChange": false,
-			"typeChange": "beast",
-			"newSubtype": "faunus"
-		}, {
-			"id": "t8",
-			"name": "half-halfling",
-			"sizeChange": "slight build",
-			"typeChange": false,
-			"newSubtype": "halfling"
-		}, {
-			"id": "t9",
-			"name": "half-human",
-			"sizeChange": false,
-			"typeChange": false,
-			"newSubtype": "human"
-		}, {
-			"id": "t10",
-			"name": "half-jotborn",
-			"sizeChange": "powerful build",
-			"typeChange": "giant",
-			"newSubtype": "jotborn"
-		}, {
-			"id": "t11",
-			"name": "half-planarborn",
-			"sizeChange": false,
-			"typeChange": "eidolon",
-			"newSubtype": "planarborn"
-		}, {
-			"id": "t12",
-			"name": "half-transforged",
-			"sizeChange": false,
-			"typeChange": "contstruct",
-			"newSubtype": "living-construct, transforged"
-		}, {
-			"id": "t13",
-			"name": "half-vogul",
-			"sizeChange": false,
-			"typeChange": false,
-			"newSubtype": "vogul"
-		}, {
-			"id": "t14",
-			"name": "gargoyle",
-			"sizeChange": false,
-			"typeChange": false,
-			"newSubtype": "gargoyle"
-		}, {
-			"id": "t15",
-			"name": "kentari",
-			"sizeChange": "powerful build",
-			"typeChange": false,
-			"newSubtype": "kentari"
-		}, {
-			"id": "t17",
-			"name": "lich",
-			"sizeChange": false,
-			"typeChange": "undead",
-			"newSubtype": "lich"
-		}, {
-			"id": "t18",
-			"name": "shade",
-			"sizeChange": false,
-			"typeChange": "undead",
-			"newSubtype": "shade"
-		}, {
-			"id": "t19",
-			"name": "soulstiched",
-			"sizeChange": false,
-			"typeChange": "construct",
-			"newSubtype": "unliving-construct, soulstiched"
-		}, {
-			"id": "t20",
-			"name": "spellwarped",
-			"sizeChange": false,
-			"typeChange": false,
-			"newSubtype": "spellwarped"
-		}, {
-			"id": "t21",
-			"name": "therianthrope",
-			"sizeChange": false,
-			"typeChange": "beast",
-			"newSubtype": "therianthrope"
-		}, {
-			"id": "t22",
-			"name": "vampire",
-			"sizeChange": false,
-			"typeChange": "undead",
-			"newSubtype": "vampire"
-		}]
+		"name": "demigod",
+		"typeChange": "eidolon",
+		"newsubTypes": ["demigod"]
+	}, {
+		"name": "dvati",
+		"newsubTypes": ["dvati"]
+	}, {
+		"name": "eleti",
+		"typeChange": "undead",
+		"newsubTypes": ["eleti"]
+	}, {
+		"name": "half-dragonborn",
+		"typeChange": "dragon",
+		"newsubTypes": ["dragonborn"]
+	}, {
+		"name": "half-dryad",
+		"typeChange": "plant",
+		"newsubTypes": ["dryad"]
+	}, {
+		"name": "half-dwarf",
+		"newsubTypes": ["dwarf"]
+	}, {
+		"name": "half-elf",
+		"newsubTypes": ["elf"]
+	}, {
+		"name": "half-faunus",
+		"typeChange": "beast",
+		"newsubTypes": ["faunus"]
+	}, {
+		"name": "half-halfling",
+		"sizeChange": "slight build",
+		"newsubTypes": ["halfling"]
+	}, {
+		"name": "half-human",
+		"newsubTypes": ["human"]
+	}, {
+		"name": "half-jotborn",
+		"sizeChange": "powerful build",
+		"typeChange": "giant",
+		"newsubTypes": ["jotborn"]
+	}, {
+		"name": "half-planarborn",
+		"typeChange": "eidolon",
+		"newsubTypes": ["planarborn"]
+	}, {
+		"name": "half-transforged",
+		"typeChange": "contstruct",
+		"newsubTypes": ["living-construct", "transforged"]
+	}, {
+		"name": "half-vogul",
+		"newsubTypes": ["vogul"]
+	}, {
+		"name": "gargoyle",
+		"newsubTypes": ["gargoyle"]
+	}, {
+		"name": "kentari",
+		"sizeChange": "powerful build",
+		"newsubTypes": ["kentari"]
+	}, {
+		"name": "lich",
+		"typeChange": "undead",
+		"newsubTypes": ["lich"]
+	}, {
+		"name": "shade",
+		"typeChange": "undead",
+		"newsubTypes": ["shade"]
+	}, {
+		"name": "soulstiched",
+		"typeChange": "construct",
+		"newsubTypes": ["unliving-construct", "soulstiched"]
+	}, {
+		"name": "spellwarped",
+		"newsubTypes": ["spellwarped"]
+	}, {
+		"name": "vampire",
+		"typeChange": "undead",
+		"newsubTypes": ["vampire"]
+	}, {
+		"name": "therianthrope",
+		"typeChange": "beast",
+		"newsubTypes": ["therianthrope"],
+		"beasts": ["wolf", "rat", "bear", "tiger"]
 	}]
 }
