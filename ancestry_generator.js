@@ -10,7 +10,7 @@ function generateAncestry() {
   var ancestryObj =  randomizer(ancestryJSON.ancestries);
   var ancestrySubObj = randomizer(ancestryObj.subs);
   var tenPercent = dieRoll(10);
-  if (tenPercent == 10) {
+  if (tenPercent) {
     var newSize = "";
     var newTypes = [""];
     var beast = "";
@@ -25,7 +25,10 @@ function generateAncestry() {
     beast = randomizer(templateObj.beasts);
   }
     return {
-      types: ancestrySubObj.size + " " + newSize + ancestryObj.types.join("/") + newTypes + " (" +  ancestryObj.subTypes.join(", ") + " " +  templateObj.newsubTypes.join(", ")  +")",
+      types: ancestrySubObj.size + " " + newSize + ancestryObj.types.
+      join("/") + newTypes + " (" +  ancestryObj.subTypes.
+      join(", ") + ", " +  templateObj.newsubTypes.
+      join(", ")  +")",
       ancestry:  templateObj.name + " " + ancestryObj.rt};
   } else {
     return {

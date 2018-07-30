@@ -30,7 +30,7 @@ var ancestryJSON = {
 				"size": "medium"
 			}, {
 				"name": "petite kobold",
-				"size": "small (slight build)"
+				"size": "small [powerful build]"
 			}, {
 				"name": "prismatic",
 				"size": "medium"
@@ -212,7 +212,7 @@ var ancestryJSON = {
 				"size": "small"
 			}, {
 				"name": "tallfellow",
-				"size": "small (powerful build)"
+				"size": "small [powerful build"
 			}, {
 				"name": "tinkergnome",
 				"size": "small"
@@ -253,19 +253,19 @@ var ancestryJSON = {
 			"rt": "jotborn",
 			"types": ["kinfolk", "giant"],
 			"subTypes": ["jotborn"],
-			"baseSize": "medium (powerful build)",
+			"baseSize": "medium [powerful build]",
 			"subs": [{
 				"name": "goliath",
-				"size": "medium (powerful build)"
+				"size": "medium [powerful build]"
 			}, {
 				"name": "goron",
-				"size": "medium (powerful build)"
+				"size": "medium [powerful build]"
 			}, {
 				"name": "formian kith",
-				"size": "medium (powerful build)"
+				"size": "medium [powerful build]"
 			}, {
 				"name": "varl",
-				"size": "medium (powerful build)"
+				"size": "medium [powerful build]"
 			}]
 		},
 		{
@@ -374,7 +374,7 @@ var ancestryJSON = {
 			"baseSize": "medium",
 			"subs": [{
 				"name": "bugbear",
-				"size": "medium (powerful build)"
+				"size": "medium [powerful build]"
 			}, {
 				"name": "blue",
 				"size": "small"
@@ -389,7 +389,7 @@ var ancestryJSON = {
 				"size": "medium"
 			}, {
 				"name": "troll",
-				"size": "medium (powerful build)"
+				"size": "medium [powerful build]"
 			}]
 		}
 	],
@@ -424,7 +424,7 @@ var ancestryJSON = {
 		"newsubTypes": ["faunus"]
 	}, {
 		"name": "half-halfling",
-		"sizeChange": "slight build",
+		"sizeChange": "[slight build]",
 		"newsubTypes": ["halfling"]
 	}, {
 		"name": "half-human",
