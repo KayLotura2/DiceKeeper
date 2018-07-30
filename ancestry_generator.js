@@ -10,7 +10,7 @@ function generateAncestry() {
   var ancestryObj =  randomizer(ancestryJSON.ancestries);
   var ancestrySubObj = randomizer(ancestryObj.subs);
   var tenPercent = dieRoll(10);
-  if (tenPercent) {
+  if (tenPercent == 10) {
     var newSize = "";
     var newTypes = [""];
     var beast = "";
