@@ -34,10 +34,23 @@ function generate_gender() {
 
 // Retruns a string which describes a persons romantic and sexual attractions.
 function generate_attraction() {
-  var tempattraction_rom =  randomizer(genderJSON.attractionDescriptors);
-  var tempattraction_sex =  randomizer(genderJSON.attractionDescriptors);
-  return randomizer(tempattraction_rom) + 'romantic' + '/' +
-    randomizer(tempattraction_sex) + 'sexual';
+  var variablePercent = dieRoll(10);
+  if (variablePercent <= 6) {
+    var tempAttraction = randomizer(genderJSON.attractionDescriptors);
+    var tempBoth =  randomizer(tempattrAction);
+    return `${tempatraction_whole}romantic / ${tempatraction_whole}sexual`;
+  } else if (variablePercent = 7) {
+    var tempAttraction = randomizer(genderJSON.attractionDescriptors);
+    var tempRom = randomizer(tempAttraction);
+    var tempSex = randomizer(tempAttraction);
+    return `${tempRom}romantic / ${tempSex}sexual`;
+  } else {
+    var tempAttractionRom =  randomizer(genderJSON.attractionDescriptors);
+    var tempAttractionSex =  randomizer(genderJSON.attractionDescriptors);
+    var tempRom = randomizer(tempAttractionRom);
+    var tempSex = randomizer(tempAttractionSex);
+    return `${tempRom}romantic / ${tempSex}sexual`;
+  }
 }
 
 // Retruns a string of a random pronoun.
