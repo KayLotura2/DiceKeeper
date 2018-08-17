@@ -34,10 +34,48 @@ function generate_gender() {
 
 // Retruns a string which describes a persons romantic and sexual attractions.
 function generate_attraction() {
-  var tempattraction_rom =  randomizer(genderJSON.attractionDescriptors);
-  var tempattraction_sex =  randomizer(genderJSON.attractionDescriptors);
-  return randomizer(tempattraction_rom) + 'romantic' + '/' +
-    randomizer(tempattraction_sex) + 'sexual';
+  var variablePercent = dieRoll(10);
+  if (variablePercent <= 6) {
+    // Same Sexuality/Romantic, Same Descriptor
+    var tempRoot = randomizer(genderJSON.attractionRoots);
+    if (tempRoot == "a") {
+      var tempDescription = '';
+    } else {
+      var tempDescription = randomizer(genderJSON.attractionDescriptors);
+    }
+    var tempBothProfile = tempDescription + tempRoot;
+    return `${tempBothProfile}romantic / ${tempBothProfile}sexual`;
+  } else if (variablePercent == 7) {
+  // Same Sexuality/Romantic, Shuffled Descriptor
+  var tempRoot = randomizer(genderJSON.attractionRoots);
+  if (tempRoot == "a") {
+      var tempSexDescription = '';
+      var tempRomDescription = '';
+    } else {
+      var tempSexDescription = randomizer(genderJSON.attractionDescriptors);
+      var tempRomDescription = randomizer(genderJSON.attractionDescriptors);
+    }
+    var tempRomProfile = tempRomDescription + tempRoot;
+    var tempSexProfile = tempSexDescription + tempRoot;
+  return `${tempRomProfile}romantic / ${tempSexProfile}sexual`;
+  } else {
+  // Shuffled Sexuality/Romantic, Shuffled Descriptor
+  var tempRomRoot = randomizer(genderJSON.attractionRoots);
+  var tempSexRoot = randomizer(genderJSON.attractionRoots);
+  if (tempRomRoot == "a") {
+      var tempRomDescription = '';
+    } else {
+      var tempRomDescription = randomizer(genderJSON.attractionDescriptors);
+    }
+  if (tempSexRoot == "a") {
+      var tempSexDescription = '';
+    } else {
+      var tempSexDescription = randomizer(genderJSON.attractionDescriptors);
+    }
+    var tempRomProfie = tempRomDescription + tempRomRoot;
+    var tempSexProfile = tempSexDescription + tempSexRoot;
+    return `${tempRomProfie}romantic / ${tempSexProfile}sexual`;
+  }
 }
 
 // Retruns a string of a random pronoun.

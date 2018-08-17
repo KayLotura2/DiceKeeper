@@ -64,21 +64,19 @@ var genderJSON = {
 		"ve/ver",
 		"zie/zim"
 	],
+	"attractionRoots": [
+		"a",
+		"bi",
+		"hetero",
+		"homo",
+		"pan",
+	],
 	"attractionDescriptors": [
-		["a"],
-		["bi-"],
-		["demi(bi)-", "demi(hetero)-",
-			"demi(homo)-", "demi(pan)-"
-		],
-		["fray(bi)-",
-			"fray(hetero)-", "fray(homo)-", "fray(pan)-"
-		],
-		["gray(bi)-", "gray(hetero)-", "gray(homo)-",
-			"gray(pan)-"
-		],
-		["hetero-", "hetero-flexible-"],
-		["homo-", "homo-flexible-"],
-		["pan"]
+		" ",
+		" ",
+		" ",
+		"demi-",
+		"fray-",
+		"gray-",
 	]
-
 }
