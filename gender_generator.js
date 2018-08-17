@@ -36,20 +36,45 @@ function generate_gender() {
 function generate_attraction() {
   var variablePercent = dieRoll(10);
   if (variablePercent <= 6) {
-    var tempAttraction = randomizer(genderJSON.attractionDescriptors);
-    var tempBoth =  randomizer(tempAttraction);
-    return `${tempBoth}romantic / ${tempBoth}sexual`;
-  } else if (variablePercent = 7) {
-    var tempAttraction = randomizer(genderJSON.attractionDescriptors);
-    var tempRom = randomizer(tempAttraction);
-    var tempSex = randomizer(tempAttraction);
-    return `${tempRom}romantic / ${tempSex}sexual`;
+    // Same Sexuality/Romantic, Same Descriptor
+    var tempRoot = randomizer(genderJSON.attractionRoots);
+    if (tempRoot == "a") {
+      var tempDescription = '';
+    } else {
+      var tempDescription = randomizer(genderJSON.attractionDescriptors);
+    }
+    var tempBothProfile = tempDescription + tempRoot;
+    return `${tempBothProfile}romantic / ${tempBothProfile}sexual`;
+  } else if (variablePercent == 7) {
+  // Same Sexuality/Romantic, Shuffled Descriptor
+  var tempRoot = randomizer(genderJSON.attractionRoots);
+  if (tempRoot == "a") {
+      var tempSexDescription = '';
+      var tempRomDescription = '';
+    } else {
+      var tempSexDescription = randomizer(genderJSON.attractionDescriptors);
+      var tempRomDescription = randomizer(genderJSON.attractionDescriptors);
+    }
+    var tempRomProfile = tempRomDescription + tempRoot;
+    var tempSexProfile = tempSexDescription + tempRoot;
+  return `${tempRomProfile}romantic / ${tempSexProfile}sexual`;
   } else {
-    var tempAttractionRom =  randomizer(genderJSON.attractionDescriptors);
-    var tempAttractionSex =  randomizer(genderJSON.attractionDescriptors);
-    var tempRom = randomizer(tempAttractionRom);
-    var tempSex = randomizer(tempAttractionSex);
-    return `${tempRom}romantic / ${tempSex}sexual`;
+  // Shuffled Sexuality/Romantic, Shuffled Descriptor
+  var tempRomRoot = randomizer(genderJSON.attractionRoots);
+  var tempSexRoot = randomizer(genderJSON.attractionRoots);
+  if (tempRomRoot == "a") {
+      var tempRomDescription = '';
+    } else {
+      var tempRomDescription = randomizer(genderJSON.attractionDescriptors);
+    }
+  if (tempSexRoot == "a") {
+      var tempSexDescription = '';
+    } else {
+      var tempSexDescription = randomizer(genderJSON.attractionDescriptors);
+    }
+    var tempRomProfie = tempRomDescription + tempRomRoot;
+    var tempSexProfile = tempSexDescription + tempSexRoot;
+    return `${tempRomProfie}romantic / ${tempSexProfile}sexual`;
   }
 }
 
