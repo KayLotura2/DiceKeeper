@@ -37,8 +37,8 @@ function generate_attraction() {
   var variablePercent = dieRoll(10);
   if (variablePercent <= 6) {
     var tempAttraction = randomizer(genderJSON.attractionDescriptors);
-    var tempBoth =  randomizer(tempattrAction);
-    return `${tempatraction_whole}romantic / ${tempatraction_whole}sexual`;
+    var tempBoth =  randomizer(tempAttraction);
+    return `${tempBoth}romantic / ${tempBoth}sexual`;
   } else if (variablePercent = 7) {
     var tempAttraction = randomizer(genderJSON.attractionDescriptors);
     var tempRom = randomizer(tempAttraction);
