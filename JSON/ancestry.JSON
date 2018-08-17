@@ -1,78 +1,480 @@
 var ancestryJSON = {
 	"ancestries": [{
-		"rt": "dragonborn",
-		"subs": [
-			"deep", "desert", "ethereal", "forest", "glimmering", "howling", "mountain",
-			"ocean", "petite kobold", "prismatic", "storm", "styx", "swamp", "tundra",
-			"winged kobold"
-		]
+			"rt": "dragonborn",
+			"types": ["kinfolk", "dragon"],
+			"subTypes": ["dragonborn"],
+			"baseSize": "medium",
+			"subs": [{
+				"name": "deep",
+				"size": "medium"
+			}, {
+				"name": "desert",
+				"size": "medium"
+			}, {
+				"name": "ethereal",
+				"size": "medium"
+			}, {
+				"name": "forest",
+				"size": "medium"
+			}, {
+				"name": "glimmering",
+				"size": "medium"
+			}, {
+				"name": "howling",
+				"size": "medium"
+			}, {
+				"name": "mountain",
+				"size": "medium"
+			}, {
+				"name": "ocean",
+				"size": "medium"
+			}, {
+				"name": "petite kobold",
+				"size": "small [powerful build]"
+			}, {
+				"name": "prismatic",
+				"size": "medium"
+			}, {
+				"name": "storm",
+				"size": "medium"
+			}, {
+				"name": "styx",
+				"size": "medium"
+			}, {
+				"name": "swamp",
+				"size": "medium"
+			}, {
+				"name": "tundra",
+				"size": "medium"
+			}, {
+				"name": "winged kobold",
+				"size": "small"
+			}]
+		}, {
+			"rt": "dryad",
+			"types": ["kinfolk", "plant"],
+			"subTypes": ["dryad"],
+			"baseSize": "small",
+			"subs": [{
+				"name": "cactid",
+				"size": "small"
+			}, {
+				"name": "deku",
+				"size": "small"
+			}, {
+				"name": "mycanoid",
+				"size": "small"
+			}, {
+				"name": "folian",
+				"size": "small"
+			}, {
+				"name": "thorne",
+				"size": "small"
+			}, {
+				"name": "spriggan",
+				"size": "small"
+			}]
+		},
+		{
+			"rt": "dwarf",
+			"types": ["kinfolk"],
+			"subTypes": ["dwarf"],
+			"baseSize": "medium",
+			"subs": [{
+				"name": "deep",
+				"size": "medium"
+			}, {
+				"name": "desert",
+				"size": "medium"
+			}, {
+				"name": "frost",
+				"size": "medium"
+			}, {
+				"name": "hill",
+				"size": "medium"
+			}, {
+				"name": "montain",
+				"size": "medium"
+			}, {
+				"name": "shovel",
+				"size": "medium"
+			}]
+		},
+		{
+			"rt": "elf",
+			"types": ["kinfolk"],
+			"subTypes": ["elf"],
+			"baseSize": "medium",
+			"subs": [{
+				"name": "high",
+				"size": "medium"
+			}, {
+				"name": "gold",
+				"size": "medium"
+			}, {
+				"name": "grey",
+				"size": "medium"
+			}, {
+				"name": "wood",
+				"size": "medium"
+			}, {
+				"name": "winged",
+				"size": "medium"
+			}]
+		},
+		{
+			"rt": "faunus",
+			"types": ["kinfolk", "beast"],
+			"subTypes": ["faunus"],
+			"baseSize": "medium",
+			"subs": [{
+				"name": "armand",
+				"size": "medium"
+			}, {
+				"name": "bah'it",
+				"size": "medium"
+			}, {
+				"name": "bullywog",
+				"size": "small"
+			}, {
+				"name": "carcharodon",
+				"size": "medium"
+			}, {
+				"name": "darfellan",
+				"size": "medium"
+			}, {
+				"name": "dortakoid",
+				"size": "medium"
+			}, {
+				"name": "darfellan",
+				"size": "medium"
+			}, {
+				"name": "gekkin",
+				"size": "small"
+			}, {
+				"name": "gnoll",
+				"size": "medium"
+			}, {
+				"name": "kenku",
+				"size": "medium"
+			}, {
+				"name": "kitsune",
+				"size": "small"
+			}, {
+				"name": "lacertillian",
+				"size": "medium"
+			}, {
+				"name": "remm",
+				"size": "medium"
+			}, {
+				"name": "sarukai",
+				"size": "small"
+			}, {
+				"name": "stricade",
+				"size": "medium"
+			}, {
+				"name": "taurin",
+				"size": "medium"
+			}, {
+				"name": "tawaki",
+				"size": "small"
+			}, {
+				"name": "thri-kreen",
+				"size": "medium"
+			}, {
+				"name": "ursine",
+				"size": "medium"
+			}]
+		},
+		{
+			"rt": "halfling",
+			"types": ["kinfolk"],
+			"subTypes": ["halfling"],
+			"desc": "kinfolk (halfling)",
+			"baseSize": "small",
+			"subs": [{
+				"name": "deep gnome",
+				"size": "small"
+			}, {
+				"name": "forest gnome",
+				"size": "small"
+			}, {
+				"name": "kender",
+				"size": "small"
+			}, {
+				"name": "lightfoot",
+				"size": "small"
+			}, {
+				"name": "rock gnome",
+				"size": "small"
+			}, {
+				"name": "stout",
+				"size": "small"
+			}, {
+				"name": "tallfellow",
+				"size": "small [powerful build"
+			}, {
+				"name": "tinkergnome",
+				"size": "small"
+			}, {
+				"name": "ghostwise",
+				"size": "small"
+			}]
+		},
+		{
+			"rt": "human",
+			"types": ["kinfolk"],
+			"subTypes": ["human"],
+			"baseSize": "medium",
+			"subs": [{
+				"name": "changeling",
+				"size": "medium"
+			}, {
+				"name": "cyclops",
+				"size": "medium"
+			}, {
+				"name": "elan",
+				"size": "medium"
+			}, {
+				"name": "gerudo",
+				"size": "medium"
+			}, {
+				"name": "siarran",
+				"size": "medium"
+			}, {
+				"name": "weaver",
+				"size": "medium"
+			}, {
+				"name": "zshar",
+				"size": "medium"
+			}]
+		},
+		{
+			"rt": "jotborn",
+			"types": ["kinfolk", "giant"],
+			"subTypes": ["jotborn"],
+			"baseSize": "medium [powerful build]",
+			"subs": [{
+				"name": "goliath",
+				"size": "medium [powerful build]"
+			}, {
+				"name": "goron",
+				"size": "medium [powerful build]"
+			}, {
+				"name": "formian kith",
+				"size": "medium [powerful build]"
+			}, {
+				"name": "varl",
+				"size": "medium [powerful build]"
+			}]
+		},
+		{
+			"rt": "merfolk",
+			"baseSize": "medium",
+			"types": ["kinfolk"],
+			"subTypes": ["merfolk"],
+			"subs": [{
+				"name": "malenti",
+				"size": "medium"
+			}, {
+				"name": "syren",
+				"size": "medium"
+			}, {
+				"name": "merrow",
+				"size": "medium"
+			}, {
+				"name": "zora",
+				"size": "medium"
+			}]
+		},
+		{
+			"rt": "planarborn",
+			"baseSize": "medium",
+			"types": ["kinfolk", "eidolon"],
+			"subTypes": ["planarborn"],
+			"subs": [{
+				"name": "aaismar",
+				"size": "medium"
+			}, {
+				"name": "air genasi",
+				"size": "medium"
+			}, {
+				"name": "death genasi",
+				"size": "medium"
+			}, {
+				"name": "earth genasi",
+				"size": "medium"
+			}, {
+				"name": "fire genasi",
+				"size": "medium"
+			}, {
+				"name": "life genasi",
+				"size": "medium"
+			}, {
+				"name": "water genasi",
+				"size": "medium"
+			}, {
+				"name": "maeluth",
+				"size": "medium"
+			}, {
+				"name": "mechantrix",
+				"size": "medium"
+			}, {
+				"name": "neraphim",
+				"size": "medium"
+			}, {
+				"name": "norani",
+				"size": "medium"
+			}, {
+				"name": "shyft",
+				"size": "medium"
+			}, {
+				"name": "maeluth",
+				"size": "medium"
+			}, {
+				"name": "tanaruk",
+				"size": "medium"
+			}, {
+				"name": "tiefling",
+				"size": "medium"
+			}, {
+				"name": "zerythri",
+				"size": "medium"
+			}, {
+				"name": "githyanki",
+				"size": "medium"
+			}, {
+				"name": "githzerai",
+				"size": "medium"
+			}]
+		},
+		{
+			"rt": "transforged",
+			"types": ["kinfolk", "construct"],
+			"subTypes": ["living construct", "transforged"],
+			"baseSize": "medium",
+			"subs": [{
+				"name": "adamantine",
+				"size": "medium"
+			}, {
+				"name": "darkwood",
+				"size": "small"
+			}, {
+				"name": "deep-crystal",
+				"size": "medium"
+			}, {
+				"name": "mithral",
+				"size": "small"
+			}]
+		},
+		{
+			"rt": "vogul",
+			"types": ["kinfolk"],
+			"subTypes": ["vogul"],
+			"baseSize": "medium",
+			"subs": [{
+				"name": "bugbear",
+				"size": "medium [powerful build]"
+			}, {
+				"name": "blue",
+				"size": "small"
+			}, {
+				"name": "goblin",
+				"size": "small"
+			}, {
+				"name": "hobgoblin",
+				"size": "medium"
+			}, {
+				"name": "orc",
+				"size": "medium"
+			}, {
+				"name": "troll",
+				"size": "medium [powerful build]"
+			}]
+		}
+	],
+	"templates": [{
+		"name": "demigod",
+		"typeChange": "eidolon",
+		"newsubTypes": ["demigod"]
 	}, {
-		"rt": "dryad",
-		"subs": [
-			"cactid", "deku", "mycanoid", "folian", "thorne", "spriggan"
-		]
+		"name": "dvati",
+		"newsubTypes": ["dvati"]
 	}, {
-		"rt": "dwarf",
-		"subs": [
-			"deep", "desert", "frost", "hill", "mountain", "shovel"
-		]
+		"name": "eleti",
+		"typeChange": "undead",
+		"newsubTypes": ["eleti"]
 	}, {
-		"rt": "elf",
-		"subs": [
-			"deep", "high", "gold", "grey", "wood", "winged"
-		]
+		"name": "half-dragonborn",
+		"typeChange": "dragon",
+		"newsubTypes": ["dragonborn"]
 	}, {
-		"rt": "faunus",
-		"subs": [
-			"armand", "bah'it", "bullywog", "carcharodon", "darfallen", "dortakoid",
-			"gekkin", "gnoll", "kenku", "kitsune", "lacertillian", "remm", "sarukai",
-			"stricade", "taurin", "tawaki", "thri-kreen", "ursine"
-		]
+		"name": "half-dryad",
+		"typeChange": "plant",
+		"newsubTypes": ["dryad"]
 	}, {
-		"rt": "halfling",
-		"subs": [
-			"deep gnome", "foreset gnome", "kender", "lightfoot", "rock gnome",
-			"stout", "tallfellow", "tinker gnome"
-		]
+		"name": "half-dwarf",
+		"newsubTypes": ["dwarf"]
 	}, {
-		"rt": "human",
-		"subs": [
-			"changeling", "cyclops", "elan", "gerudo", "siarran", "weaver", "zshar"
-		]
+		"name": "half-elf",
+		"newsubTypes": ["elf"]
 	}, {
-		"rt": "jotborn",
-		"subs": [
-			"goliath", "goron", "formian kith", "varl"
-		]
+		"name": "half-faunus",
+		"typeChange": "beast",
+		"newsubTypes": ["faunus"]
 	}, {
-		"rt": "merfolk",
-		"subs": [
-			"malenti", "syren", "merrow", "zora"
-		]
+		"name": "half-halfling",
+		"sizeChange": "[slight build]",
+		"newsubTypes": ["halfling"]
 	}, {
-		"rt": "planarborn",
-		"subs": [
-			"aaismar", "air genasi", "death genasi", "earth genasi", "fire genasi",
-			"life genasi", "water genasi", "maeluth", "mechantri", "neraphim",
-			"norani", "shyft", "tanaruk", "tiefling", "zerythri", "gith"
-		]
+		"name": "half-human",
+		"newsubTypes": ["human"]
 	}, {
-		"rt": "transforged",
-		"subs": [
-			"adamantine", "darkwood", "deep-crystal", "mithral"
-		]
+		"name": "half-jotborn",
+		"sizeChange": "powerful build",
+		"typeChange": "giant",
+		"newsubTypes": ["jotborn"]
 	}, {
-		"rt": "vogul",
-		"subs": [
-			"bugbear", "blue", "goblin", "hobgoblin", "orc", "troll"
-		]
-
-	}],
-	"templates": [
-		"demigod", "dvati", "eleti", "half dragonborn", "half dryad", "half dwarf",
-		"half elf", "half faunus", "half halfling", "half human", "half jotborn",
-		"half merfolk", "half planarborn", "half transforged", "half vogul",
-		"gargoyle", "kentari", "lich", "shade", "soulstiched", "spellwarped",
-		"therianthrope", "vampire"
-	]
+		"name": "half-planarborn",
+		"typeChange": "eidolon",
+		"newsubTypes": ["planarborn"]
+	}, {
+		"name": "half-transforged",
+		"typeChange": "contstruct",
+		"newsubTypes": ["living-construct", "transforged"]
+	}, {
+		"name": "half-vogul",
+		"newsubTypes": ["vogul"]
+	}, {
+		"name": "gargoyle",
+		"newsubTypes": ["gargoyle"]
+	}, {
+		"name": "kentari",
+		"sizeChange": "powerful build",
+		"newsubTypes": ["kentari"]
+	}, {
+		"name": "lich",
+		"typeChange": "undead",
+		"newsubTypes": ["lich"]
+	}, {
+		"name": "shade",
+		"typeChange": "undead",
+		"newsubTypes": ["shade"]
+	}, {
+		"name": "soulstiched",
+		"typeChange": "construct",
+		"newsubTypes": ["unliving-construct", "soulstiched"]
+	}, {
+		"name": "spellwarped",
+		"newsubTypes": ["spellwarped"]
+	}, {
+		"name": "vampire",
+		"typeChange": "undead",
+		"newsubTypes": ["vampire"]
+	}, {
+		"name": "therianthrope",
+		"typeChange": "beast",
+		"newsubTypes": ["therianthrope"],
+		"beasts": ["wolf", "rat", "bear", "tiger"]
+	}]
 }
