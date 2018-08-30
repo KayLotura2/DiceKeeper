@@ -17,12 +17,14 @@ function generateBaseArchetype() {
   }
 }
 
-// Returns Archetype & Traits
-// Currently only takes in commoner traits
-function generateArchetype() {
-  var baseArchetype = generateBaseArchetype();
-  var ideal = randomizer(archetypeJSON.archetypeIdeals);
-  var trait = randomizer(archetypeJSON.archetypeTraits);
-  var flaw = randomizer(archetypeJSON.archetypeFlaws);
-  return {baseArchetype: baseArchetype, ideal: ideal, trait: trait, flaw: flaw};
+// Returns Stat Block
+// Currently only returns a commoner's stat block
+function generateBlock() {
+  var block = {}
+  block.baseArchetype = generateBaseArchetype();
+  block.ideal = randomizer(archetypeJSON.archetypeIdeals);
+  block.trait = randomizer(archetypeJSON.archetypeTraits);
+  block.flaw = randomizer(archetypeJSON.archetypeFlaws);
+  block.stats = npcBlockJSON.commoner;
+  return block;
   }

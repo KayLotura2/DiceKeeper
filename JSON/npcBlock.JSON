@@ -34,7 +34,6 @@ var npcBlockJSON = {
  					"size": 4
  				},
  				"damageType": "bludgeoning"
-
  			}
  		}
  	}
