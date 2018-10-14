@@ -11,24 +11,24 @@ function generateAncestry() {
   var ancestrySubObj = randomizer(ancestryObj.subs);
   var tenPercent = dieRoll(10);
   if (tenPercent == 10) {
-    var newSize = "";
+    var newSize;
     var newTypes = [""];
     var beast = "";
     var templateBasket = randomizerCount(ancestryJSON.templates, 2);
     var templateObj = templateBasket[0];
     if (ancestryObj.subTypes[0] == templateObj.newsubTypes[0]) {
-      templateObj = templateBasket[1]
-      console.log("Using the second template!")
+      templateObj = templateBasket[1];
+      console.log("Using the second template!");
     }
     if (templateObj.newSize) {
-      newSize = `${templateObj.newSize} `;
+      newSize = `${templateObj.newSize}`;
     }
     if (templateObj.typeChange) {
       newTypes = `, ${templateObj.typeChange} `;
     }
     if (templateObj.beasts) {
     var beastChoice = randomizer(templateObj.beasts);
-    beast = `${beastChoice}-`
+    beast = `${beastChoice}-`;
   }
     return {
       types: `${ancestrySubObj.size} ${newSize} ${ancestryObj.types.
@@ -41,6 +41,6 @@ function generateAncestry() {
     return {
       types: `${ancestrySubObj.size} ${ancestryObj.types.join("/")} (${ancestryObj.subTypes.join(", ")})`,
       ancestry: `${ancestrySubObj.name} ${ancestryObj.rt}`
-    }
+    };
   }
 }

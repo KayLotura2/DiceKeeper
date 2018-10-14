@@ -19,8 +19,9 @@ function generateBaseArchetype() {
 
 // Returns Stat Block
 // Currently only returns a commoner's stat block
-function generateBlock() {
+function generateArchetypeBlock() {
   var block = {}
+  block.name = randomizer(namesJSON.names) + " " + randomizer(namesJSON.names);
   block.baseArchetype = generateBaseArchetype();
   block.ideal = randomizer(archetypeJSON.archetypeIdeals);
   block.trait = randomizer(archetypeJSON.archetypeTraits);

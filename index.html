@@ -6,6 +6,8 @@
     <script src="JSON/ancestry.JSON"></script>
     <script src="JSON/gender.JSON"></script>
     <script src="JSON/archetype.JSON"></script>
+    <script src="JSON/npcBlock.JSON"></script>
+    <script src="JSON/names.JSON"></script>
     <script src="randomizers.js"></script>
     <script src="ancestry_generator.js"></script>
     <script src="gender_generator.js"></script>
@@ -57,8 +59,9 @@
   </body>
 </html>
 <script>
-  var archetype = generateArchetype();
+  var archetype = generateArchetypeBlock();
   var ancestryObj = generateAncestry();
+  document.getElementById("name").innerHTML = "<h2>" + archetype.name + "</h2>"
   document.getElementById("ancestry").innerHTML = ancestryObj.ancestry;
   document.getElementById("type").innerHTML = ancestryObj.types;
   document.getElementById("profile").innerHTML = "<strong>Profile: </strong>" + generatePersonality();

@@ -23,3 +23,8 @@ Currently this is a simple tool for quickly generating complex NPCs for D&D 5e o
 * NPC Block is a static Commoner, with no information. (WIP)
 
 ## Status: Incomplete.
+
+
+## Thanks
+
+* Thanks to Dominic Tarr for use of name.JSON from (`random-names`)[https://github.com/dominictarr/random-name]
