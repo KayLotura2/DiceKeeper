@@ -61,7 +61,8 @@ var monsterBlockJSON = {
 			"givenSkills": ["Religion", "herbalismTools"],
 			"randoSkils": [1, 2, 3],
 			"specialTraits": [{
-				"spellcasting": "See Acolyte Spellcasting"
+				"header": "spellcasting",
+				"text": "See Acolyte Spellcasting"
 			}],
 			"notes": [
 				"Spells aren't even set",
@@ -86,8 +87,9 @@ var monsterBlockJSON = {
 			"givenSkills": ["arcana", "history"],
 			"randoSkils": [1, 2, 3],
 			"specialTraits": [{
-				"spellcasting": "See apprentice wizard Spellcasting"
-			}],
+					"header": "spellcasting",
+					"text": "See apprentice wizard Spellcasting"
+				}],
 			"notes": [
 				"Spells aren't even set",
 				"Spells are set for now, but those should be proceedurally generated"
@@ -105,7 +107,9 @@ var monsterBlockJSON = {
 				"wis": 3
 			},
 			"languages": ["Common"],
-			"additionalLanguages": ["Aquan", "Aqua-Common", "..."],
+			"additionalLanguages": [
+				"Aquan", "Aqua-Common", "Auran", "Draconic", "Dwarven", "Elven", "Jotun", "Neghezkira", "Sylven", "Undercommon", "Drow", "Gerudo", "Gomen", "Hin", "Jäger", "Kotigi", "Menta", "Odolocation", "Skip", "Zillarith"
+			],
 			"bonusLanguages": [1, 2, 2, 3],
 			"challenge": 3,
 			"primaryWeapon": ["dagger", "spear", "shortSword", "longSword"],
@@ -149,7 +153,7 @@ var monsterBlockJSON = {
 			"shield": ["no"],
 			"armor": ["leather", "studdedLeather", "studdedLeather", "chainshirt"],
 			"givenSkills": ["perception", "deception", "stealth"],
-			"randoSkils": [3, 4, 4, 5],
+			"randoSkils": [2, 3, 4, 5],
 			"damageResistances": ["poison"],
 			"specialTraits": [{
 					"header": "Assassinate",
@@ -170,7 +174,7 @@ var monsterBlockJSON = {
 				{
 					"primaryRider": true,
 					"secondaryRider": true,
-					"text": ", and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
+					"appendText": ", and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
 				}
 			],
 			"specialActions": [{
@@ -256,7 +260,7 @@ var monsterBlockJSON = {
 			"secondaryWeapon": ["dagger", "dagger", "sickle", "whip"],
 			"shield": ["no"],
 			"armor": ["leather", "studdedLeather", "studdedLeather", "chainShirt"],
-			"givenSkills": ["athletics", "deception"],
+			"givenSkills": ["athletics"],
 			"randoSkils": [1, 2, 3],
 			"specialActions": [{
 				"header": "Multiattack",
@@ -271,12 +275,188 @@ var monsterBlockJSON = {
 			]
 		},
 
+		"cult fanatic": {
+			"hitDice": [8, 9, 10, 11],
+			"abilityBonus": {
+				"str": 3,
+				"dex": 2,
+				"con": 7,
+				"int": -1,
+				"wis": 1,
+				"cha": -1
+			},
+			"languages": ["Common"],
+			"additionalLanguages": ["Sylvan", "Abyssal", "Infernal", "Auran", "Terran", "Cant", "Elven", "Gnomen", "Neghezkira", "Hin", "Aqua-common"],
+			"bonusLanguages": [2, 3, 3, 4],
+			"challenge": 2,
+			"primaryWeapon": ["baton", "dagger", "dagger", "dagger", "throwingKnife", "quarterstaff", "sickle", "sickle"],
+			"shield": ["no", "no", "no", "yes"],
+			"armor": ["padded", "leather", "leather", "studdedLeather"],
+			"givenSkills": ["persuasion", "religion"],
+			"randoSkils": [1, 2, 3, 4],
+			"specialTraits": [
+				{
+					"header": "dark devotion",
+					"text": "NAME has advantage on saving throws against being charmed or frightened."
+				},
+				{
+					"header": "spellcasting",
+					"text": "See Cult Fanatic Spellcasting"
+				},
+			],
+			"specialActions": [{
+				"header": "Multiattack",
+				"text": "NAME makes two melee attacks."
+			}],
+			"notes": [
+				"normal note about cult fanatic and spellcasting."
+			]
+		},
 
-		"cult fanatic": {},
-		"cultist": {},
-		"druid": {},
-		"gladiator": {},
-		"knight": {},
+		"cultist": {
+				"hitDice": [1, 2, 3, 4],
+				"abilityBonus": {
+					"str": 1,
+					"dex": 2,
+					"wis": 1,
+				},
+				"languages": ["Common"],
+				"additionalLanguages": ["Sylvan", "Abyssal", "Infernal", "Auran", "Terran", "Cant", "Elven", "Gnomen", "Neghezkira", "Hin", "Aqua-common"],
+				"bonusLanguages": [1, 2, 2, 3],
+				"challenge": 0.125,
+				"primaryWeapon": ["baton", "dagger", "shortSword", "scimitar", "scimitar", "shortStaff", "spikedChain", "whip"],
+				"shield": ["no"],
+				"armor": ["padded", "leather", "leather", "studdedLeather"],
+				"givenSkills": ["religion"],
+				"randoSkils": [1, 1, 2, 3],
+				"specialTraits": [{
+					"header": "dark devotion",
+					"text": "NAME has advantage on saving throws against being charmed or frightened."
+				}],
+				"notes": []
+			},
+
+
+		"druid":  {
+			"hitDice": [3, 4, 5, 6],
+			"abilityBonus": {
+				"dex": 1,
+				"con": 3,
+				"int": 2,
+				"wis": 5,
+				"cha": 1
+			},
+			"languages": ["Druidic", "Common"],
+			"additionalLanguages": ["ALL"],
+			"bonusLanguages": [2, 3, 3, 4],
+			"challenge": 2,
+			"primaryWeapon": ["shillelagh"],
+			"shield": ["no", "no", "no", "yes"],
+			"armor": ["barkskin"],
+			"givenSkills": ["nature", "herbalismTools"],
+			"randoSkils": [1, 2, 3, 4],
+			"specialTraits": [
+			{
+				"header": "spellcasting",
+				"text": "See Druid (NPC) Spellcasting"
+			},
+			{
+				"primaryRider": true,
+				"appendText": ", and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
+			}
+		],
+			"notes": [
+				"Spellcasting issue on Druid.",
+				"barkskin as armor",
+				"shillelagh as weapon"
+			]
+		},
+
+		"gladiator": {
+				"hitDice": [14, 15, 16, 17],
+				"abilityBonus": {
+					"str": 8,
+					"dex": 5,
+					"con": 6,
+					"wis": 2,
+					"cha": 5
+				},
+				"languages": ["Common"],
+				"additionalLanguages": ["Aqua-common" , "Dwarven", "Dwarven Gem-code", "Elven", "Elven Astrological Runes", "Giant", "Neghezkira", "Undercommon", "Bahbel", "Drow", "Drow Sign", "Gerudo", "Gith", "Gnomen", "Gnomen Flower Code", "Hin", "Hobgoblin Sign", "Jäger", "Kotigi", "Kuo-toa", "Mantid Flag", "Menta", "Pantomime", "Sahuagin", "Skip", "Cant", "Taalese (Partial)"],
+				"bonusLanguages": [1, 2, 2, 3],
+				"challenge": 5,
+				"primaryWeapon": ["spear", "battleAxe", "flail", "scimitar", "longSword" , "spikedChain", "warPick", "warHammer", "whip" ],
+				"secondaryWeapon": ["net", "spikdedShield"],
+				"shield": ["yes"],
+				"armor": ["leather", "studdedLeather", "chainShirt", "breastPlate"],
+				"givenSkills": ["athletics"],
+				"randoSkils": [1, 2, 3],
+				"specialTraits": [
+					{
+						"header": "Brave",
+						"text": "NAME has advantage on saving throws against being frightened"
+					},
+					{
+						"header": "Brute",
+						"text": "When NAME makes a weapon attack add 1d8 damage.",
+						"primaryRider": true,
+						"secondaryRider": true,
+						"appendText": ", +1d8 weapon damage."
+					},
+					{
+						"primaryRider": false,
+						"secondaryRider": true,
+						"appendText": ", if the target is a medium or smaller creature, they must succeed on a DC 15 Strength saving throw or be knocked prone."
+
+					}
+				],
+				"specialActions": [{
+					"header": "Multiattack",
+					"text": "NAME makes three melee attacks or two ranged attacks."
+				}],
+				"reactions": [{
+					"header": "Parry",
+					"text": "NAME adds 3 to THEIR AC against one melee attack that would hit THEM. To do so NAME must see the attacker and be wielding a melee weapon."
+				}],
+				"notes": [
+					"so, shield Bash == spikedShield",
+					"also I kind of fudged brute into a more stable and eaiser to control idea."
+				]
+			},
+
+		"knight": {
+			"hitDice": [8, 9, 10, 11],
+			"abilityBonus": {
+				"str": 6,
+				"dex": 1,
+				"con": 4,
+				"int": 1,
+				"wis": 1,
+				"cha": 5
+			},
+			"languages": ["Common"],
+			"additionalLanguages": ["Sylvan", "Abyssal", "Infernal", "Auran", "Terran", "Cant", "Elven", "Gnomen", "Neghezkira", "Hin", "Aqua-common"],
+			"bonusLanguages": [2, 3, 3, 4],
+			"challenge": 2,
+			"primaryWeapon": ["shortSword", "scimitar", "scimitar", "longSword"],
+			"secondaryWeapon": ["dagger", "dagger", "sickle", "whip"],
+			"shield": ["no"],
+			"armor": ["leather", "studdedLeather", "studdedLeather", "chainShirt"],
+			"givenSkills": ["athletics"],
+			"randoSkils": [1, 2, 3],
+			"specialActions": [{
+				"header": "Multiattack",
+				"text": "NAME makes two attacks with THEIR PRIMARYWPN and one attack with THEIR SECONDARYWPN."
+			}],
+			"reactions": [{
+				"header": "Parry",
+				"text": "NAME adds 2 to THEIR AC against one melee attack that would hit THEM. To do so NAME must see the attacker and be wielding a melee weapon."
+			}],
+			"notes": [
+				"Interesting string key of PRIMARYWPN and SECONDARYWPN"
+			]
+		},
+
 		"mage": {},
 		"martial arts adept": {},
 		"noble": {},
@@ -311,6 +491,7 @@ var monsterBlockJSON = {
 		"Common",
 		"Draconic",
 		"Dwarven",
+		"Dwarven Gem Code",
 		"Elven",
 		"Ignan",
 		"Giant",
@@ -320,7 +501,6 @@ var monsterBlockJSON = {
 		"Terran",
 		"Undercommon",
 		"Bahbel",
-		"Dwarven Gem Code",
 		"Drow",
 		"Drow Sign",
 		"Elven Astrological Runes",
