@@ -50,6 +50,10 @@ var monsterBlockJSON = {
 				"wis": 4,
 				"cha": 1
 			},
+			"saves": [
+				"dex",
+				"int"
+			],
 			"languages": ["Common"],
 			"bonusLanguages": [1, 2, 2, 3],
 			"additionalLanguages": ["Celestial", "Infernal", "Abyssal", "Primodial", "Ignan", "Terran", "Auran", "Aquan", "Draconic", "Jotun", "Gith", "Pentacalian", "Xythian (Partial)", "Taalese (Partial)"],
@@ -196,6 +200,11 @@ var monsterBlockJSON = {
 				"wis": 1,
 				"cha": 4
 			},
+			"saves": [
+				"str",
+				"dex",
+				"wis"
+			],
 			"languages": ["Common"],
 			"additionalLanguages": ["Sylvan", "Abyssal", "Infernal", "Auran", "Terran", "Cant", "Elven", "Gnomen", "Neghezkira", "Hin", "Aqua-common"],
 			"bonusLanguages": [2, 3, 3, 4],
@@ -381,6 +390,12 @@ var monsterBlockJSON = {
 					"wis": 2,
 					"cha": 5
 				},
+				"saves": [
+					"str",
+					"dex",
+					"con"
+				],
+
 				"languages": ["Common"],
 				"additionalLanguages": ["Aqua-common" , "Dwarven", "Dwarven Gem-code", "Elven", "Elven Astrological Runes", "Giant", "Neghezkira", "Undercommon", "Bahbel", "Drow", "Drow Sign", "Gerudo", "Gith", "Gnomen", "Gnomen Flower Code", "Hin", "Hobgoblin Sign", "Jäger", "Kotigi", "Kuo-toa", "Mantid Flag", "Menta", "Pantomime", "Sahuagin", "Skip", "Cant", "Taalese (Partial)"],
 				"bonusLanguages": [1, 2, 2, 3],
@@ -423,6 +438,7 @@ var monsterBlockJSON = {
 					"also I kind of fudged brute into a more stable and eaiser to control idea."
 				]
 			},
+
 
 		"knight": {
 			"hitDice": [8, 9, 10, 11],
