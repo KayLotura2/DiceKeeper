@@ -13,6 +13,7 @@ var genderJSON = {
 		"non-conforming",
 		"masculine",
 		"sparkle",
+		"soft",
 		"trans"
 	],
 	"genderRoots": [{
