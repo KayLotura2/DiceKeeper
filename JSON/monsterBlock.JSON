@@ -1,4 +1,4 @@
-var monsterBlockJSON = {
+{
 	"monsters": {
 		"commoner": {
 			"hitDice": [1, 1, 2, 3],

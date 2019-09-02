@@ -1,4 +1,4 @@
-var weaponsJSON = {
+{
   "simpleMeleeWeapons": [
     "Baton",
     "Knife",

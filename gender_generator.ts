@@ -9,8 +9,9 @@
 * and above all respect would be nescisary, as such I don"t think it"s
 * appropriate to include in a random generator.
 */
-// TODO: Add switch to include genders from other cultures, to avoid exclusion,
+// TODO: Add switch to include genders from other cultures, to avoid exclusion.
 // such as hijra, two-spirit, and other third genders.
+// Be sure to have a sensitivity reader check it over, and pay them for their work.
 // Note: gein is a gender nuetral pronoun in my storytelling used by dragons
 // TODO: gein switch.
 // TODO: Increase likelyhood of gein as pronoun if draconic
