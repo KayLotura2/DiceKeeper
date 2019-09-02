@@ -1,4 +1,5 @@
 "use strict";
+/*eslint-env es6*/
 // The goal of this module is to create an achetype for a character to fall
 // into, based on existing npc blocks.
 

@@ -1,4 +1,5 @@
 "use strict";
+/*eslint-env es6*/
 //The goal of this module is to create vibrant ancestry profiles for nonplayer characters.
 
 

@@ -1,4 +1,6 @@
 "use strict";
+/*eslint-env es6*/
+
 //The goal of this module is to create vibrant multifacited gender profiles.
 
 /* I have left out cultural genders that are not a part of my culture, as that
@@ -44,7 +46,8 @@ function generate_attraction() {
       var tempDescription = randomizer(genderJSON.attractionDescriptors);
     }
     var tempBothProfile = tempDescription + tempRoot;
-    return `${tempBothProfile}romantic / ${tempBothProfile}sexual`;
+    var result = `${tempBothProfile}romantic / ${tempBothProfile}sexual`
+    return result;
   } else if (variablePercent == 7) {
   // Same Sexuality/Romantic, Shuffled Descriptor
   var tempRoot = randomizer(genderJSON.attractionRoots);
