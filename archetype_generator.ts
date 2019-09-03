@@ -2,9 +2,9 @@
 // The goal of this module is to create an achetype for a character to fall
 // into, based on existing npc blocks.
 
-import * as archetypeJSON from "./JSON/archetype.JSON"
-import * as npcBlockJSON from "./JSON/npcBlock.JSON"
-import * as namesJSON from "./JSON/names.JSON"
+import * as archetypeJSON from "./JSON/archetype.json"
+import * as npcBlockJSON from "./JSON/npcBlock.json"
+import * as namesJSON from "./JSON/names.json"
 import { randomizer, dieRoll } from "./randomizers";
 
 
@@ -14,8 +14,7 @@ export type ArchetypeBlock = {
   ideal: string,
   trait: string,
   flaw: string,
-  stats: 
-
+  stats: string[]
 }
 
 
@@ -68,7 +67,7 @@ function generateBaseArchetype(): string {
  * Currently only returns a commoner's stat block
  * TODO: Flesh Out 
  */
-function generateArchetypeBlock() {
+export function generateArchetypeBlock() {
   const block: ArchetypeBlock = {
     name: `${randomizer(names)}  ${randomizer(names)}`,
     baseArchetype: generateBaseArchetype(),

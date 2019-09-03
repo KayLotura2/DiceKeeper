@@ -15,7 +15,7 @@
 // TODO: gein switch.
 // TODO: Increase likelyhood of gein as pronoun if draconic
 
-import * as genderJSON from "./JSON/gender.JSON"
+import * as genderJSON from "./JSON/gender.json"
 import { dieRoll, randomizerCount, randomizer, flipCoin } from "./randomizers"
 
 
@@ -32,7 +32,7 @@ type GenderRoot = {
 }
 
 type GenderObject = {
-  rt: GenderRoot
+  rts: GenderRoot[]
   desc: string
 }
 
@@ -56,7 +56,7 @@ function generate_gender(): GenderObject {
     genRoots = [randomizer(genderRoots)]
   }
   const gender: GenderObject = {
-    rt: genRoots,
+    rts: genRoots,
     desc: descriptor
   }
   return gender
@@ -126,10 +126,11 @@ export function generatePersonality(): string {
   const gender: GenderObject = generate_gender()
   let pronoun = ''
   if (flipCoin()) {
-    pronoun = gender.rt.pronoun
+    pronoun = gender.rts[0].pronoun
   } else {
     pronoun = generate_pronoun()
   }
-  const personality: string = `${gender.desc} ${gender.rt.gen} with ${pronoun} pronouns, who is ${attraction}`
+  const genders: string[] = gender.rts.map(g => g.gen)
+  const personality: string = `${gender.desc} ${genders.join(' ')} with ${pronoun} pronouns, who is ${attraction}`
   return personality
 }

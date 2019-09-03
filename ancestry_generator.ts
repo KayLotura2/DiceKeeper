@@ -2,7 +2,7 @@
 //The goal of this module is to create vibrant ancestry profiles for nonplayer characters.
 
 
-import * as ancestryJSON from "./JSON/ancestry.JSON"
+import * as ancestryJSON from "./JSON/ancestry.json"
 import { randomizer, dieRoll, randomizerCount } from "./randomizers"
 
 
@@ -43,7 +43,7 @@ const templates: Template[] = (<any>ancestryJSON).templates
  * and a random subrace from the ancestryObject, with a 10% chance
  * of returning a templated ancestry.
  */
-function generateAncestry(): FullAncestry {
+export function generateAncestry(): FullAncestry {
   let newsubTypes: string = ""
   const currentAncestry: AncestryObj = randomizer(ancestries)
   const currentSubObj: SubType = randomizer(currentAncestry.subs)

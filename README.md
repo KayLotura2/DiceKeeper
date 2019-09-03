@@ -5,6 +5,8 @@ An advanced NPC generator for D&D 5e and similar games that randomizes an NPC's 
 
 * Currently this project is a work in progress.
 * To use, clone or download the repository.
+* Open command line and run:
+    * `tsc ancestry_generator.ts archetype_generator.ts gender_generator.ts randomizers.ts --resolveJsonModule`
 * Drag the index.html to your browser
   * Chrome is supported, it hasn't been tested on other browsers yet
 * Reload page to generate a new NPC

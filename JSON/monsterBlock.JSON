@@ -1,48 +1,150 @@
 {
 	"monsters": {
 		"commoner": {
-			"hitDice": [1, 1, 2, 3],
+			"hitDice": [
+				1,
+				1,
+				2,
+				3
+			],
 			"abilityBonus": {},
-			"languages": ["Common"],
-			"additionalLanguages": ["Aqua-Common", "Cant", "Dwarven", "Elven", "Gerudo", "Gnomen", "Hin", "Jäger", "Jotun", "Kotigi", "Menta", "Neghezkira", "Skip", "Tuilvalanuue","Undercommon", "Zilarith"],
-			"bonusLanguages": [0, 0, 1, 2],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Aqua-Common",
+				"Cant",
+				"Dwarven",
+				"Elven",
+				"Gerudo",
+				"Gnomen",
+				"Hin",
+				"Jäger",
+				"Jotun",
+				"Kotigi",
+				"Menta",
+				"Neghezkira",
+				"Skip",
+				"Tuilvalanuue",
+				"Undercommon",
+				"Zilarith"
+			],
+			"bonusLanguages": [
+				0,
+				0,
+				1,
+				2
+			],
 			"challenge": 0,
-			"primaryWeapon": ["baton", "baton", "dagger", "mace", "quarterstaff", "spear"],
-			"shield": ["no"],
-			"armor": ["none", "none", "padded"],
+			"primaryWeapon": [
+				"baton",
+				"baton",
+				"dagger",
+				"mace",
+				"quarterstaff",
+				"spear"
+			],
+			"shield": [
+				"no"
+			],
+			"armor": [
+				"none",
+				"none",
+				"padded"
+			],
 			"givenSkills": [],
-			"randoSkils": [1, 1, 2, 3],
+			"randoSkils": [
+				1,
+				1,
+				2,
+				3
+			],
 			"notes": [
 				"Skills should be generated based on profession",
 				"I'd love for these to be proceedurally generated and then have their CR calculated!"
 			]
 		},
-
 		"guard": {
-			"hitDice": [2, 3, 4, 5],
+			"hitDice": [
+				2,
+				3,
+				4,
+				5
+			],
 			"abilityBonus": {
 				"str": 3,
 				"dex": 2,
 				"con": 1,
 				"wis": 1
 			},
-			"languages": ["Common"],
-			"additionalLanguages": ["Aqua-Common", "Cant", "Dwarven", "Elven", "Gerudo", "Gnomen", "Hin", "Jäger", "Jotun", "Kotigi", "Menta", "Neghezkira", "Skip", "Tuilvalanuue","Undercommon", "Zilarith"],
-			"bonusLanguages": [0, 0, 1, 2],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Aqua-Common",
+				"Cant",
+				"Dwarven",
+				"Elven",
+				"Gerudo",
+				"Gnomen",
+				"Hin",
+				"Jäger",
+				"Jotun",
+				"Kotigi",
+				"Menta",
+				"Neghezkira",
+				"Skip",
+				"Tuilvalanuue",
+				"Undercommon",
+				"Zilarith"
+			],
+			"bonusLanguages": [
+				0,
+				0,
+				1,
+				2
+			],
 			"challenge": 0.125,
-			"primaryWeapon": ["baton", "mace", "quarterStaff", "spear", "glaive", "heavyCrossbow"],
-			"shield": ["no", "yes", "yes", "yes"],
-			"armor": ["studdedLeather", "hide", "chainShirt", "scale"],
-			"givenSkills": ["perception"],
-			"randoSkils": [1, 1, 2, 3],
+			"primaryWeapon": [
+				"baton",
+				"mace",
+				"quarterStaff",
+				"spear",
+				"glaive",
+				"heavyCrossbow"
+			],
+			"shield": [
+				"no",
+				"yes",
+				"yes",
+				"yes"
+			],
+			"armor": [
+				"studdedLeather",
+				"hide",
+				"chainShirt",
+				"scale"
+			],
+			"givenSkills": [
+				"perception"
+			],
+			"randoSkils": [
+				1,
+				1,
+				2,
+				3
+			],
 			"notes": [
 				"Shield & Two Handed Weapons should be exclusive"
 			]
 		},
-
-
 		"acolyte": {
-			"hitDice": [2, 2, 3, 4],
+			"hitDice": [
+				2,
+				2,
+				3,
+				4
+			],
 			"abilityBonus": {
 				"wis": 4,
 				"cha": 1
@@ -51,55 +153,155 @@
 				"dex",
 				"int"
 			],
-			"languages": ["Common"],
-			"bonusLanguages": [1, 2, 2, 3],
-			"additionalLanguages": ["Abyssal", "Aquan", "Auran", "Celestial", "Draconic", "Drow", "Dwarven", "Elven", "Gith", "Gnomen", "Hin", "Ignan", "Infernal", "Jotun", "Kuo-toa", "Neghezkira", "Pentacalian", "Primordial", "Sahuagin", "Slaad", "Sylvan", "Terran", "Taalese (Partial)", "Xythian (Partial)"],
+			"languages": [
+				"Common"
+			],
+			"bonusLanguages": [
+				1,
+				2,
+				2,
+				3
+			],
+			"additionalLanguages": [
+				"Abyssal",
+				"Aquan",
+				"Auran",
+				"Celestial",
+				"Draconic",
+				"Drow",
+				"Dwarven",
+				"Elven",
+				"Gith",
+				"Gnomen",
+				"Hin",
+				"Ignan",
+				"Infernal",
+				"Jotun",
+				"Kuo-toa",
+				"Neghezkira",
+				"Pentacalian",
+				"Primordial",
+				"Sahuagin",
+				"Slaad",
+				"Sylvan",
+				"Terran",
+				"Taalese (Partial)",
+				"Xythian (Partial)"
+			],
 			"challenge": 0.125,
-			"primaryWeapon": ["baton", "mace", "quarterstaff", "quarterstaff"],
-			"secondaryWeapon": ["sling", "sling", "throwingHammer"],
-			"shield": ["no", "no", "no", "yes"],
-			"armor": ["none", "none", "padded", "chainShirt"],
-			"givenSkills": ["Religion", "herbalismTools"],
-			"randoSkils": [1, 2, 3],
-			"specialTraits": [{
-				"header": "spellcasting",
-				"text": "See Acolyte Spellcasting"
-			}],
+			"primaryWeapon": [
+				"baton",
+				"mace",
+				"quarterstaff",
+				"quarterstaff"
+			],
+			"secondaryWeapon": [
+				"sling",
+				"sling",
+				"throwingHammer"
+			],
+			"shield": [
+				"no",
+				"no",
+				"no",
+				"yes"
+			],
+			"armor": [
+				"none",
+				"none",
+				"padded",
+				"chainShirt"
+			],
+			"givenSkills": [
+				"Religion",
+				"herbalismTools"
+			],
+			"randoSkils": [
+				1,
+				2,
+				3
+			],
+			"specialTraits": [
+				{
+					"header": "spellcasting",
+					"text": "See Acolyte Spellcasting"
+				}
+			],
 			"notes": [
 				"Spells aren't even set",
 				"Spells are set for now, but those should be proceedurally generated",
 				"Might also be good to set an Accolyte to a Domain, and then to a God or Cause"
 			]
 		},
-
 		"apprentice wizard": {
-			"hitDice": [2, 2, 3, 4],
+			"hitDice": [
+				2,
+				2,
+				3,
+				4
+			],
 			"abilityBonus": {
 				"int": 4,
 				"cha": 1
 			},
-			"languages": ["Common"],
-			"additionalLanguages": ["ALL"],
-			"bonusLanguages": [2, 3, 4, 5],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"ALL"
+			],
+			"bonusLanguages": [
+				2,
+				3,
+				4,
+				5
+			],
 			"challenge": 0.25,
-			"primaryWeapon": ["baton", "dagger", "quarterStaff", "quarterStaff", "quarterStaff", "sickle"],
-			"shield": ["no"],
-			"armor": ["none", "none", "padded"],
-			"givenSkills": ["arcana", "history"],
-			"randoSkils": [1, 2, 3],
-			"specialTraits": [{
+			"primaryWeapon": [
+				"baton",
+				"dagger",
+				"quarterStaff",
+				"quarterStaff",
+				"quarterStaff",
+				"sickle"
+			],
+			"shield": [
+				"no"
+			],
+			"armor": [
+				"none",
+				"none",
+				"padded"
+			],
+			"givenSkills": [
+				"arcana",
+				"history"
+			],
+			"randoSkils": [
+				1,
+				2,
+				3
+			],
+			"specialTraits": [
+				{
 					"header": "spellcasting",
 					"text": "See apprentice wizard Spellcasting"
-				}],
+				}
+			],
 			"notes": [
 				"Spells aren't even set",
 				"Spells are set for now, but those should be proceedurally generated"
-
 			]
 		},
-
 		"archer": {
-			"hitDice": [9, 10, 10, 11, 12, 13],
+			"hitDice": [
+				9,
+				10,
+				10,
+				11,
+				12,
+				13
+			],
 			"abilityBonus": {
 				"str": 1,
 				"dex": 8,
@@ -107,30 +309,102 @@
 				"int": 1,
 				"wis": 3
 			},
-			"languages": ["Common"],
-			"additionalLanguages": [ "Aqua-Common", "Aquan", "Auran", "Cant", "Draconic", "Drow Sign", "Drow", "Dwarven", "Elven", "Gerudo", "Gnomen", "Hin", "Hobgoblin Sign", "Ignan", "Infernal", "Jäger", "Jotun", "Kender Knocking", "Kotigi", "Kuo-toa", "Mantid Flag", "Menta", ""Neghezkira", "Odolocation", "Primordial", "Sahuagin", "Skip", "Slaad", "Sylvan", "Terran" "Tuilvalanuue", "Undercommon", "Zilarith"]
-			"bonusLanguages": [1, 2, 2, 3],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Aqua-Common",
+				"Aquan",
+				"Auran",
+				"Cant",
+				"Draconic",
+				"Drow Sign",
+				"Drow",
+				"Dwarven",
+				"Elven",
+				"Gerudo",
+				"Gnomen",
+				"Hin",
+				"Hobgoblin Sign",
+				"Ignan",
+				"Infernal",
+				"Jäger",
+				"Jotun",
+				"Kender Knocking",
+				"Kotigi",
+				"Kuo-toa",
+				"Mantid Flag",
+				"Menta",
+				"Neghezkira",
+				"Odolocation",
+				"Primordial",
+				"Sahuagin",
+				"Skip",
+				"Slaad",
+				"Sylvan",
+				"Terran",
+				"Tuilvalanuue",
+				"Undercommon",
+				"Zilarith"
+			],
+			"bonusLanguages": [
+				1,
+				2,
+				2,
+				3
+			],
 			"challenge": 3,
-			"primaryWeapon": ["dagger", "spear", "shortSword", "longSword"],
-			"secondaryWeapon": ["shortBow", "longBow", "longBow"],
-			"shield": ["no"],
-			"armor": ["leather", "studdedLeather", "studdedLeather"],
-			"givenSkills": ["perception", "nature"],
-			"randoSkils": [2, 2, 3],
-			"specialTraits": [{
-				"header": "Archer's Eye (3/day)",
-				"text": "As a bonus action, NAME can add 1d10 to THEIR next attack or damage roll with a ranged weapon"
-			}],
-			"specialActions": [{
-				"header": "Multiattack",
-				"text": "NAME makes two attacks with THEIR ranged weapons."
-			}],
-			"notes": [
-			]
+			"primaryWeapon": [
+				"dagger",
+				"spear",
+				"shortSword",
+				"longSword"
+			],
+			"secondaryWeapon": [
+				"shortBow",
+				"longBow",
+				"longBow"
+			],
+			"shield": [
+				"no"
+			],
+			"armor": [
+				"leather",
+				"studdedLeather",
+				"studdedLeather"
+			],
+			"givenSkills": [
+				"perception",
+				"nature"
+			],
+			"randoSkils": [
+				2,
+				2,
+				3
+			],
+			"specialTraits": [
+				{
+					"header": "Archer's Eye (3/day)",
+					"text": "As a bonus action, NAME can add 1d10 to THEIR next attack or damage roll with a ranged weapon"
+				}
+			],
+			"specialActions": [
+				{
+					"header": "Multiattack",
+					"text": "NAME makes two attacks with THEIR ranged weapons."
+				}
+			],
+			"notes": []
 		},
-
 		"assassin": {
-			"hitDice": [11, 12, 12, 13, 13, 14],
+			"hitDice": [
+				11,
+				12,
+				12,
+				13,
+				13,
+				14
+			],
 			"abilityBonus": {
 				"str": 1,
 				"dex": 6,
@@ -142,18 +416,57 @@
 				"dex",
 				"int"
 			],
-			"languages": ["Common", "Thieves Cant"],
-			"bonusLanguages": [2, 3, 4, 5],
-			"additionalLanguages": ["ALL"],
+			"languages": [
+				"Common",
+				"Thieves Cant"
+			],
+			"bonusLanguages": [
+				2,
+				3,
+				4,
+				5
+			],
+			"additionalLanguages": [
+				"ALL"
+			],
 			"challenge": 8,
-			"primaryWeapon": ["dagger", "shortSword", "scimitar", "rapier"],
-			"secondaryWeapon": ["dart", "lightCrossbow", "lightCrossbow", "pistol"],
-			"shield": ["no"],
-			"armor": ["leather", "studdedLeather", "studdedLeather", "chainshirt"],
-			"givenSkills": ["perception", "deception", "stealth"],
-			"randoSkils": [2, 3, 4, 5],
-			"damageResistances": ["poison"],
-			"specialTraits": [{
+			"primaryWeapon": [
+				"dagger",
+				"shortSword",
+				"scimitar",
+				"rapier"
+			],
+			"secondaryWeapon": [
+				"dart",
+				"lightCrossbow",
+				"lightCrossbow",
+				"pistol"
+			],
+			"shield": [
+				"no"
+			],
+			"armor": [
+				"leather",
+				"studdedLeather",
+				"studdedLeather",
+				"chainshirt"
+			],
+			"givenSkills": [
+				"perception",
+				"deception",
+				"stealth"
+			],
+			"randoSkils": [
+				2,
+				3,
+				4,
+				5
+			],
+			"damageResistances": [
+				"poison"
+			],
+			"specialTraits": [
+				{
 					"header": "Assassinate",
 					"text": "During NAME's first turn, THEY HAVE advantage on attack rolls against any creature that hasn't taken a turn. Any hit that NAME scores against a surprised creature is a critical hit."
 				},
@@ -175,17 +488,23 @@
 					"appendText": ", and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
 				}
 			],
-			"specialActions": [{
-				"header": "Multiattack",
-				"text": "NAME makes two attacks with THEIR melee weapons."
-			}],
+			"specialActions": [
+				{
+					"header": "Multiattack",
+					"text": "NAME makes two attacks with THEIR melee weapons."
+				}
+			],
 			"notes": [
 				"key of /ALL/ for langauges"
 			]
 		},
-
 		"bandit captain": {
-			"hitDice": [10, 10, 11, 12],
+			"hitDice": [
+				10,
+				10,
+				11,
+				12
+			],
 			"abilityBonus": {
 				"str": 5,
 				"dex": 6,
@@ -199,54 +518,161 @@
 				"dex",
 				"wis"
 			],
-			"languages": ["Common"],
-			"additionalLanguages": ["Aqua-Common", "Cant", "Dwarven", "Elven", "Gerudo", "Gnomen", "Hin", "Jäger", "Jotun", "Kotigi", "Menta", "Neghezkira", "Skip", "Tuilvalanuue","Undercommon", "Zilarith"],
-			"bonusLanguages": [1, 2, 2, 3],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Aqua-Common",
+				"Cant",
+				"Dwarven",
+				"Elven",
+				"Gerudo",
+				"Gnomen",
+				"Hin",
+				"Jäger",
+				"Jotun",
+				"Kotigi",
+				"Menta",
+				"Neghezkira",
+				"Skip",
+				"Tuilvalanuue",
+				"Undercommon",
+				"Zilarith"
+			],
+			"bonusLanguages": [
+				1,
+				2,
+				2,
+				3
+			],
 			"challenge": 2,
-			"primaryWeapon": ["shortSword", "scimitar", "scimitar", "longSword"],
-			"secondaryWeapon": ["dagger", "dagger", "sickle", "whip"],
-			"shield": ["no"],
-			"armor": ["leather", "studdedLeather", "studdedLeather", "chainShirt"],
-			"givenSkills": ["athletics", "deception"],
-			"randoSkils": [1, 2, 3],
-			"specialActions": [{
-				"header": "Multiattack",
-				"text": "NAME makes two attacks with THEIR PRIMARYWPN and one attack with THEIR SECONDARYWPN."
-			}],
-			"reactions": [{
-				"header": "Parry",
-				"text": "NAME adds 2 to THEIR AC against one melee attack that would hit THEM. To do so NAME must see the attacker and be wielding a melee weapon."
-			}],
+			"primaryWeapon": [
+				"shortSword",
+				"scimitar",
+				"scimitar",
+				"longSword"
+			],
+			"secondaryWeapon": [
+				"dagger",
+				"dagger",
+				"sickle",
+				"whip"
+			],
+			"shield": [
+				"no"
+			],
+			"armor": [
+				"leather",
+				"studdedLeather",
+				"studdedLeather",
+				"chainShirt"
+			],
+			"givenSkills": [
+				"athletics",
+				"deception"
+			],
+			"randoSkils": [
+				1,
+				2,
+				3
+			],
+			"specialActions": [
+				{
+					"header": "Multiattack",
+					"text": "NAME makes two attacks with THEIR PRIMARYWPN and one attack with THEIR SECONDARYWPN."
+				}
+			],
+			"reactions": [
+				{
+					"header": "Parry",
+					"text": "NAME adds 2 to THEIR AC against one melee attack that would hit THEM. To do so NAME must see the attacker and be wielding a melee weapon."
+				}
+			],
 			"notes": [
 				"Interesting string key of PRIMARYWPN and SECONDARYWPN"
 			]
 		},
-
-
 		"bandit": {
-			"hitDice": [1, 2, 3, 4],
+			"hitDice": [
+				1,
+				2,
+				3,
+				4
+			],
 			"abilityBonus": {
 				"str": 1,
 				"dex": 2,
 				"con": 1
 			},
-			"languages": ["Common"],
-			"additionalLanguages": ["Aqua-Common", "Cant", "Dwarven", "Elven", "Gerudo", "Gnomen", "Hin", "Jäger", "Jotun", "Kotigi", "Menta", "Neghezkira", "Skip", "Tuilvalanuue","Undercommon", "Zilarith"],
-			"bonusLanguages": [0, 0, 1, 2],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Aqua-Common",
+				"Cant",
+				"Dwarven",
+				"Elven",
+				"Gerudo",
+				"Gnomen",
+				"Hin",
+				"Jäger",
+				"Jotun",
+				"Kotigi",
+				"Menta",
+				"Neghezkira",
+				"Skip",
+				"Tuilvalanuue",
+				"Undercommon",
+				"Zilarith"
+			],
+			"bonusLanguages": [
+				0,
+				0,
+				1,
+				2
+			],
 			"challenge": 0.125,
-			"primaryWeapon": ["dagger", "shortSword", "scimitar", "scimitar"],
-			"secondaryWeapon": ["dagger", "shortSword", "scimitar", "scimitar"],
-			"shield": ["no", "no", "yes", "yes"],
-			"armor": ["padded", "leather", "leather", "studded leather"],
-			"randoSkils": [1, 1, 2, 3],
+			"primaryWeapon": [
+				"dagger",
+				"shortSword",
+				"scimitar",
+				"scimitar"
+			],
+			"secondaryWeapon": [
+				"dagger",
+				"shortSword",
+				"scimitar",
+				"scimitar"
+			],
+			"shield": [
+				"no",
+				"no",
+				"yes",
+				"yes"
+			],
+			"armor": [
+				"padded",
+				"leather",
+				"leather",
+				"studded leather"
+			],
+			"randoSkils": [
+				1,
+				1,
+				2,
+				3
+			],
 			"notes": [
 				"Shield & Two weapon fighting should be exclusive"
 			]
 		},
-
-
 		"berserker": {
-			"hitDice": [8, 9, 10, 11],
+			"hitDice": [
+				8,
+				9,
+				10,
+				11
+			],
 			"abilityBonus": {
 				"str": 3,
 				"dex": 2,
@@ -255,31 +681,103 @@
 				"wis": 1,
 				"cha": -1
 			},
-			"languages": ["Common"],
-			"additionalLanguages": [ "Aqua-Common", "Aquan", "Auran", "Cant", "Draconic", "Drow Sign", "Drow", "Dwarven", "Elven", "Gerudo", "Gnomen", "Hin", "Hobgoblin Sign", "Ignan", "Infernal", "Jäger", "Jotun", "Kender Knocking", "Kotigi", "Kuo-toa", "Mantid Flag", "Menta", ""Neghezkira", "Odolocation", "Primordial", "Sahuagin", "Skip", "Slaad", "Sylvan", "Terran" "Tuilvalanuue", "Undercommon", "Zilarith"],
-			"bonusLanguages": [2, 3, 3, 4],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Aqua-Common",
+				"Aquan",
+				"Auran",
+				"Cant",
+				"Draconic",
+				"Drow Sign",
+				"Drow",
+				"Dwarven",
+				"Elven",
+				"Gerudo",
+				"Gnomen",
+				"Hin",
+				"Hobgoblin Sign",
+				"Ignan",
+				"Infernal",
+				"Jäger",
+				"Jotun",
+				"Kender Knocking",
+				"Kotigi",
+				"Kuo-toa",
+				"Mantid Flag",
+				"Menta",
+				"Neghezkira",
+				"Odolocation",
+				"Primordial",
+				"Sahuagin",
+				"Skip",
+				"Slaad",
+				"Sylvan",
+				"Terran",
+				"Tuilvalanuue",
+				"Undercommon",
+				"Zilarith"
+			],
+			"bonusLanguages": [
+				2,
+				3,
+				3,
+				4
+			],
 			"challenge": 2,
-			"primaryWeapon": ["shortSword", "scimitar", "scimitar", "longSword"],
-			"secondaryWeapon": ["dagger", "dagger", "sickle", "whip"],
-			"shield": ["no"],
-			"armor": ["leather", "studdedLeather", "studdedLeather", "chainShirt"],
-			"givenSkills": ["athletics"],
-			"randoSkils": [1, 2, 3],
-			"specialActions": [{
-				"header": "Multiattack",
-				"text": "NAME makes two attacks with THEIR PRIMARYWPN and one attack with THEIR SECONDARYWPN."
-			}],
-			"reactions": [{
-				"header": "Parry",
-				"text": "NAME adds 2 to THEIR AC against one melee attack that would hit THEM. To do so NAME must see the attacker and be wielding a melee weapon."
-			}],
+			"primaryWeapon": [
+				"shortSword",
+				"scimitar",
+				"scimitar",
+				"longSword"
+			],
+			"secondaryWeapon": [
+				"dagger",
+				"dagger",
+				"sickle",
+				"whip"
+			],
+			"shield": [
+				"no"
+			],
+			"armor": [
+				"leather",
+				"studdedLeather",
+				"studdedLeather",
+				"chainShirt"
+			],
+			"givenSkills": [
+				"athletics"
+			],
+			"randoSkils": [
+				1,
+				2,
+				3
+			],
+			"specialActions": [
+				{
+					"header": "Multiattack",
+					"text": "NAME makes two attacks with THEIR PRIMARYWPN and one attack with THEIR SECONDARYWPN."
+				}
+			],
+			"reactions": [
+				{
+					"header": "Parry",
+					"text": "NAME adds 2 to THEIR AC against one melee attack that would hit THEM. To do so NAME must see the attacker and be wielding a melee weapon."
+				}
+			],
 			"notes": [
 				"Interesting string key of PRIMARYWPN and SECONDARYWPN"
 			]
 		},
-
 		"cult fanatic": {
-			"hitDice": [8, 9, 10, 11],
+			"hitDice": [
+				8,
+				9,
+				10,
+				11
+			],
 			"abilityBonus": {
 				"str": 3,
 				"dex": 2,
@@ -288,15 +786,61 @@
 				"wis": 1,
 				"cha": -1
 			},
-			"languages": ["Common"],
-			"additionalLanguages": ["Sylvan", "Abyssal", "Infernal", "Auran", "Terran", "Cant", "Elven", "Gnomen", "Neghezkira", "Hin", "Aqua-common"],
-			"bonusLanguages": [2, 3, 3, 4],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Sylvan",
+				"Abyssal",
+				"Infernal",
+				"Auran",
+				"Terran",
+				"Cant",
+				"Elven",
+				"Gnomen",
+				"Neghezkira",
+				"Hin",
+				"Aqua-common"
+			],
+			"bonusLanguages": [
+				2,
+				3,
+				3,
+				4
+			],
 			"challenge": 2,
-			"primaryWeapon": ["baton", "dagger", "dagger", "dagger", "throwingKnife", "quarterstaff", "sickle", "sickle"],
-			"shield": ["no", "no", "no", "yes"],
-			"armor": ["padded", "leather", "leather", "studdedLeather"],
-			"givenSkills": ["persuasion", "religion"],
-			"randoSkils": [1, 2, 3, 4],
+			"primaryWeapon": [
+				"baton",
+				"dagger",
+				"dagger",
+				"dagger",
+				"throwingKnife",
+				"quarterstaff",
+				"sickle",
+				"sickle"
+			],
+			"shield": [
+				"no",
+				"no",
+				"no",
+				"yes"
+			],
+			"armor": [
+				"padded",
+				"leather",
+				"leather",
+				"studdedLeather"
+			],
+			"givenSkills": [
+				"persuasion",
+				"religion"
+			],
+			"randoSkils": [
+				1,
+				2,
+				3,
+				4
+			],
 			"specialTraits": [
 				{
 					"header": "dark devotion",
@@ -305,43 +849,96 @@
 				{
 					"header": "spellcasting",
 					"text": "See Cult Fanatic Spellcasting"
-				},
+				}
 			],
-			"specialActions": [{
-				"header": "Multiattack",
-				"text": "NAME makes two melee attacks."
-			}],
+			"specialActions": [
+				{
+					"header": "Multiattack",
+					"text": "NAME makes two melee attacks."
+				}
+			],
 			"notes": [
 				"normal note about cult fanatic and spellcasting."
 			]
 		},
-
 		"cultist": {
-				"hitDice": [1, 2, 3, 4],
-				"abilityBonus": {
-					"str": 1,
-					"dex": 2,
-					"wis": 1,
-				},
-				"languages": ["Common"],
-				"additionalLanguages": ["Sylvan", "Abyssal", "Infernal", "Auran", "Terran", "Cant", "Elven", "Gnomen", "Neghezkira", "Hin", "Aqua-common"],
-				"bonusLanguages": [1, 2, 2, 3],
-				"challenge": 0.125,
-				"primaryWeapon": ["baton", "dagger", "shortSword", "scimitar", "scimitar", "shortStaff", "spikedChain", "whip"],
-				"shield": ["no"],
-				"armor": ["padded", "leather", "leather", "studdedLeather"],
-				"givenSkills": ["religion"],
-				"randoSkils": [1, 1, 2, 3],
-				"specialTraits": [{
+			"hitDice": [
+				1,
+				2,
+				3,
+				4
+			],
+			"abilityBonus": {
+				"str": 1,
+				"dex": 2,
+				"wis": 1
+			},
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Sylvan",
+				"Abyssal",
+				"Infernal",
+				"Auran",
+				"Terran",
+				"Cant",
+				"Elven",
+				"Gnomen",
+				"Neghezkira",
+				"Hin",
+				"Aqua-common"
+			],
+			"bonusLanguages": [
+				1,
+				2,
+				2,
+				3
+			],
+			"challenge": 0.125,
+			"primaryWeapon": [
+				"baton",
+				"dagger",
+				"shortSword",
+				"scimitar",
+				"scimitar",
+				"shortStaff",
+				"spikedChain",
+				"whip"
+			],
+			"shield": [
+				"no"
+			],
+			"armor": [
+				"padded",
+				"leather",
+				"leather",
+				"studdedLeather"
+			],
+			"givenSkills": [
+				"religion"
+			],
+			"randoSkils": [
+				1,
+				1,
+				2,
+				3
+			],
+			"specialTraits": [
+				{
 					"header": "dark devotion",
 					"text": "NAME has advantage on saving throws against being charmed or frightened."
-				}],
-				"notes": []
-			},
-
-
-		"druid":  {
-			"hitDice": [3, 4, 5, 6],
+				}
+			],
+			"notes": []
+		},
+		"druid": {
+			"hitDice": [
+				3,
+				4,
+				5,
+				6
+			],
 			"abilityBonus": {
 				"dex": 1,
 				"con": 3,
@@ -349,93 +946,190 @@
 				"wis": 5,
 				"cha": 1
 			},
-			"languages": ["Druidic", "Common"],
-			"additionalLanguages": ["ALL"],
-			"bonusLanguages": [2, 3, 3, 4],
+			"languages": [
+				"Druidic",
+				"Common"
+			],
+			"additionalLanguages": [
+				"ALL"
+			],
+			"bonusLanguages": [
+				2,
+				3,
+				3,
+				4
+			],
 			"challenge": 2,
-			"primaryWeapon": ["shillelagh"],
-			"shield": ["no", "no", "no", "yes"],
-			"armor": ["barkskin"],
-			"givenSkills": ["nature", "herbalismTools"],
-			"randoSkils": [1, 2, 3, 4],
+			"primaryWeapon": [
+				"shillelagh"
+			],
+			"shield": [
+				"no",
+				"no",
+				"no",
+				"yes"
+			],
+			"armor": [
+				"barkskin"
+			],
+			"givenSkills": [
+				"nature",
+				"herbalismTools"
+			],
+			"randoSkils": [
+				1,
+				2,
+				3,
+				4
+			],
 			"specialTraits": [
-			{
-				"header": "spellcasting",
-				"text": "See Druid (NPC) Spellcasting"
-			},
-			{
-				"primaryRider": true,
-				"appendText": ", and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
-			}
-		],
+				{
+					"header": "spellcasting",
+					"text": "See Druid (NPC) Spellcasting"
+				},
+				{
+					"primaryRider": true,
+					"appendText": ", and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
+				}
+			],
 			"notes": [
 				"Spellcasting issue on Druid.",
 				"barkskin as armor",
 				"shillelagh as weapon"
 			]
 		},
-
 		"gladiator": {
-				"hitDice": [14, 15, 16, 17],
-				"abilityBonus": {
-					"str": 8,
-					"dex": 5,
-					"con": 6,
-					"wis": 2,
-					"cha": 5
+			"hitDice": [
+				14,
+				15,
+				16,
+				17
+			],
+			"abilityBonus": {
+				"str": 8,
+				"dex": 5,
+				"con": 6,
+				"wis": 2,
+				"cha": 5
+			},
+			"saves": [
+				"str",
+				"dex",
+				"con"
+			],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Aqua-common",
+				"Dwarven",
+				"Dwarven Gem-code",
+				"Elven",
+				"Elven Astrological Runes",
+				"Giant",
+				"Neghezkira",
+				"Undercommon",
+				"Bahbel",
+				"Drow",
+				"Drow Sign",
+				"Gerudo",
+				"Gith",
+				"Gnomen",
+				"Gnomen Flower Code",
+				"Hin",
+				"Hobgoblin Sign",
+				"Jäger",
+				"Kotigi",
+				"Kuo-toa",
+				"Mantid Flag",
+				"Menta",
+				"Pantomime",
+				"Sahuagin",
+				"Skip",
+				"Cant",
+				"Taalese (Partial)"
+			],
+			"bonusLanguages": [
+				1,
+				2,
+				2,
+				3
+			],
+			"challenge": 5,
+			"primaryWeapon": [
+				"spear",
+				"battleAxe",
+				"flail",
+				"scimitar",
+				"longSword",
+				"spikedChain",
+				"warPick",
+				"warHammer",
+				"whip"
+			],
+			"secondaryWeapon": [
+				"net",
+				"spikdedShield"
+			],
+			"shield": [
+				"yes"
+			],
+			"armor": [
+				"leather",
+				"studdedLeather",
+				"chainShirt",
+				"breastPlate"
+			],
+			"givenSkills": [
+				"athletics"
+			],
+			"randoSkils": [
+				1,
+				2,
+				3
+			],
+			"specialTraits": [
+				{
+					"header": "Brave",
+					"text": "NAME has advantage on saving throws against being frightened"
 				},
-				"saves": [
-					"str",
-					"dex",
-					"con"
-				],
-
-				"languages": ["Common"],
-				"additionalLanguages": ["Aqua-common" , "Dwarven", "Dwarven Gem-code", "Elven", "Elven Astrological Runes", "Giant", "Neghezkira", "Undercommon", "Bahbel", "Drow", "Drow Sign", "Gerudo", "Gith", "Gnomen", "Gnomen Flower Code", "Hin", "Hobgoblin Sign", "Jäger", "Kotigi", "Kuo-toa", "Mantid Flag", "Menta", "Pantomime", "Sahuagin", "Skip", "Cant", "Taalese (Partial)"],
-				"bonusLanguages": [1, 2, 2, 3],
-				"challenge": 5,
-				"primaryWeapon": ["spear", "battleAxe", "flail", "scimitar", "longSword" , "spikedChain", "warPick", "warHammer", "whip" ],
-				"secondaryWeapon": ["net", "spikdedShield"],
-				"shield": ["yes"],
-				"armor": ["leather", "studdedLeather", "chainShirt", "breastPlate"],
-				"givenSkills": ["athletics"],
-				"randoSkils": [1, 2, 3],
-				"specialTraits": [
-					{
-						"header": "Brave",
-						"text": "NAME has advantage on saving throws against being frightened"
-					},
-					{
-						"header": "Brute",
-						"text": "When NAME makes a weapon attack add 1d8 damage.",
-						"primaryRider": true,
-						"secondaryRider": true,
-						"appendText": ", +1d8 weapon damage."
-					},
-					{
-						"primaryRider": false,
-						"secondaryRider": true,
-						"appendText": ", if the target is a medium or smaller creature, they must succeed on a DC 15 Strength saving throw or be knocked prone."
-
-					}
-				],
-				"specialActions": [{
+				{
+					"header": "Brute",
+					"text": "When NAME makes a weapon attack add 1d8 damage.",
+					"primaryRider": true,
+					"secondaryRider": true,
+					"appendText": ", +1d8 weapon damage."
+				},
+				{
+					"primaryRider": false,
+					"secondaryRider": true,
+					"appendText": ", if the target is a medium or smaller creature, they must succeed on a DC 15 Strength saving throw or be knocked prone."
+				}
+			],
+			"specialActions": [
+				{
 					"header": "Multiattack",
 					"text": "NAME makes three melee attacks or two ranged attacks."
-				}],
-				"reactions": [{
+				}
+			],
+			"reactions": [
+				{
 					"header": "Parry",
 					"text": "NAME adds 3 to THEIR AC against one melee attack that would hit THEM. To do so NAME must see the attacker and be wielding a melee weapon."
-				}],
-				"notes": [
-					"so, shield Bash == spikedShield",
-					"also I kind of fudged brute into a more stable and eaiser to control idea."
-				]
-			},
-
-
+				}
+			],
+			"notes": [
+				"so, shield Bash == spikedShield",
+				"also I kind of fudged brute into a more stable and eaiser to control idea."
+			]
+		},
 		"knight": {
-			"hitDice": [8, 9, 10, 11],
+			"hitDice": [
+				8,
+				9,
+				10,
+				11
+			],
 			"abilityBonus": {
 				"str": 6,
 				"dex": 1,
@@ -448,28 +1142,74 @@
 				"con",
 				"wis"
 			],
-			"languages": ["Common"],
-			"additionalLanguages": ["Aqua-Common", "Celestial", "Draconic", "Dwarven", "Elven", "Gerudo","Giant", "Gnomen", "Hin", "Hobgblin Sign", "Kotigi", "Menta", "Neghezkira", "Skip", "Tuilvalanuue", "Undercommon", "Zilarith"],
+			"languages": [
+				"Common"
+			],
+			"additionalLanguages": [
+				"Aqua-Common",
+				"Celestial",
+				"Draconic",
+				"Dwarven",
+				"Elven",
+				"Gerudo",
+				"Giant",
+				"Gnomen",
+				"Hin",
+				"Hobgblin Sign",
+				"Kotigi",
+				"Menta",
+				"Neghezkira",
+				"Skip",
+				"Tuilvalanuue",
+				"Undercommon",
+				"Zilarith"
+			],
 			"challenge": 3,
 			"primaryWeapon": [],
-			"secondaryWeapon": ["heavyCrossbow", "heavyCrossbow", "longBow", "musket"],
-			"shield": ["no", "no", "yes", "yes"],
-			"armor": ["halfPlate", "chainMail", "splint", "plate", "plate", "plate"],
-			"givenSkills": ["athletics"],
-			"randoSkils": [1, 2, 3],
-			"specialActions": [{
-				"header": "Multiattack",
-				"text": "NAME makes two attacks with THEIR PRIMARYWPN and one attack with THEIR SECONDARYWPN."
-			}],
-			"reactions": [{
-				"header": "Parry",
-				"text": "NAME adds 2 to THEIR AC against one melee attack that would hit THEM. To do so NAME must see the attacker and be wielding a melee weapon."
-			}],
+			"secondaryWeapon": [
+				"heavyCrossbow",
+				"heavyCrossbow",
+				"longBow",
+				"musket"
+			],
+			"shield": [
+				"no",
+				"no",
+				"yes",
+				"yes"
+			],
+			"armor": [
+				"halfPlate",
+				"chainMail",
+				"splint",
+				"plate",
+				"plate",
+				"plate"
+			],
+			"givenSkills": [
+				"athletics"
+			],
+			"randoSkils": [
+				1,
+				2,
+				3
+			],
+			"specialActions": [
+				{
+					"header": "Multiattack",
+					"text": "NAME makes two attacks with THEIR PRIMARYWPN and one attack with THEIR SECONDARYWPN."
+				}
+			],
+			"reactions": [
+				{
+					"header": "Parry",
+					"text": "NAME adds 2 to THEIR AC against one melee attack that would hit THEM. To do so NAME must see the attacker and be wielding a melee weapon."
+				}
+			],
 			"notes": [
 				"Interesting string key of PRIMARYWPN and SECONDARYWPN"
 			]
 		},
-
 		"mage": {},
 		"martial arts adept": {},
 		"noble": {},
@@ -543,50 +1283,50 @@
 		"Taalese (Partial)",
 		"Xythian (Partial)"
 	],
-
-"weapons": {
-	"simpleMeleeWeapons": [
-		"baton",
-		"dagger",
-		"dart",
-		"mace",
-		"quarterStaff",
-		"sickle",
-		"spear",
-		"throwingAxe"
-		"unarmedStrike"],
-	"simpleRangedWeapons": [
-		"crowsbow",
-		"grenade",
-		"sling",
-		"throwingHammer" // Mace that is just thrown
-	],
-	"martialMeleeWeapons": [
-		"battleAxe",
-		"flail",
-		"glaive",
-		"greatSword",
-		"longSword",
-		"maul",
-		"naginata",
-		"net",
-		"pike",
-		"rapier",
-		"scimitar",
-		"shortSword",
-		"shortStaff",
-		"spikedChain",
-		"warPick",
-		"warHammer",
-		"whip"
-	],
+	"weapons": {
+		"simpleMeleeWeapons": [
+			"baton",
+			"dagger",
+			"dart",
+			"mace",
+			"quarterStaff",
+			"sickle",
+			"spear",
+			"throwingAxe",
+			"unarmedStrike"
+		],
+		"simpleRangedWeapons": [
+			"crowsbow",
+			"grenade",
+			"sling",
+			"throwingHammer"
+		],
+		"martialMeleeWeapons": [
+			"battleAxe",
+			"flail",
+			"glaive",
+			"greatSword",
+			"longSword",
+			"maul",
+			"naginata",
+			"net",
+			"pike",
+			"rapier",
+			"scimitar",
+			"shortSword",
+			"shortStaff",
+			"spikedChain",
+			"warPick",
+			"warHammer",
+			"whip"
+		],
 		"martialRangedWeapons": [
 			"longBow",
 			"musket",
 			"pistol",
 			"bolas",
 			"shortBow",
-			"scatterGonne"
+			"scatterGonne",
 			"heavyCrossbow"
 		],
 		"miscWeapons": [
