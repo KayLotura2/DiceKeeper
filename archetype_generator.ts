@@ -1,32 +1,82 @@
-"use strict";
 /*eslint-env es6*/
 // The goal of this module is to create an achetype for a character to fall
 // into, based on existing npc blocks.
 
-// Retruns a base Archetype
-// TODO add silly thing for secret monster as archetype
-function generateBaseArchetype() {
-  var weightRoll = dieRoll(100);
-  if (weightRoll <= 50) {
-    return "commoner (" + randomizer(archetypeJSON.commonerArchetypes) + ")";
-  } else if (weightRoll <= 75) {
-    return "guard (" + randomizer(archetypeJSON.guardArchetypes) + ")";
-  } else if (weightRoll <= 95) {
-    return randomizer(archetypeJSON.basicArchetypes);
+import * as archetypeJSON from "./JSON/archetype.JSON"
+import * as npcBlockJSON from "./JSON/npcBlock.JSON"
+import * as namesJSON from "./JSON/names.JSON"
+import { randomizer, dieRoll } from "./randomizers";
+
+
+export type ArchetypeBlock = {
+  name: string,
+  baseArchetype: string,
+  ideal: string,
+  trait: string,
+  flaw: string,
+  stats: 
+
+}
+
+
+const names: string[] = (<any>namesJSON).names
+// TODO: Collapse these under one object
+const commonerArchetypes: string[] = (<any>archetypeJSON).commonerArchetypes
+const guardArchetypes: string[] = (<any>archetypeJSON).guardArchetypes
+const basicArchetypes: string[] = (<any>archetypeJSON).basicArchetypes
+const exceptionalArchetypes: string[] = (<any>archetypeJSON).exceptionalArchetypes
+const secretMonsters: string[] = (<any>archetypeJSON).secretMonsters
+// TODO: Collapse these under one object
+const ideals: string[] = (<any>archetypeJSON).archetypeIdeals
+const traits: string[] = (<any>archetypeJSON).archetypeTraits
+const flaws: string[] = (<any>archetypeJSON).archetypeFlaws
+// TODO: Make more than commoner block
+const stats: string[] = (<any>npcBlockJSON).commoner
+
+
+/**
+ * Retruns a base Archetype
+ */
+function generateBaseArchetype(): string {
+  const weightedRoll: number = dieRoll(100);
+  if (weightedRoll <= 50) {
+    return `commoner (${randomizer(commonerArchetypes)})`
+  } else if (weightedRoll <= 75) {
+    return `guard (${randomizer(guardArchetypes)})`
+  } else if (weightedRoll <= 95) {
+    return randomizer(basicArchetypes)
+  } else if (weightedRoll <= 99) {
+    return randomizer(exceptionalArchetypes)
   } else {
-    return randomizer(archetypeJSON.exceptionalArchetypes);
+    // Secretly a Monster!
+    const secretMonster: string = randomizer(secretMonsters)
+    const secondWeightedRoll: number = dieRoll(8);
+    if (secondWeightedRoll === 1) {
+      return `${secretMonster} posing as a commoner (${randomizer(commonerArchetypes)})`
+    } else if (secondWeightedRoll === 2) {
+      return `${secretMonster} posing as a guard (${randomizer(guardArchetypes)})`
+    } else if (weightedRoll <= 5) {
+      return `${secretMonster} posing as a ${randomizer(basicArchetypes)}`
+    } else {
+      return `${secretMonster} posing as a ${randomizer(exceptionalArchetypes)}`
+    }
   }
 }
 
-// Returns Stat Block
-// Currently only returns a commoner's stat block
+/**
+ * Returns Stat Block
+ * Currently only returns a commoner's stat block
+ * TODO: Flesh Out 
+ */
 function generateArchetypeBlock() {
-  var block = {}
-  block.name = randomizer(namesJSON.names) + " " + randomizer(namesJSON.names);
-  block.baseArchetype = generateBaseArchetype();
-  block.ideal = randomizer(archetypeJSON.archetypeIdeals);
-  block.trait = randomizer(archetypeJSON.archetypeTraits);
-  block.flaw = randomizer(archetypeJSON.archetypeFlaws);
-  block.stats = npcBlockJSON.commoner;
-  return block;
+  const block: ArchetypeBlock = {
+    name: `${randomizer(names)}  ${randomizer(names)}`,
+    baseArchetype: generateBaseArchetype(),
+    ideal: randomizer(ideals),
+    trait: randomizer(traits),
+    flaw: randomizer(flaws),
+    // This is only one stat block currently
+    stats: stats
   }
+  return block
+}

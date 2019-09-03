@@ -50,7 +50,7 @@ export function randomizerCount(originalArray: any[], num: number): any[] {
 
 
 // Uses randomizer to randomly return true or false.
-function flipCoin() {
+export function flipCoin() {
   var coin = [0, 1];
   var flip = randomizer(coin);
   if (flip === 1) {

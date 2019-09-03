@@ -16,24 +16,28 @@
 		"soft",
 		"trans"
 	],
-	"genderRoots": [{
+	"genderRoots": [
+		{
 			"gen": "agender",
 			"pron": "they/them"
-		}, {
+		},
+		{
 			"gen": "boy",
 			"pron": "he/him"
 		},
 		{
 			"gen": "enby",
 			"pron": "they/them"
-		}, {
+		},
+		{
 			"gen": "epicine",
 			"pron": "they/them"
 		},
 		{
 			"gen": "girl",
 			"pron": "she/her"
-		}, {
+		},
+		{
 			"gen": "man",
 			"pron": "he/him"
 		},
@@ -70,7 +74,7 @@
 		"bi",
 		"hetero",
 		"homo",
-		"pan",
+		"pan"
 	],
 	"attractionDescriptors": [
 		" ",
@@ -78,6 +82,6 @@
 		" ",
 		"demi-",
 		"fray-",
-		"gray-",
+		"gray-"
 	]
 }

@@ -1,6 +1,4 @@
-"use strict";
 /*eslint-env es6*/
-
 //The goal of this module is to create vibrant multifacited gender profiles.
 
 /* I have left out cultural genders that are not a part of my culture, as that
@@ -9,6 +7,7 @@
 * and above all respect would be nescisary, as such I don"t think it"s
 * appropriate to include in a random generator.
 */
+
 // TODO: Add switch to include genders from other cultures, to avoid exclusion.
 // such as hijra, two-spirit, and other third genders.
 // Be sure to have a sensitivity reader check it over, and pay them for their work.
@@ -16,87 +15,121 @@
 // TODO: gein switch.
 // TODO: Increase likelyhood of gein as pronoun if draconic
 
-// Returns a complex gender object.
-// Example: {rt: {gen:'girl', pron: 'she/her'}, desc: ['androgynous'] }
-// TODO clean this the heck up.
-function generate_gender() {
-    var fivePercent = dieRoll(20);
-    if (fivePercent == 19) {
-        var descriptor = 'bigender';
-        var roots = randomizerCount(genderJSON.genderRoots, 2)
-    } else if (fivePercent == 20) {
-      var descriptor = 'pangender';
-      var numberOfGenders = dieRoll(4)
-      var roots = randomizerCount(genderJSON.genderRoots, numberOfGenders)
-    } else {
-      var descriptor = randomizer(genderJSON.genderDescriptors);
-      var roots = randomizer(genderJSON.genderRoots);
-    }
-  return {rt: roots, desc: descriptor};
+import * as genderJSON from "./JSON/gender.JSON"
+import { dieRoll, randomizerCount, randomizer, flipCoin } from "./randomizers"
+
+
+const genderRoots: string[] = (<any>genderJSON).genderRoots
+const genderDescriptors: string[] = (<any>genderJSON).genderDescriptors
+const attractionRoots: string[] = (<any>genderJSON).attractionRoots
+const attractionDescriptors: string[] = (<any>genderJSON).attractionDescriptors
+const pronouns: string[] = (<any>genderJSON).pronouns
+
+
+type GenderRoot = {
+  gen: string,
+  pronoun: string
 }
 
-// Retruns a string which describes a persons romantic and sexual attractions.
-function generate_attraction() {
-  var variablePercent = dieRoll(10);
+type GenderObject = {
+  rt: GenderRoot
+  desc: string
+}
+
+
+/**
+ * Returns a complex GenderObject.
+ */
+function generate_gender(): GenderObject {
+  const fivePercent: number = dieRoll(20)
+  let descriptor: string = ''
+  let genRoots: GenderRoot[]
+  if (fivePercent == 19) {
+    descriptor = 'bigender'
+    genRoots = randomizerCount(genderRoots, 2)
+  } else if (fivePercent == 20) {
+    descriptor = 'pangender'
+    const numberOfGenders = dieRoll(4 + 1)
+    genRoots = randomizerCount(genderRoots, numberOfGenders)
+  } else {
+    descriptor = randomizer(genderDescriptors)
+    genRoots = [randomizer(genderRoots)]
+  }
+  const gender: GenderObject = {
+    rt: genRoots,
+    desc: descriptor
+  }
+  return gender
+}
+
+/**
+ * Retruns a string which describes a persons romantic and sexual attractions.
+ */
+function generate_attraction(): string {
+  var variablePercent: number = dieRoll(10)
   if (variablePercent <= 6) {
     // Same Sexuality/Romantic, Same Descriptor
-    var tempRoot = randomizer(genderJSON.attractionRoots);
-    if (tempRoot == "a") {
-      var tempDescription = '';
-    } else {
-      var tempDescription = randomizer(genderJSON.attractionDescriptors);
+    const tempRoot: string = randomizer(attractionRoots)
+    let tempDescription: string = ''
+    if (tempRoot !== "a") {
+      tempDescription = randomizer(attractionDescriptors)
     }
-    var tempBothProfile = tempDescription + tempRoot;
-    var result = `${tempBothProfile}romantic / ${tempBothProfile}sexual`
-    return result;
+    const tempBothProfile: string = tempDescription + tempRoot
+    const result: string = `${tempBothProfile}romantic / ${tempBothProfile}sexual`
+    return result
+
   } else if (variablePercent == 7) {
-  // Same Sexuality/Romantic, Shuffled Descriptor
-  var tempRoot = randomizer(genderJSON.attractionRoots);
-  if (tempRoot == "a") {
-      var tempSexDescription = '';
-      var tempRomDescription = '';
-    } else {
-      var tempSexDescription = randomizer(genderJSON.attractionDescriptors);
-      var tempRomDescription = randomizer(genderJSON.attractionDescriptors);
+    // Same Sexuality/Romantic, Shuffled Descriptor
+    const tempRoot = randomizer(attractionRoots)
+    let tempSexDescription: string = ''
+    let tempRomDescription: string = ''
+    if (tempRoot !== "a") {
+      tempSexDescription = randomizer(attractionDescriptors)
+      tempRomDescription = randomizer(attractionDescriptors)
     }
-    var tempRomProfile = tempRomDescription + tempRoot;
-    var tempSexProfile = tempSexDescription + tempRoot;
-  return `${tempRomProfile}romantic / ${tempSexProfile}sexual`;
+    const tempRomProfile: string = tempRomDescription + tempRoot
+    const tempSexProfile: string = tempSexDescription + tempRoot
+    const result: string = `${tempRomProfile}romantic / ${tempSexProfile}sexual`
+    return result
+
   } else {
-  // Shuffled Sexuality/Romantic, Shuffled Descriptor
-  var tempRomRoot = randomizer(genderJSON.attractionRoots);
-  var tempSexRoot = randomizer(genderJSON.attractionRoots);
-  if (tempRomRoot == "a") {
-      var tempRomDescription = '';
-    } else {
-      var tempRomDescription = randomizer(genderJSON.attractionDescriptors);
+    // Shuffled Sexuality/Romantic, Shuffled Descriptor
+    const tempRomRoot = randomizer(attractionRoots)
+    const tempSexRoot = randomizer(attractionRoots)
+    let tempRomDescription: string = ''
+    let tempSexDescription: string = ''
+    if (tempRomRoot !== "a") {
+      tempRomDescription = randomizer(attractionDescriptors)
     }
-  if (tempSexRoot == "a") {
-      var tempSexDescription = '';
-    } else {
-      var tempSexDescription = randomizer(genderJSON.attractionDescriptors);
+    if (tempSexRoot !== "a") {
+      tempSexDescription = randomizer(attractionDescriptors)
     }
-    var tempRomProfie = tempRomDescription + tempRomRoot;
-    var tempSexProfile = tempSexDescription + tempSexRoot;
-    return `${tempRomProfie}romantic / ${tempSexProfile}sexual`;
+    const tempRomProfie: string = tempRomDescription + tempRomRoot
+    const tempSexProfile: string = tempSexDescription + tempSexRoot
+    return `${tempRomProfie}romantic / ${tempSexProfile}sexual`
   }
 }
 
-// Retruns a string of a random pronoun.
-function generate_pronoun() {
-  return randomizer(genderJSON.pronouns);
+/**
+ * Retruns a string of a random pronoun set.
+ */
+function generate_pronoun(): string {
+  return randomizer(pronouns)
 }
 
-// Retruns a string describing a persons gender, pronouns, and their attraction.
-// Pronouns are weighted ~50%/50% of being the typical pronoun for said gender.
-function generatePersonality() {
-  var attraction = generate_attraction();
-  var gender = generate_gender();
-  var pronoun = '';
+/**
+ * Retruns a string describing a persons gender, pronouns, and their attraction.
+ * Pronouns are weighted ~50%/50% of being the typical pronoun for said gender.
+ */
+export function generatePersonality(): string {
+  const attraction: string = generate_attraction()
+  const gender: GenderObject = generate_gender()
+  let pronoun = ''
   if (flipCoin()) {
-    pronoun = gender.rt.pron;
+    pronoun = gender.rt.pronoun
   } else {
-    pronoun = generate_pronoun();
+    pronoun = generate_pronoun()
   }
-  return gender.desc + ' ' + gender.rt.gen + ' with ' + pronoun + ' pronouns, who is ' + attraction;
+  const personality: string = `${gender.desc} ${gender.rt.gen} with ${pronoun} pronouns, who is ${attraction}`
+  return personality
 }
