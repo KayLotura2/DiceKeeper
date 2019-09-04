@@ -2,9 +2,9 @@
 // The goal of this module is to create an achetype for a character to fall
 // into, based on existing npc blocks.
 
-import * as archetypeJSON from "./JSON/archetype.json"
-import * as npcBlockJSON from "./JSON/npcBlock.json"
-import * as namesJSON from "./JSON/names.json"
+import * as archetypeJSON from "../JSON/archetype.json"
+import * as npcBlockJSON from "../JSON/npcBlock.json"
+import * as namesJSON from "../JSON/names.json"
 import { randomizer, dieRoll } from "./randomizers";
 
 

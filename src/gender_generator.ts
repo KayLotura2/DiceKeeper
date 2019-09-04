@@ -15,7 +15,7 @@
 // TODO: gein switch.
 // TODO: Increase likelyhood of gein as pronoun if draconic
 
-import * as genderJSON from "./JSON/gender.json"
+import * as genderJSON from "../JSON/gender.json"
 import { dieRoll, randomizerCount, randomizer, flipCoin } from "./randomizers"
 
 

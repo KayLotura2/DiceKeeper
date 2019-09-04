@@ -2,16 +2,20 @@
   "name": "dicekeeper",
   "version": "1.0.0",
   "description": "A Random NPC generator for D&D 5e",
+  "private": true,
   "main": "app.ts",
   "dependencies": {
     "npm": "^5.7.1"
   },
   "devDependencies": {
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.6.2",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc src/ancestry_generator.ts src/archetype_generator.ts src/gender_generator.ts src/randomizers.ts --resolveJsonModule; webpack"
   },
   "repository": {
     "type": "git",
