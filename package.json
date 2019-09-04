@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc src/ancestry_generator.ts src/archetype_generator.ts src/gender_generator.ts src/randomizers.ts --resolveJsonModule; webpack"
+    "build": "tsc src/ancestry_generator.ts src/archetype_generator.ts src/gender_generator.ts src/randomizers.ts && webpack",
+    "clear": "cd src && del ancestry_generator.js archetype_generator.js gender_generator.js randomizers.js"
   },
   "repository": {
     "type": "git",
