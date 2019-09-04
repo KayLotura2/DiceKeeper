@@ -2,7 +2,7 @@
 //The goal of this module is to create vibrant ancestry profiles for nonplayer characters.
 
 
-import * as ancestryJSON from "./JSON/ancestry.json"
+import * as ancestryJSON from "../JSON/ancestry.json"
 import { randomizer, dieRoll, randomizerCount } from "./randomizers"
 
 
