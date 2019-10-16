@@ -121,7 +121,7 @@ function generate_pronoun(): string {
  * Retruns a string describing a persons gender, pronouns, and their attraction.
  * Pronouns are weighted ~50%/50% of being the typical pronoun for said gender.
  */
-export function generatePersonality(): string {
+function generatePersonality(): string {
   const attraction: string = generate_attraction()
   const gender: GenderObject = generate_gender()
   let pronoun = ''
@@ -134,3 +134,5 @@ export function generatePersonality(): string {
   const personality: string = `${gender.desc} ${genders.join(' ')} with ${pronoun} pronouns, who is ${attraction}`
   return personality
 }
+
+export { generatePersonality }

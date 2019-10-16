@@ -6,13 +6,13 @@ import * as ancestryJSON from "../JSON/ancestry.json"
 import { randomizer, dieRoll, randomizerCount } from "./randomizers"
 
 
-export type SubType = {
+type SubType = {
   name: string,
   size: string
 }
 
 
-export type AncestryObj = {
+type AncestryObj = {
   "rt": string,
   "types": string[],
   "subTypes": string[],
@@ -20,7 +20,7 @@ export type AncestryObj = {
   "subs": SubType[]
 }
 
-export type Template = {
+type Template = {
   "name": string,
   "typeChange"?: string,
   "sizeChange"?: string,
@@ -28,7 +28,7 @@ export type Template = {
   "newsubTypes": string[]
 }
 
-export type FullAncestry = {
+type FullAncestry = {
   "types": string,
   "ancestry": string
 }
@@ -43,7 +43,7 @@ const templates: Template[] = (<any>ancestryJSON).templates
  * and a random subrace from the ancestryObject, with a 10% chance
  * of returning a templated ancestry.
  */
-export function generateAncestry(): FullAncestry {
+function generateAncestry(): FullAncestry {
   let newsubTypes: string = ""
   const currentAncestry: AncestryObj = randomizer(ancestries)
   const currentSubObj: SubType = randomizer(currentAncestry.subs)
@@ -84,3 +84,5 @@ export function generateAncestry(): FullAncestry {
     }
   }
 }
+
+export { SubType, AncestryObj, Template, FullAncestry, generateAncestry }

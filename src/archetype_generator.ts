@@ -8,7 +8,7 @@ import * as namesJSON from "../JSON/names.json"
 import { randomizer, dieRoll } from "./randomizers";
 
 
-export type ArchetypeBlock = {
+type ArchetypeBlock = {
   name: string,
   baseArchetype: string,
   ideal: string,
@@ -67,7 +67,7 @@ function generateBaseArchetype(): string {
  * Currently only returns a commoner's stat block
  * TODO: Flesh Out 
  */
-export function generateArchetypeBlock() {
+function generateArchetypeBlock() {
   const block: ArchetypeBlock = {
     name: `${randomizer(names)}  ${randomizer(names)}`,
     baseArchetype: generateBaseArchetype(),
@@ -79,3 +79,5 @@ export function generateArchetypeBlock() {
   }
   return block
 }
+
+export { ArchetypeBlock, generateArchetypeBlock }

@@ -8,8 +8,8 @@
     "npm": "^5.7.1"
   },
   "devDependencies": {
-    "ts-loader": "^6.0.4",
-    "typescript": "^3.6.2",
+    "ts-loader": "^6.1.0",
+    "typescript": "^3.6.3",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
   },
