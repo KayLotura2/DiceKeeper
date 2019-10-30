@@ -1,9 +1,8 @@
-var weaponsJSON = {
+{
   "simpleMeleeWeapons": [
     "Baton",
-    "Dagger",
-    "Dart",
-    "Mace",
+    "Knife",
+    "Club",
     "Quarterstaff",
     "Sickle",
     "Spear",
@@ -12,11 +11,13 @@ var weaponsJSON = {
   ],
   "simpleRangedWeapons":[
     "Crossbow",
+    "Dart",
     "Grenade Weapon",
     "Hand Crossbow",
     "Sling"
   ],
   "martialMeleeWeapons": [
+    "Dagger",
     "Flail",
     "Glaive",
     "Greatsword",

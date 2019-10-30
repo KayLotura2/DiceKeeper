@@ -1,0 +1,40 @@
+{
+ 	"commoner": {
+ 		"armorClass": 10,
+ 		"hitdice": {
+ 			"number": 1,
+ 			"size": 8
+ 		},
+ 		"speed": {
+ 			"land": 30
+ 		},
+ 		"abilities": {
+ 			"STR": 10,
+ 			"DEX": 10,
+ 			"CON": 10,
+ 			"INT": 10,
+ 			"WIS": 10,
+ 			"CHA": 10
+ 		},
+ 		"languages": ["Common"],
+ 		"challenge": {
+ 			"cr": 0,
+ 			"xp": 10,
+ 			"prof": 2
+ 		},
+ 		"actions": {
+ 			"attacks": {
+ 				"name": "club",
+ 				"mode": "Melee Weapon Attack",
+ 				"abilityMod": "STR",
+ 				"reach": "5 ft.",
+ 				"targets": 1,
+ 				"damageDice": {
+ 					"number": 1,
+ 					"size": 4
+ 				},
+ 				"damageType": "bludgeoning"
+ 			}
+ 		}
+ 	}
+ }

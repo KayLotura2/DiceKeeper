@@ -1,0 +1,863 @@
+{
+	"Baton": {
+		"name": "Baton",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d4",
+			"finesse_bool": true,
+			"light_bool": true,
+			"polearm_bool": false,
+			"trick_bool": false,
+			"versatile_bool": false,
+			"two-handed_bool": false,
+			"critical_bool": false,
+			"loading_bool": false,
+			"firearm_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Knife": {
+		"name": "Knife",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "piercing",
+			"damage_die": "1d4",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": true,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Club": {
+		"name": "Club",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d6",
+			"versatile_die": "1d8",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee/Thrown(30/60)"
+		}
+	},
+	"Dart": {
+		"name": "Dart",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "piercing",
+			"damage_die": "1d4",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Melee/Thrown(30/60)"
+		}
+	},
+	"Quarterstaff": {
+		"name": "Quarterstaff",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d6",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": true,
+			"special_bool": false,
+			"trick_bool": true,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Sickle": {
+		"name": "Sickle",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "slashing",
+			"damage_die": "1d4",
+			"versatile_die": "1d6",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": true,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee"
+		}
+	},
+	"Spear": {
+		"name": "Spear",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "piercing",
+			"damage_die": "1d6",
+			"versatile_die": "1d8",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": true,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee/Thrown(30/60)"
+		}
+	},
+	"Hand-axe": {
+		"name": "Hand-axe",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "slashing",
+			"damage_die": "1d4",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": true,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Melee/Thrown(30/60)"
+		}
+	},
+	"Unarmed Strike": {
+		"name": "Unarmed Strike",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d4",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": true,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Crossbow": {
+		"name": "Crossbow",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "piercing",
+			"damage_die": "1d6",
+			"critical_bool": true,
+			"finesse_bool": false,
+			"firearm_bool": true,
+			"light_bool": false,
+			"loading_bool": true,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Ranged(60/120)"
+		}
+	},
+	"Alchemist Fire": {
+		"name": "Alchemist Fire",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "fire",
+			"damage_die": "1d6",
+			"special": "Any creature adjascent to your target must make a DC 15 Dexterity save or suffer the same damage.",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": true,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Ranged(30/60)"
+		}
+	},
+	"Acid": {
+		"name": "Acid",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "acid",
+			"damage_die": "1d6",
+			"special": "Any creature adjascent to your target must make a DC 15 Constitution save or suffer the same damage.",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": true,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Ranged(30/60)"
+		}
+	},
+	"Holy Water": {
+		"name": "Holy Water",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "radiant",
+			"damage_die": "1d6",
+			"special": "Any creature adjascent to your target must make a DC 15 Constitution save or suffer the same damage.",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": true,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Ranged(30/60)"
+		}
+	},
+	"Sling": {
+		"name": "Sling",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "simple",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d4",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Ranged(120/300)"
+		}
+	},
+	"Battleaxe": {
+		"name": "Battleaxe",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "slashing",
+			"damage_die": "1d8",
+			"versatile_die": "1d12",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee"
+		}
+	},
+	"Flail": {
+		"name": "Flail",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d6",
+			"versatile_die": "1d8",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": true,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee"
+		}
+	},
+	"Glaive": {
+		"name": "Glaive",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "slashing",
+			"damage_die": "1d8",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": true,
+			"special_bool": false,
+			"trick_bool": true,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Melee/Reach"
+		}
+	},
+	"Greatsword": {
+		"name": "Greatsword",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "slashing",
+			"damage_die": "2d6",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Longsword": {
+		"name": "Longsword",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "slashing",
+			"damage_die": "1d8",
+			"versatile_die": "1d10",
+			"critical_bool": true,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee"
+		}
+	},
+	"Maul": {
+		"name": "Maul",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d12",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Naginata": {
+		"name": "Naginata",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "slashing",
+			"damage_die": "1d8",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": true,
+			"special_bool": false,
+			"trick_bool": true,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Spiked Net": {
+		"name": "Spiked Net",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "piercing",
+			"damage_die": "1d4",
+			"special": "A creature hit with this weapon is [Restrained] until freed. A creature can use its action to make a DC 10 Strength save, freeing itself or another creature within its reach on a success. Dealing 5 points of slashing damage to the weapon (AC 10) also frees the creature without harming it, ending the Restrained effect and destroying the weapon.",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": true,
+			"trick_bool": true,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Melee/Thrown(30/60)"
+		}
+	},
+	"Pike": {
+		"name": "Spiked",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "piercing",
+			"damage_die": "1d10",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": true,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Melee/Reach"
+		}
+	},
+	"Rapier": {
+		"name": "Rapier",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "piercing",
+			"damage_die": "1d8",
+			"versatile_die": false,
+			"critical_bool": true,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Court Blade": {
+		"name": "Court Blade",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "piercing",
+			"damage_die": "1d8",
+			"versatile_die": "1d10",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Scimitar": {
+		"name": "Scimitar",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "slashing",
+			"damage_die": "1d8",
+			"versatile_die": "1d10",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": true,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Double Scimitar": {
+		"name": "Double Scimitar",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "slashing",
+			"damage_die": "2d4",
+			"special": "Bonus action to make a melee attack with the opposite end of the weapon for 1d4 damage.",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": true,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": true,
+			"trick_bool": false,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"Shortsword": {
+		"name": "Shortsword",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "piercing",
+			"damage_die": "1d6",
+			"critical_bool": true,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": true,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Melee"
+		}
+	},
+	"War Staff": {
+		"name": "War Staff",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d6",
+			"versatile_die": "1d8",
+			"critical_bool": true,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": true,
+			"special_bool": false,
+			"trick_bool": true,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee"
+		}
+	},
+	"Spiked Chain": {
+		"name": "Spiked Chain",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "slashing",
+			"damage_die": "2d4",
+			"special": "Bonus action to make a melee attack with the opposite end of the weapon for 1d4 damage.",
+			"critical_bool": false,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": true,
+			"trick_bool": true,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Melee/Reach"
+		}
+	},
+	"War Pick": {
+		"name": "War Pick",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "piercing",
+			"damage_die": "1d8",
+			"versatile_die": "1d10",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee"
+		}
+	},
+	"Warhammer": {
+		"name": "Warhammer",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d8",
+			"versatile_die": "1d10",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee"
+		}
+	},
+	"Whip": {
+		"name": "Whip",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "slashing",
+			"damage_die": "1d4",
+			"critical_bool": true,
+			"finesse_bool": true,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": true,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": true,
+			"two-handed_bool": false,
+			"versatile_bool": true,
+			"range": "Melee/Reach"
+		}
+	},
+	"Long Bow": {
+		"name": "Long Bow",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "piercing",
+			"damage_die": "1d10",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Ranged(120/300)"
+		}
+	},
+	"Musket": {
+		"name": "Musket",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "piercing",
+			"damage_die": "1d10",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": true,
+			"light_bool": false,
+			"loading_bool": true,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Ranged(60/120)"
+		}
+	},
+	"Pistol": {
+		"name": "Pistol",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "piercing",
+			"damage_die": "1d6",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": true,
+			"light_bool": true,
+			"loading_bool": true,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Ranged(60/120)"
+		}
+	},
+	"Bolas": {
+		"name": "Bolas",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "bludgeoning",
+			"damage_die": "1d4",
+			"special": "A creature hit with this weapon is [Restrained] until freed. A creature can use its action to make a DC 10 Strength save, freeing itself or another creature within its reach on a success. Dealing 5 points of slashing damage to the weapon (AC 10) also frees the creature without harming it, ending the Restrained effect and destroying the weapon.",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": true,
+			"two-handed_bool": false,
+			"versatile_bool": false,
+			"range": "Thrown(60/120)"
+		}
+	},
+	"Short Bow": {
+		"name": "Short Bow",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "Piercing",
+			"damage_die": "2d4",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": false,
+			"light_bool": false,
+			"loading_bool": false,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": false,
+			"trick_bool": false,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Ranged(60/120)"
+		}
+	},
+	"Scatter-gonne": {
+		"name": "Scatter-gone",
+		"type": "Weapon",
+		"stats": {
+			"prof_type": "martial",
+			"damage_type": "Piercing",
+			"damage_die": "3d4",
+			"special": "A scattering weapon deals full damage in it’s first range increment, one die less damage in it’s second range increment, and two dice less damage in its third range increment.",
+			"critical_bool": false,
+			"finesse_bool": false,
+			"firearm_bool": true,
+			"light_bool": false,
+			"loading_bool": true,
+			"melee_bool": false,
+			"polearm_bool": false,
+			"special_bool": true,
+			"trick_bool": false,
+			"two-handed_bool": true,
+			"versatile_bool": false,
+			"range": "Ranged(30/60/120)"
+		}
+	},
+	"Light Armor": {
+		"name": "Light Armor",
+		"type": "Armor",
+		"stats": {
+			"armor_bonus": 2,
+			"armor_stat": "DEX"
+		}
+	},
+	"Heavy Armor": {
+		"name": "Heavy Armor",
+		"type": "Armor",
+		"stats": {
+			"armor_bonus": 4,
+			"armor_stat": "-"
+		}
+	},
+	"Shield": {
+		"name": "Shield",
+		"type": "Armor",
+		"stats": {
+			"armor_bonus": 2,
+			"armor_stat": "-"
+		}
+	}
+}

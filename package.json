@@ -1,0 +1,36 @@
+{
+  "name": "dicekeeper",
+  "version": "1.0.0",
+  "description": "A Random NPC generator for D&D 5e",
+  "private": true,
+  "main": "app.ts",
+  "dependencies": {
+    "npm": "^6.12.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc src/ancestry_generator.ts src/archetype_generator.ts src/gender_generator.ts src/randomizers.ts && webpack",
+    "clear": "cd src && del ancestry_generator.js archetype_generator.js gender_generator.js randomizers.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KayLotura2/DiceKeeper.git"
+  },
+  "keywords": [
+    "D&D",
+    "Generator",
+    "Typescript"
+  ],
+  "author": "Hekate V. Nichols",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/KayLotura2/DiceKeeper/issues"
+  },
+  "homepage": "https://github.com/KayLotura2/DiceKeeper#readme"
+}
