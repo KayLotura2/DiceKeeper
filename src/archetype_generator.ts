@@ -8,7 +8,7 @@ import * as namesJSON from "../JSON/names.json"
 import { randomizer, dieRoll } from "./randomizers";
 
 
-type ArchetypeBlock = {
+export type ArchetypeBlock = {
   name: string,
   baseArchetype: string,
   ideal: string,
@@ -36,7 +36,7 @@ const stats: string[] = (<any>npcBlockJSON).commoner
 /**
  * Retruns a base Archetype
  */
-function generateBaseArchetype(): string {
+export function generateBaseArchetype(): string {
   const weightedRoll: number = dieRoll(100);
   if (weightedRoll <= 50) {
     return `commoner (${randomizer(commonerArchetypes)})`
@@ -67,7 +67,7 @@ function generateBaseArchetype(): string {
  * Currently only returns a commoner's stat block
  * TODO: Flesh Out 
  */
-function generateArchetypeBlock() {
+export function generateArchetypeBlock() {
   const block: ArchetypeBlock = {
     name: `${randomizer(names)}  ${randomizer(names)}`,
     baseArchetype: generateBaseArchetype(),
@@ -79,5 +79,3 @@ function generateArchetypeBlock() {
   }
   return block
 }
-
-export { ArchetypeBlock, generateArchetypeBlock }

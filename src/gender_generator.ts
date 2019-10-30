@@ -31,7 +31,7 @@ type GenderRoot = {
   pronoun: string
 }
 
-type GenderObject = {
+export type GenderObject = {
   rts: GenderRoot[]
   desc: string
 }
