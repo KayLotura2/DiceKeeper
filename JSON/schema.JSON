@@ -1,0 +1,380 @@
+{
+	"ancestries-schema": {
+		"id" : "#ancestries"
+    "title": "Ancestries",
+    "description": "A collection of valid NPC ancestries",
+    "type": "array",
+    "items" : {"$ref": "#/definitions/ancestry" }
+    "definitions": {
+      "ancestry": {
+				"id" : "#ancestry"
+        "title": "Ancestry",
+        "description": "A detailed description of a NPC's ancestry",
+        "type": "object",
+        "properties":  {
+            "rt" : {
+              "title": "Root Ancestry",
+              "description": "The base ancestry",
+              "type" : "string"
+            },
+            "types" : {
+              "title": "Types",
+              "description": "The base types of the NPC",
+              "type" : "array"
+              "items" : {
+                "type" : "string"
+                "enum" : [
+                  "dragon",
+                  "kinfolk"
+                ]
+              }
+            },
+            "subtypes" : {
+              "title": "Subtypes",
+              "description": "The base subtypes of the NPC",
+              "type" : "array"
+              "items" : {
+                "type" : "string"
+                "enum" : [
+                  "dragonborn",
+                ]
+              }
+            },
+            "baseSize": {
+              "title": "Base Size",
+              "description": "The base size of the NPC",
+              "type" : {
+								"$ref": "#size"
+							}
+            },
+            "baseMod": {
+              "title": "Base Mod",
+              "description": "The base ability modifier of the NPC's ancestry",
+              "type" : "object",
+              "properties" : {
+                "ab": { "$ref": "#ability" },
+                "Bonus" : {
+                    "type": "number",
+                    "enum" : {
+                      0,
+                      1,
+                      2
+                    }
+                }
+              }
+            },
+            "senses": {
+              "title": "Senses",
+              "description": "The base senses the NPC has for their ancestry",
+              "type" : "array"
+              "items" : { "$ref": "#sense" }
+            },
+						"moveSpeeds" : {
+							"title": "Move Speeds",
+              "description": "The base move speeds the NPC has for their ancestry",
+              "type" : "array"
+              "items" : { "$ref": "#moveSpeed" }
+						},
+            "resistances" :  {
+              "title": "Senses",
+              "description": "The base resistances the NPC has for their ancestry",
+              "type" : "array"
+              "items" : { "$ref": "#resistance" }
+            },
+            "subs":{
+              "title": "Sub-Ancestries",
+              "description": "The sub-ancestries available for the given base ancestry",
+              "type" : "array",
+              "items" : { "$ref": "#/definitions/subAncestry" }
+            }
+          }
+        }
+      },
+      "subAncestry" : {
+				"id" : "#subAncestry"
+        "title": "Sub-Ancestry",
+        "description": "A sub-ancestry's values for the given base ancestry",
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "title": "Sub-Ancestry Name",
+            "description": "A sub-ancestry's name, usually a modifer to the base ancestry",
+            "type" : "string",
+          },
+          "size" : {
+            "title": "Sub-Ancestry Size",
+            "description": "A sub-ancestry's size.",
+            "type" : { "$ref" : "#size" }
+          },
+          "subMod": {
+            "title": "The Subraces Ability Modifier",
+            "description": "The ability modifier of the NPC's sub ancestry",
+            "type" : "object" {
+							"ab": {
+                "ref": "#ability"
+              },
+							"Bonus" : {
+									"type": "number",
+									"enum" : {
+										0,
+										1,
+										2
+									}
+							}
+						},
+          "proficiencies" : {
+					"title": "Proficiencies",
+					"description": "The skill and tool proficiencies of the NPC's sub ancestry",
+					"type" : "array",
+					"items" : {
+						"ref" : "#skill"
+					}
+        },
+        "required" : [
+          "name",
+          "submod"
+        ]
+      }
+    },
+
+
+		"skillsSchema": {
+			"id" : "#skills"
+			"title": "Skills",
+	    "description": "A collection of skills and tools",
+	    "type": "array",
+	    "items" : {"$ref": "#/definitions/skill" }
+	    "definitions": {
+	      "skill": {
+					"id" : "#skill"
+	        "title": "Skill",
+	        "description": "A detailed description of a given skill",
+	        "type": "object",
+					"properties": {
+						"name" : {
+							"title": "name",
+					    "description": "name of given tool or skill",
+					    "type": "string"
+						},
+						"abMod" : {
+							"ref": "#ability"
+						}
+					}
+				}
+			}
+		},
+		"abilitiesSchema": {
+			"id" : "#abilities"
+			"title": "Abilities",
+			"description": "A collection of abilities",
+			"type": "array",
+			"items" : {"$ref": "#/definitions/ability" }
+			"definitions": {
+				"ability": {
+					"id" : "#ability"
+		      "title": "Ability",
+		      "description": "A detailed description of a given ability",
+		      "type": "object",
+					"properties": {
+						"name" : {
+							"title": "Name",
+					    "description": "name of ability",
+					    "type": "string"
+						},
+						"abbrev" : {
+							"title": "Abbreviation",
+							"description": "abbreveiation of ability",
+							"type": "string"
+						},
+						"score" : {
+							"title": "Ability Score",
+							"description": "The score of a given ability",
+							"type" : "number"
+						}
+					}
+				}
+			},
+		},
+		"sizesSchema": {
+				"id" : "#sizes"
+				"title": "Sizes",
+				"description": "A collection of sizes",
+				"type": "array",
+				"items" : {"$ref": "#/definitions/size" }
+				"definitions": {
+					"size": {
+						"id" : "#size"
+						"title": "Size",
+						"description": "Available sizes",
+						"type" : "string",
+						"enum" : [
+							"tiny",
+							"small",
+							"medium",
+							"large"
+						]
+					}
+				},
+				"moveSpeedsSchema": {
+						"id" : "#MoveSpeeds"
+						"title": "Move Speeds",
+						"description": "A collection of move speeds",
+						"type": "array",
+						"items" : {"$ref": "#/definitions/moveSpeed" }
+						"definitions": {
+							"moveSpeed": {
+								"id" : "#moveSpeed"
+								"title": "Move Speed",
+								"description": "Available Move Speed",
+								"type" : "object",
+								"properties" : {
+									"movementType" : {
+										"title": "Movement Type",
+										"description": "How the movement works",
+										"type" : "string",
+										"enum": [
+											"walk",
+											"glyde",
+											"fly",
+											"swim",
+											"burrow"
+										]
+									}
+									"speed" : {
+										"title": "Movement Speed Score",
+										"description": "How far the character can move with a single movement",
+										"type" : "number",
+										"enum": [
+											10,
+											15,
+											20,
+											25,
+											30,
+											35,
+											40,
+											45,
+											50,
+											55,
+											60
+										]
+									}
+								}
+							}
+						}
+					}
+					moveSpeeds
+
+
+
+
+TODO: Make a senses definition
+TODO: Make a resistances definition
+TODO: make a subAncestry definition
+            [
+				{
+					"sense": "Darkvision",
+					"range": "60ft"
+				}
+			],
+
+
+			"subs": [
+				{
+					"name": "deep",
+					"size": "medium"
+				},
+				{
+					"name": "desert",
+					"size": "medium"
+				},
+				{
+					"name": "ethereal",
+					"size": "medium"
+				},
+				{
+					"name": "forest",
+					"size": "medium"
+				},
+				{
+					"name": "glimmering",
+					"size": "medium"
+				},
+				{
+					"name": "howling",
+					"size": "medium"
+				},
+				{
+					"name": "mountain",
+					"size": "medium"
+				},
+				{
+					"name": "ocean",
+					"size": "medium"
+				},
+				{
+					"name": "petite kobold",
+					"size": "small [powerful build]"
+				},
+				{
+					"name": "prismatic",
+					"size": "medium"
+				},
+				{
+					"name": "storm",
+					"size": "medium"
+				},
+				{
+					"name": "styx",
+					"size": "medium"
+				},
+				{
+					"name": "swamp",
+					"size": "medium"
+				},
+				{
+					"name": "tundra",
+					"size": "medium"
+				},
+				{
+					"name": "winged kobold",
+					"size": "small"
+				}
+			]
+		},
+		{
+			"rt": "dryad",
+			"types": [
+				"kinfolk",
+				"plant"
+			],
+			"subTypes": [
+				"dryad"
+			],
+			"baseSize": "small",
+			"subs": [
+				{
+					"name": "cactid",
+					"size": "small"
+				},
+				{
+					"name": "deku",
+					"size": "small"
+				},
+				{
+					"name": "mycanoid",
+					"size": "small"
+				},
+				{
+					"name": "folian",
+					"size": "small"
+				},
+				{
+					"name": "thorne",
+					"size": "small"
+				},
+				{
+					"name": "spriggan",
+					"size": "small"
+				}
+			]
+		},

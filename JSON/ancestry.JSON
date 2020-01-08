@@ -10,6 +10,20 @@
 				"dragonborn"
 			],
 			"baseSize": "medium",
+			"baseMod": {
+				"AB": "STR",
+				"Bonus": +2
+			},
+			"senses": [
+				{
+					"sense": "Darkvision",
+					"range": "60ft"
+				}
+			],
+			"Resistances" :  [
+				"Advantage on Saving throws against the [Paralyzed] condition.
+			]
+
 			"subs": [
 				{
 					"name": "deep",
