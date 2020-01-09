@@ -12,7 +12,7 @@
 			"baseSize": "medium",
 			"baseMod": {
 				"AB": "STR",
-				"Bonus": +2
+				"Bonus": 2
 			},
 			"senses": [
 				{
@@ -21,9 +21,8 @@
 				}
 			],
 			"Resistances" :  [
-				"Advantage on Saving throws against the [Paralyzed] condition.
-			]
-
+				"Advantage on Saving throws against the [Paralyzed] condition."
+			],
 			"subs": [
 				{
 					"name": "deep",
