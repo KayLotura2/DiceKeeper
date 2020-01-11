@@ -27,16 +27,16 @@
               "$ref": "#/type"
             }
           },
-          "subtypes": {
+          "subTypes": {
             "title": "Subtypes",
-            "description": "The base subtypes of the NPC",
+            "description": "The base subTypes of the NPC",
             "type": "array",
             "items": {
               "$ref": "#/subType"
             }
           },
           "baseSize": {
-            "$ref": "#size"
+            "$ref": "#/size"
           },
           "baseMod": {
             "title": "Base Abiliy Modifier",
@@ -44,7 +44,7 @@
             "type": "object",
             "properties": {
               "ability": {
-                "$ref": "#ability"
+                "$ref": "#/ability"
               },
               "bonus": {
                 "type": "number",
@@ -64,16 +64,16 @@
               "senseObj": {
                 "properties": {
                   "sense": {
-                    "$ref": "#sense"
+                    "$ref": "#/sense"
                   },
                   "distance": {
                     "type": "number"
                   }
                 },
-                "required": [
-                  "sense",
-                  "distance"
-                ]
+                "required": {
+                  "sense": true,
+                  "distance": true
+                }
               }
             }
           },
@@ -85,16 +85,16 @@
               "moveSpeedObj": {
                 "properties": {
                   "movetype": {
-                    "$ref": "#moveType"
+                    "$ref": "#/moveType"
                   },
                   "distance": {
                     "type": "number"
                   }
                 },
-                "required": [
-                  "movetype",
-                  "distance"
-                ]
+                "required": {
+                  "movetype": true,
+                  "distance": true
+                }
               }
             }
           },
@@ -103,7 +103,7 @@
             "description": "The base resistances the NPC has for their ancestry",
             "type": "array",
             "items": {
-              "$ref": "#resistance"
+              "$ref": "#/resistance"
             }
           },
           "naturealWeapons": {
@@ -111,7 +111,7 @@
             "description": "The natural wreapons provided by the base ancestry",
             "type": "array",
             "items": {
-              "$ref": "#naturalWeapon"
+              "$ref": "#/naturalWeapon"
             }
           },
           "weaponProfs": {
@@ -119,7 +119,7 @@
             "description": "Weapon Proficiencies provided by the base ancestry",
             "type": "array",
             "items": {
-              "$ref": "#weapon"
+              "$ref": "#/weapon"
             }
           },
           "skillProficiencies": {
@@ -127,7 +127,7 @@
             "description": "The skill and tool proficiencies of the NPC's sub ancestry",
             "type": "array",
             "items": {
-              "ref": "#skill"
+              "ref": "#/skill"
             }
           },
           "languages": {
@@ -135,7 +135,7 @@
             "description": "Languages granted by baseAncestry",
             "type": "array",
             "items": {
-              "ref": "#language"
+              "ref": "#/language"
             }
           },
           "other": {
@@ -170,9 +170,7 @@
               "size": {
                 "title": "Sub-Ancestry Size",
                 "description": "A sub-ancestry's size.",
-                "type": {
-                  "$ref": "#size"
-                }
+                "$ref": "#/size"
               },
               "subMod": {
                 "title": "The Subraces Ability Modifier",
@@ -180,7 +178,7 @@
                 "type": "object",
                 "properties": {
                   "ability": {
-                    "$ref": "#ability"
+                    "$ref": "#/ability"
                   },
                   "bonus": {
                     "type": "number",
@@ -215,16 +213,16 @@
                     "senseObj": {
                       "properties": {
                         "sense": {
-                          "$ref": "#sense"
+                          "$ref": "#/sense"
                         },
                         "distance": {
                           "type": "number"
                         }
                       },
-                      "required": [
-                        "sense",
-                        "distance"
-                      ]
+                      "required": {
+                        "sense": true,
+                        "distance": true
+                      }
                     }
                   }
                 },
@@ -236,16 +234,16 @@
                     "moveSpeedObj": {
                       "properties": {
                         "movetype": {
-                          "$ref": "#moveType"
+                          "$ref": "#/moveType"
                         },
                         "distance": {
                           "type": "number"
                         }
                       },
-                      "required": [
-                        "movetype",
-                        "distance"
-                      ]
+                      "required": {
+                        "movetype": true,
+                        "distance": true
+                      }
                     }
                   }
                 },
@@ -258,467 +256,467 @@
                   }
                 }
               },
-              "required": [
-                "name",
-                "subMod"
-              ]
-            }
-          },
-          "required": [
-            "rt",
-            "types",
-            "baseSize",
-            "baseMod",
-            "moveSpeeds",
-            "subs"
-          ]
-        }
-      }
-    },
-    "skills-schema": {
-      "id": "#skills",
-      "title": "Skills",
-      "description": "A collection of skills and tools",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/skill"
-      },
-      "definitions": {
-        "skill": {
-          "id": "#skill",
-          "title": "Skill",
-          "description": "A detailed description of a given skill",
-          "type": "object",
-          "properties": {
-            "name": {
-              "title": "name",
-              "description": "name of given tool or skill",
-              "type": "string"
-            },
-            "abMod": {
-              "title": "Ability Modifier",
-              "description": "The related Ability Modifier for the skill or tool.",
-              "ref": "#ability"
-            }
-          },
-          "required": [
-            "name",
-            "abMod"
-          ]
-        }
-      }
-    },
-    "abilities-schema": {
-      "id": "#abilities",
-      "title": "Abilities",
-      "description": "A collection of abilities",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ability"
-      },
-      "definitions": {
-        "ability": {
-          "id": "#ability",
-          "title": "Ability",
-          "description": "A detailed description of a given ability",
-          "type": "object",
-          "properties": {
-            "name": {
-              "title": "Name",
-              "description": "name of ability",
-              "type": "string"
-            },
-            "abbrev": {
-              "title": "Abbreviation",
-              "description": "abbreveiation of ability",
-              "type": "string"
-            }
-          },
-          "required": [
-            "name",
-            "abbrev"
-          ]
-        }
-      }
-    },
-    "sizes-schema": {
-      "id": "#sizes",
-      "title": "Sizes",
-      "description": "A collection of sizes",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/size"
-      },
-      "definitions": {
-        "size": {
-          "id": "#size",
-          "title": "Size",
-          "description": "Available sizes",
-          "type": "string",
-          "enum": [
-            "tiny",
-            "small",
-            "medium",
-            "large"
-          ]
-        }
-      }
-    },
-    "moveTypes-schema": {
-      "id": "#moveTypes",
-      "title": "Movement Types",
-      "description": "A collection of movement types",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/moveType"
-      },
-      "definitions": {
-        "moveSpeed": {
-          "id": "#moveType",
-          "title": "Move Type",
-          "description": "Available Movement Type",
-          "type": "string",
-          "enum": [
-            "walk",
-            "glyde",
-            "fly",
-            "swim",
-            "burrow"
-          ]
-        }
-      }
-    },
-    "scenes-schema": {
-      "id": "#senses",
-      "title": "Senses",
-      "description": "A collection of senses",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/sense"
-      },
-      "definitions": {
-        "sense": {
-          "id": "#sense",
-          "title": "Sense",
-          "description": "Available Sense",
-          "type": "string",
-          "enum": [
-            "blindsight",
-            "darkvision",
-            "tremorsense",
-            "truesight"
-          ]
-        }
-      }
-    },
-    "types-schema": {
-      "id": "#types",
-      "title": "types",
-      "description": "A collection of creature types",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/type"
-      },
-      "definitions": {
-        "type": {
-          "id": "#type",
-          "title": "Type",
-          "description": "The Base Type a Creature has",
-          "type": "string",
-          "enum": [
-            "abberation",
-            "beast",
-            "celestial",
-            "construct",
-            "dragon",
-            "elemental",
-            "fey",
-            "fiend",
-            "giant",
-            "kinfolk",
-            "monstrosity",
-            "Oooze",
-            "plant",
-            "swarm",
-            "undead"
-          ]
-        }
-      }
-    },
-    "subtypes-schema": {
-      "id": "#subtypes",
-      "title": "subtypes",
-      "description": "A collection of creature subtypes",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/subtype"
-      },
-      "definitions": {
-        "type": {
-          "id": "#subtype",
-          "title": "Subtype",
-          "description": "The lesser subtype a creature has",
-          "type": "string",
-          "enum": [
-            "air",
-            "angel",
-            "aquatic",
-            "augmented",
-            "chaotic",
-            "cold",
-            "demon",
-            "deva",
-            "devil",
-            "dwarf",
-            "earth",
-            "elf",
-            "extraplanar",
-            "faunus",
-            "fire",
-            "gnome",
-            "good",
-            "guardinial",
-            "halfling",
-            "incorporeal",
-            "jotborn",
-            "lawful",
-            "living construct",
-            "native",
-            "neghezkira",
-            "psionic",
-            "shadow",
-            "shapechanger",
-            "titan",
-            "water",
-            "yugoloth"
-          ]
-        }
-      }
-    },
-    "resistanceLevels-schema": {
-      "id": "#resitanceLevels",
-      "title": "Resistance Levels",
-      "description": "A collection of resistance levels",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/resstanceLevel"
-      },
-      "definitions": {
-        "type": {
-          "id": "#resitanceLevel",
-          "title": "Resistance Level",
-          "description": "The level of resistance to a thing a person has.",
-          "type": "string",
-          "enum": [
-            "advantage on saving throws against",
-            "disadvantage on saving throws against",
-            "immunity",
-            "resistance",
-            "vulnerability"
-          ]
-        }
-      }
-    },
-    "damageTypes-schema": {
-      "id": "#damageTypes",
-      "title": "Damage Types",
-      "description": "A collection of all the damage types",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/damageType"
-      },
-      "definitions": {
-        "type": {
-          "id": "#damageType",
-          "title": "Damage Type",
-          "description": "A Specific Damage Type.",
-          "type": "string",
-          "enum": [
-            "acid",
-            "bludgeoning",
-            "cold",
-            "fire",
-            "force",
-            "lightning",
-            "necrotic",
-            "piercing",
-            "poison",
-            "psychic",
-            "radiant",
-            "slashing",
-            "thunder"
-          ]
-        }
-      }
-    },
-    "conditions-schema": {
-      "id": "#conditions",
-      "title": "Conditions",
-      "description": "A collection of all the conditions",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/condition"
-      },
-      "definitions": {
-        "type": {
-          "id": "#condition",
-          "title": "Condition",
-          "description": "A status effect that alters the behavior of a character or creature.",
-          "type": "string",
-          "enum": [
-            "blinded",
-            "charmed",
-            "deafened",
-            "exhaustion",
-            "fatigued",
-            "frightened",
-            "grappled",
-            "incapacitated",
-            "invisible",
-            "paralyzed",
-            "petrified",
-            "poisoned",
-            "prone",
-            "restrained",
-            "stunned",
-            "unconscious"
-          ]
-        }
-      }
-    },
-    "weapons-schema": {
-      "id": "#weapons",
-      "title": "Weapons",
-      "description": "All weapons",
-      "type": "object",
-      "properties": {
-        "simpleWeapons": {
-          "id": "#simpleWeapons",
-          "title": "Simple Weapons",
-          "description": "All Simple Weapons",
-          "type": "object",
-          "properties": {
-            "simpleRangedWeapons": {
-              "id": "#simpleRangedWeapons",
-              "title": "Simple Ranged Weapons",
-              "description": "All Simple Ranged Weapons",
-              "type": "array",
-              "items": {
-                "$ref": "#rangedWeapon"
-              }
-            },
-            "simplemeleeWeapons": {
-              "id": "#simplemeleeWeapons",
-              "title": "Simple Melee Weapons",
-              "description": "All Simple Melee Weapons",
-              "type": "array",
-              "items": {
-                "$ref": "#meleeWeapon"
+              "required": {
+                "name": true,
+                "subMod": true
               }
             }
           },
-          "required": [
-            "simpleRangedWeapons",
-            "simplemeleeWeapons"
-          ]
+          "required": {
+            "rt": true,
+            "types": true,
+            "baseSize": true,
+            "baseMod": true,
+            "moveSpeeds": true,
+            "subs": true
+          }
+        }
+      }
+    }
+  },
+  "skills-schema": {
+    "id": "#skills",
+    "title": "Skills",
+    "description": "A collection of skills and tools",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/skill"
+    },
+    "definitions": {
+      "skill": {
+        "id": "#skill",
+        "title": "Skill",
+        "description": "A detailed description of a given skill",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "name",
+            "description": "name of given tool or skill",
+            "type": "string"
+          },
+          "abMod": {
+            "title": "Ability Modifier",
+            "description": "The related Ability Modifier for the skill or tool.",
+            "ref": "#ability"
+          }
         },
-        "martialWeapons": {
-          "id": "#martialWeapons",
-          "title": "Martial Weapons",
-          "description": "All Martial Weapons",
-          "type": "object",
-          "properties": {
-            "martialRangedWeapons": {
-              "id": "#martialRangedWeapons",
-              "title": "Martial Ranged Weapons",
-              "description": "All Martial Ranged Weapons",
-              "type": "array",
-              "items": {
-                "$ref": "#rangedWeapon"
-              }
-            },
-            "martialmeleeWeapons": {
-              "id": "#martialmeleeWeapons",
-              "title": "Martial Melee Weapons",
-              "description": "All Martial Melee Weapons",
-              "type": "array",
-              "items": {
-                "$ref": "#meleeWeapon"
-              }
-            }
+        "required": {
+          "name": true,
+          "abMod": true
+        }
+      }
+    }
+  },
+  "abilities-schema": {
+    "id": "#abilities",
+    "title": "Abilities",
+    "description": "A collection of abilities",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/ability"
+    },
+    "definitions": {
+      "ability": {
+        "id": "#ability",
+        "title": "Ability",
+        "description": "A detailed description of a given ability",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "description": "name of ability",
+            "type": "string"
           },
-          "required": [
-            "martialRangedWeapons",
-            "martialmeleeWeapons"
-          ]
+          "abbrev": {
+            "title": "Abbreviation",
+            "description": "abbreveiation of ability",
+            "type": "string"
+          }
         },
-        "naturalWeapons": {
-          "id": "#naturalWeapons",
-          "title": "Natural Weapons",
-          "description": "All Natural Weapons",
-          "type": "object",
-          "properties": {
-            "naturalRangedWeapons": {
-              "id": "#naturalRangedWeapons",
-              "title": "Natural Ranged Weapons",
-              "description": "All Natural Ranged Weapons",
-              "type": "array",
-              "items": {
-                "$ref": "#rangedWeapon"
-              }
-            },
-            "naturalmeleeWeapons": {
-              "id": "#naturalmeleeWeapons",
-              "title": "Natural Melee Weapons",
-              "description": "All Natural Melee Weapons",
-              "type": "array",
-              "items": {
-                "$ref": "#meleeWeapon"
-              }
+        "required": {
+          "name": true,
+          "abbrev": true
+        }
+      }
+    }
+  },
+  "sizes-schema": {
+    "id": "#sizes",
+    "title": "Sizes",
+    "description": "A collection of sizes",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/size"
+    },
+    "definitions": {
+      "size": {
+        "id": "#size",
+        "title": "Size",
+        "description": "Available sizes",
+        "type": "string",
+        "enum": [
+          "tiny",
+          "small",
+          "medium",
+          "large"
+        ]
+      }
+    }
+  },
+  "moveTypes-schema": {
+    "id": "#moveTypes",
+    "title": "Movement Types",
+    "description": "A collection of movement types",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/moveType"
+    },
+    "definitions": {
+      "moveSpeed": {
+        "id": "#moveType",
+        "title": "Move Type",
+        "description": "Available Movement Type",
+        "type": "string",
+        "enum": [
+          "walk",
+          "glyde",
+          "fly",
+          "swim",
+          "burrow"
+        ]
+      }
+    }
+  },
+  "scenes-schema": {
+    "id": "#senses",
+    "title": "Senses",
+    "description": "A collection of senses",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/sense"
+    },
+    "definitions": {
+      "sense": {
+        "id": "#sense",
+        "title": "Sense",
+        "description": "Available Sense",
+        "type": "string",
+        "enum": [
+          "blindsight",
+          "darkvision",
+          "tremorsense",
+          "truesight"
+        ]
+      }
+    }
+  },
+  "types-schema": {
+    "id": "#types",
+    "title": "Types",
+    "description": "A collection of creature types",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/type"
+    },
+    "definitions": {
+      "type": {
+        "id": "#type",
+        "title": "Type",
+        "description": "The base type a creature has",
+        "type": "string",
+        "enum": [
+          "abberation",
+          "beast",
+          "celestial",
+          "construct",
+          "dragon",
+          "elemental",
+          "fey",
+          "fiend",
+          "giant",
+          "kinfolk",
+          "monstrosity",
+          "Oooze",
+          "plant",
+          "swarm",
+          "undead"
+        ]
+      }
+    }
+  },
+  "subTypes-schema": {
+    "id": "#subTypes",
+    "title": "SubTypes",
+    "description": "A collection of creature subtypes",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/subType"
+    },
+    "definitions": {
+      "type": {
+        "id": "#subType",
+        "title": "Subtype",
+        "description": "The lesser subtype a creature has",
+        "type": "string",
+        "enum": [
+          "air",
+          "angel",
+          "aquatic",
+          "augmented",
+          "chaotic",
+          "cold",
+          "demon",
+          "deva",
+          "devil",
+          "dwarf",
+          "earth",
+          "elf",
+          "extraplanar",
+          "faunus",
+          "fire",
+          "gnome",
+          "good",
+          "guardinial",
+          "halfling",
+          "incorporeal",
+          "jotborn",
+          "lawful",
+          "living construct",
+          "native",
+          "neghezkira",
+          "psionic",
+          "shadow",
+          "shapechanger",
+          "titan",
+          "water",
+          "yugoloth"
+        ]
+      }
+    }
+  },
+  "resistanceLevels-schema": {
+    "id": "#resitanceLevels",
+    "title": "Resistance Levels",
+    "description": "A collection of resistance levels",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/resstanceLevel"
+    },
+    "definitions": {
+      "type": {
+        "id": "#resitanceLevel",
+        "title": "Resistance Level",
+        "description": "The level of resistance to a thing a person has.",
+        "type": "string",
+        "enum": [
+          "advantage on saving throws against",
+          "disadvantage on saving throws against",
+          "immunity",
+          "resistance",
+          "vulnerability"
+        ]
+      }
+    }
+  },
+  "damageTypes-schema": {
+    "id": "#damageTypes",
+    "title": "Damage Types",
+    "description": "A collection of all the damage types",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/damageType"
+    },
+    "definitions": {
+      "type": {
+        "id": "#damageType",
+        "title": "Damage Type",
+        "description": "A Specific Damage Type.",
+        "type": "string",
+        "enum": [
+          "acid",
+          "bludgeoning",
+          "cold",
+          "fire",
+          "force",
+          "lightning",
+          "necrotic",
+          "piercing",
+          "poison",
+          "psychic",
+          "radiant",
+          "slashing",
+          "thunder"
+        ]
+      }
+    }
+  },
+  "conditions-schema": {
+    "id": "#conditions",
+    "title": "Conditions",
+    "description": "A collection of all the conditions",
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/condition"
+    },
+    "definitions": {
+      "type": {
+        "id": "#condition",
+        "title": "Condition",
+        "description": "A status effect that alters the behavior of a character or creature.",
+        "type": "string",
+        "enum": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "exhaustion",
+          "fatigued",
+          "frightened",
+          "grappled",
+          "incapacitated",
+          "invisible",
+          "paralyzed",
+          "petrified",
+          "poisoned",
+          "prone",
+          "restrained",
+          "stunned",
+          "unconscious"
+        ]
+      }
+    }
+  },
+  "weapons-schema": {
+    "id": "#weapons",
+    "title": "Weapons",
+    "description": "All weapons",
+    "type": "object",
+    "properties": {
+      "simpleWeapons": {
+        "id": "#simpleWeapons",
+        "title": "Simple Weapons",
+        "description": "All Simple Weapons",
+        "type": "object",
+        "properties": {
+          "simpleRangedWeapons": {
+            "id": "#simpleRangedWeapons",
+            "title": "Simple Ranged Weapons",
+            "description": "All Simple Ranged Weapons",
+            "type": "array",
+            "items": {
+              "$ref": "#/rangedWeapon"
             }
           },
-          "required": [
-            "naturalRangedWeapons",
-            "naturalmeleeWeapons"
-          ]
+          "simplemeleeWeapons": {
+            "id": "#simplemeleeWeapons",
+            "title": "Simple Melee Weapons",
+            "description": "All Simple Melee Weapons",
+            "type": "array",
+            "items": {
+              "$ref": "#/meleeWeapon"
+            }
+          }
         },
-        "improvisedWeapons": {
-          "id": "#improvisedWeapons",
-          "title": "Weapons",
-          "description": "All Improvised weapons",
-          "type": "object",
-          "properties": {
-            "improvisedRangedWeapons": {
-              "id": "#improvisedRangedWeapons",
-              "title": "Improvised Ranged Weapons",
-              "description": "All Improvised Ranged Weapons",
-              "type": "array",
-              "items": {
-                "$ref": "#rangedWeapon"
-              }
-            },
-            "naturalmeleeWeapons": {
-              "id": "#improvisedmeleeWeapons",
-              "title": "Improvised Melee Weapons",
-              "description": "All Improvised Melee Weapons",
-              "type": "array",
-              "items": {
-                "$ref": "#meleeWeapon"
-              }
-            }
-          },
-          "required": [
-            "improvisedRangedWeapons",
-            "improvisedmeleeWeapons"
-          ]
+        "required": {
+          "simpleRangedWeapons": true,
+          "simplemeleeWeapons": true
         }
       },
-      "required": [
-        "simpleWeapons",
-        "martialWeapons",
-        "naturalWeapons",
-        "improvisedWeapons"
-      ]
+      "martialWeapons": {
+        "id": "#martialWeapons",
+        "title": "Martial Weapons",
+        "description": "All Martial Weapons",
+        "type": "object",
+        "properties": {
+          "martialRangedWeapons": {
+            "id": "#martialRangedWeapons",
+            "title": "Martial Ranged Weapons",
+            "description": "All Martial Ranged Weapons",
+            "type": "array",
+            "items": {
+              "$ref": "#/rangedWeapon"
+            }
+          },
+          "martialmeleeWeapons": {
+            "id": "#martialmeleeWeapons",
+            "title": "Martial Melee Weapons",
+            "description": "All Martial Melee Weapons",
+            "type": "array",
+            "items": {
+              "$ref": "#/meleeWeapon"
+            }
+          }
+        },
+        "required": {
+          "martialRangedWeapons": true,
+          "martialmeleeWeapons": true
+        }
+      },
+      "naturalWeapons": {
+        "id": "#naturalWeapons",
+        "title": "Natural Weapons",
+        "description": "All Natural Weapons",
+        "type": "object",
+        "properties": {
+          "naturalRangedWeapons": {
+            "id": "#naturalRangedWeapons",
+            "title": "Natural Ranged Weapons",
+            "description": "All Natural Ranged Weapons",
+            "type": "array",
+            "items": {
+              "$ref": "#/rangedWeapon"
+            }
+          },
+          "naturalmeleeWeapons": {
+            "id": "#naturalmeleeWeapons",
+            "title": "Natural Melee Weapons",
+            "description": "All Natural Melee Weapons",
+            "type": "array",
+            "items": {
+              "$ref": "#/meleeWeapon"
+            }
+          }
+        },
+        "required": {
+          "naturalRangedWeapons": true,
+          "naturalmeleeWeapons": true
+        }
+      },
+      "improvisedWeapons": {
+        "id": "#improvisedWeapons",
+        "title": "Weapons",
+        "description": "All Improvised weapons",
+        "type": "object",
+        "properties": {
+          "improvisedRangedWeapons": {
+            "id": "#improvisedRangedWeapons",
+            "title": "Improvised Ranged Weapons",
+            "description": "All Improvised Ranged Weapons",
+            "type": "array",
+            "items": {
+              "$ref": "#/rangedWeapon"
+            }
+          },
+          "naturalmeleeWeapons": {
+            "id": "#improvisedmeleeWeapons",
+            "title": "Improvised Melee Weapons",
+            "description": "All Improvised Melee Weapons",
+            "type": "array",
+            "items": {
+              "$ref": "#/meleeWeapon"
+            }
+          }
+        },
+        "required": {
+          "improvisedRangedWeapons": true,
+          "improvisedmeleeWeapons": true
+        }
+      }
+    },
+    "required": {
+      "simpleWeapons": true,
+      "martialWeapons": true,
+      "naturalWeapons": true,
+      "improvisedWeapons": true
     }
   },
   "languages-schema": {
