@@ -11,14 +11,20 @@ const ajv = new Ajv({
   schemas: schema
 });
 
+const green = '\x1b[32m'
+const red = '\x1b[31m'
+const reset = '\x1b[0m'
+
 function testSchema(schemaName, jsonObj) {
-  var valid = ajv.validate(schemaName, jsonObj);
+  const valid = ajv.validate(schemaName, jsonObj);
   if (!valid) {
-    console.log(`Errors in ${schemaName}: ${ajv.errors}`);
+    console.log(`Errors in`, red, `${schemaName}`, reset)
+    console.log(ajv.errors)
   } else {
-    console.log(`Success!${schemaName} is valid!`)
+    console.log(`Success!`, green , `${schemaName}`, reset , `is valid!`)
   }
 }
 
+// List of Validations to run
 testSchema('ancestries-schema', ancestry["ancestries"]);
-testSchema('archetypeBlock-schema', blocks["archetypeBlocks"]);
+testSchema('archetypeBlocks-schema', blocks["archetypeBlocks"]);

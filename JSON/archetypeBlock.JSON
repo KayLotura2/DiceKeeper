@@ -1,6 +1,7 @@
 {
-  "archetypeBlocks": {
-    "commoner": {
+  "archetypeBlocks": [
+    {
+      "name": "commoner",
       "hitDice": [
         1,
         1,
@@ -37,7 +38,8 @@
       ],
       "givenSaves": []
     },
-    "guard": {
+    {
+      "name": "guard",
       "hitDice": [
         2,
         3,
@@ -76,7 +78,8 @@
       ],
       "givenSaves": []
     },
-    "acolyte": {
+    {
+      "name": "acolyte",
       "hitDice": [
         2,
         2,
@@ -106,7 +109,7 @@
         "religion",
         "herbalism tools"
       ],
-      "randomSkils": [
+      "randomSkills": [
         1,
         2,
         3
@@ -119,7 +122,8 @@
         "Acolyte Spellcasting"
       ]
     },
-    "apprenticeWizard": {
+    {
+      "name": "apprenticeWizard",
       "hitDice": [
         2,
         2,
@@ -164,7 +168,8 @@
         "Apprentice Wizard Spellcasting"
       ]
     },
-    "archer": {
+    {
+      "name": "archer",
       "hitDice": [
         9,
         10,
@@ -212,7 +217,8 @@
         "Archer's Eye (3/day): As a bonus action, {NAME} can add 1d10 to {THEIR} next attack or damage roll with a ranged weapon"
       ]
     },
-    "assassin": {
+    {
+      "name": "assassin",
       "hitDice": [
         11,
         12,
@@ -269,7 +275,8 @@
         "Poisoned Weapons: After {NAME} hits with {THEIR} weapon, the target must make a DC 15 consitution save or be Poisoned for 1 minute, and suffer 24 (7d6) poison damage on a failed save, or half as much damage on a successful one."
       ]
     },
-    "bandit captain": {
+    {
+      "name": "bandit captain",
       "hitDice": [
         10,
         10,
@@ -318,7 +325,8 @@
         "Reaction (Parry): {NAME} adds 2 to {THEIR} AC against one melee attack that would hit {THEM}. To do so {NAME} must see the attacker and be wielding a melee weapon."
       ]
     },
-    "bandit": {
+    {
+      "name": "bandit",
       "hitDice": [
         1,
         2,
@@ -348,6 +356,9 @@
       "shieldProf": true,
       "lightArmorProf": true,
       "hvyArmorProf": false,
+      "givenSkills": [
+        "stealth"
+      ],
       "randomSkills": [
         1,
         1,
@@ -356,7 +367,8 @@
       ],
       "givenSaves": []
     },
-    "berserker": {
+    {
+      "name": "berserker",
       "hitDice": [
         8,
         9,
@@ -403,7 +415,8 @@
 
       ]
     },
-    "cult fanatic": {
+    {
+      "name": "cult fanatic",
       "hitDice": [
         8,
         9,
@@ -452,7 +465,8 @@
         "Multiattack: {NAME} makes two melee attacks."
       ]
     },
-    "cultist": {
+    {
+      "name": "cultist",
       "hitDice": [
         1,
         2,
@@ -491,11 +505,13 @@
         2,
         3
       ],
+      "givenSaves": [],
       "other": [
         "Dark Devotion: {NAME} has advantage on saving throws against being charmed or frightened."
       ]
     },
-    "druid": {
+    {
+      "name": "druid",
       "hitDice": [
         3,
         4,
@@ -537,7 +553,8 @@
         "Druid (NPC) Spellcasting"
       ]
     },
-    "gladiator": {
+    {
+      "name": "gladiator",
       "hitDice": [
         14,
         15,
@@ -590,7 +607,8 @@
 				"Parry (Reaction): {NAME} adds 3 to {THEIR} AC against one melee attack that would hit {THEM}. To do so {NAME} must see the attacker and be wielding a melee weapon."
 				]
     },
-    "knight": {
+    {
+      "name": "knight",
       "hitDice": [
         8,
         9,
@@ -599,6 +617,12 @@
       ],
       "languages": [
         "common"
+      ],
+      "bonusLanguages": [
+        1,
+        2,
+        3,
+        4
       ],
       "challenge": 3,
       "weaponProficiencies": [
@@ -627,5 +651,5 @@
 				"Parry (reaction): {NAME} adds 2 to {THEIR} AC against one melee attack that would hit {THEM}. To do so {NAME} must see the attacker and be wielding a melee weapon."
       ]
     }
-  }
+  ]
 }

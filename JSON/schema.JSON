@@ -1,4 +1,36 @@
 {
+  "abilities-schema": {
+    "$id": "http://localhost/abilities",
+    "title": "Abilities",
+    "description": "A collection of abilities",
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/abilities#/definitions/ability"
+    },
+    "definitions": {
+      "ability": {
+        "title": "Ability",
+        "description": "A detailed description of a given ability",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "description": "name of ability",
+            "type": "string"
+          },
+          "abbrev": {
+            "title": "Abbreviation",
+            "description": "abbreveiation of ability",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "abbrev"
+        ]
+      }
+    }
+  },
   "ancestries-schema": {
     "$id": "http://localhost/ancestries",
     "title": "Ancestries",
@@ -278,6 +310,303 @@
       }
     }
   },
+  "archetypeBlocks-schema": {
+    "$id": "http://localhost/archetypeBlocks",
+    "title": "archetypeBlocks",
+    "description": "An array of stat-block descriptors for an NPC's given Archetype",
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/archetypeBlocks#/definitions/archetypeBlock"
+    },
+    "definitions": {
+      "archetypeBlock": {
+        "title": "archetypeBlocks",
+        "description": "The shape of a given stat-block for an NPCs's given Archetype",
+        "type": "object",
+        "properties": {
+          "name": {
+            "name": "Name",
+            "description": "Name of archetype.",
+            "type": "string"
+          },
+          "hitDice": {
+            "title": "Hit Dice",
+            "description": "How Many Hit Dice a Monter Has, an array of values for randomization.",
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "languages": {
+            "title": "Archetypical Languages",
+            "description": "An Array of Languages the archetype always offers.",
+            "type": "array",
+            "items": {
+              "$ref": "http://localhost/languages#/definitions/language"
+            }
+          },
+          "bonusLanguages": {
+            "title": "Archetypical Bonus Languages",
+            "description": "An Array of different numbers of bonus lanuges the architype offers by nature, randomization.",
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "challenge": {
+            "title": "Challenge Rating",
+            "description": "The challenge rating of the archetype.",
+            "type": "number"
+          },
+          "weaponProficiencies": {
+            "title": "Weapon Proficiencies",
+            "description": "The Weapon Proficiencies provided by the Archetype.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "shieldProf": {
+            "title": "Shield Proficiency",
+            "description": "Does the archetype provide Shield Proficiency.",
+            "type": "boolean"
+          },
+          "lightArmorProf": {
+            "title": "Light Armor Proficiency",
+            "description": "Does the archetype provide Light Armor Proficiency.",
+            "type": "boolean"
+          },
+          "hvyArmorProf": {
+            "title": "Heavy Armor Proficiency",
+            "description": "Does the archetype provide Heavy Armor Proficiency.",
+            "type": "boolean"
+          },
+          "givenSkills": {
+            "title": "Given Skills",
+            "description": "The Skill and Tool Proficiencies provided by the Archetype that are garunteed.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "randomSkills": {
+            "title": "Random Skills Number",
+            "description": "An Array of different numbers of skills the architype gains by nature, randomization.",
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "givenSaves": {
+            "title": "Given Saves",
+            "description": "The Save Proficiencies provided by the Archetype that are garunteed.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "other": {
+            "title": "Other",
+            "description": "Special Strings to include.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "hitDice",
+          "languages",
+          "bonusLanguages",
+          "challenge",
+          "weaponProficiencies",
+          "shieldProf",
+          "lightArmorProf",
+          "hvyArmorProf",
+          "givenSkills",
+          "randomSkills",
+          "givenSaves"
+        ]
+      }
+    }
+  },
+  "conditions-schema": {
+    "$id": "http://localhost/conditions",
+    "title": "Conditions",
+    "description": "A collection of all the conditions",
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/conditions#/definitions/condition"
+    },
+    "definitions": {
+      "condition": {
+        "title": "Condition",
+        "description": "A status effect that alters the behavior of a character or creature.",
+        "type": "string",
+        "enum": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "exhaustion",
+          "fatigued",
+          "frightened",
+          "grappled",
+          "incapacitated",
+          "invisible",
+          "paralyzed",
+          "petrified",
+          "poisoned",
+          "prone",
+          "restrained",
+          "stunned",
+          "unconscious"
+        ]
+      }
+    }
+  },
+  "damageTypes-schema": {
+    "$id": "http://localhost/damageTypes",
+    "title": "Damage Types",
+    "description": "A collection of all the damage types",
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/damageTypes#/definitions/damageType"
+    },
+    "definitions": {
+      "damageType": {
+        "title": "Damage Type",
+        "description": "A Specific Damage Type.",
+        "type": "string",
+        "enum": [
+          "acid",
+          "bludgeoning",
+          "cold",
+          "fire",
+          "force",
+          "lightning",
+          "necrotic",
+          "piercing",
+          "poison",
+          "psychic",
+          "radiant",
+          "slashing",
+          "thunder"
+        ]
+      }
+    }
+  },
+  "languages-schema": {
+    "$id": "http://localhost/languages",
+    "title": "Languages",
+    "description": "A collection of laungaues",
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/languages#/definitions/language"
+    },
+    "definitions": {
+      "language": {
+        "title": "Language",
+        "description": "A communication form in setting.",
+        "type": "string",
+        "enum": [
+          "abyssal",
+          "aqua-common",
+          "aquan",
+          "auran",
+          "bahbel",
+          "celestial",
+          "common",
+          "draconic",
+          "drow",
+          "drow sign",
+          "druidic",
+          "dvati",
+          "dwarven",
+          "dwarven gem code",
+          "elven",
+          "elven astrological runes",
+          "gerudo",
+          "giant",
+          "gith",
+          "gnomen",
+          "gnomen flower code",
+          "goblin",
+          "halfling",
+          "hobgoblin sign",
+          "ignan",
+          "infernal",
+          "jäger",
+          "kender knocking",
+          "kotigi",
+          "kuo-toa",
+          "mantid flag",
+          "menta",
+          "odolocation",
+          "pantomime",
+          "pentacalian",
+          "primordial",
+          "sahuagin",
+          "skip",
+          "slaad",
+          "sylvan",
+          "taalese",
+          "terran",
+          "thieves cant",
+          "tuilvalanuue",
+          "undercommon",
+          "xythian",
+          "zilarith"
+        ]
+      }
+    }
+  },
+  "moveTypes-schema": {
+    "$id": "http://localhost/moveTypes",
+    "title": "Movement Types",
+    "description": "A collection of movement types",
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/moveTypes#/definitions/moveType"
+    },
+    "definitions": {
+      "moveSpeed": {
+        "title": "Move Type",
+        "description": "Available Movement Type",
+        "type": "string",
+        "enum": [
+          "walk",
+          "glyde",
+          "fly",
+          "swim",
+          "burrow"
+        ]
+      }
+    }
+  },
+  "resistanceLevels-schema": {
+    "$id": "http://localhost/resistanceLevels",
+    "title": "Resistance Levels",
+    "description": "A collection of resistance levels",
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/resistanceLevels#/definitions/resistanceLevel"
+    },
+    "definitions": {
+      "resistanceLevel": {
+        "title": "Resistance Level",
+        "description": "The level of resistance to a thing a person has.",
+        "type": "string",
+        "enum": [
+          "advantage on saving throws against",
+          "disadvantage on saving throws against",
+          "immunity",
+          "resistance",
+          "vulnerability"
+        ]
+      }
+    }
+  },
   "skills-schema": {
     "$id": "http://localhost/skills",
     "title": "Skills",
@@ -310,83 +639,6 @@
       }
     }
   },
-  "abilities-schema": {
-    "$id": "http://localhost/abilities",
-    "title": "Abilities",
-    "description": "A collection of abilities",
-    "type": "array",
-    "items": {
-      "$ref": "http://localhost/abilities#/definitions/ability"
-    },
-    "definitions": {
-      "ability": {
-        "title": "Ability",
-        "description": "A detailed description of a given ability",
-        "type": "object",
-        "properties": {
-          "name": {
-            "title": "Name",
-            "description": "name of ability",
-            "type": "string"
-          },
-          "abbrev": {
-            "title": "Abbreviation",
-            "description": "abbreveiation of ability",
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "abbrev"
-        ]
-      }
-    }
-  },
-  "sizes-schema": {
-    "$id": "http://localhost/sizes",
-    "title": "Sizes",
-    "description": "A collection of sizes",
-    "type": "array",
-    "items": {
-      "$ref": "http://localhost/sizes#/definitions/size"
-    },
-    "definitions": {
-      "size": {
-        "title": "Size",
-        "description": "Available sizes",
-        "type": "string",
-        "enum": [
-          "tiny",
-          "small",
-          "medium",
-          "large"
-        ]
-      }
-    }
-  },
-  "moveTypes-schema": {
-    "$id": "http://localhost/moveTypes",
-    "title": "Movement Types",
-    "description": "A collection of movement types",
-    "type": "array",
-    "items": {
-      "$ref": "http://localhost/moveTypes#/definitions/moveType"
-    },
-    "definitions": {
-      "moveSpeed": {
-        "title": "Move Type",
-        "description": "Available Movement Type",
-        "type": "string",
-        "enum": [
-          "walk",
-          "glyde",
-          "fly",
-          "swim",
-          "burrow"
-        ]
-      }
-    }
-  },
   "senses-schema": {
     "$id": "http://localhost/senses",
     "title": "Senses",
@@ -409,36 +661,24 @@
       }
     }
   },
-  "types-schema": {
-    "$id": "http://localhost/types",
-    "title": "Types",
-    "description": "A collection of creature types",
+  "sizes-schema": {
+    "$id": "http://localhost/sizes",
+    "title": "Sizes",
+    "description": "A collection of sizes",
     "type": "array",
     "items": {
-      "$ref": "http://localhost/types#/definitions/type"
+      "$ref": "http://localhost/sizes#/definitions/size"
     },
     "definitions": {
-      "type": {
-        "title": "Type",
-        "description": "The base type a creature has",
+      "size": {
+        "title": "Size",
+        "description": "Available sizes",
         "type": "string",
         "enum": [
-          "abberation",
-          "beast",
-          "celestial",
-          "construct",
-          "dragon",
-          "elemental",
-          "eidolon",
-          "fey",
-          "fiend",
-          "giant",
-          "kinfolk",
-          "monstrosity",
-          "Oooze",
-          "plant",
-          "swarm",
-          "undead"
+          "tiny",
+          "small",
+          "medium",
+          "large"
         ]
       }
     }
@@ -499,90 +739,36 @@
       }
     }
   },
-  "resistanceLevels-schema": {
-    "$id": "http://localhost/resistanceLevels",
-    "title": "Resistance Levels",
-    "description": "A collection of resistance levels",
+  "types-schema": {
+    "$id": "http://localhost/types",
+    "title": "Types",
+    "description": "A collection of creature types",
     "type": "array",
     "items": {
-      "$ref": "http://localhost/resistanceLevels#/definitions/resistanceLevel"
+      "$ref": "http://localhost/types#/definitions/type"
     },
     "definitions": {
-      "resistanceLevel": {
-        "title": "Resistance Level",
-        "description": "The level of resistance to a thing a person has.",
+      "type": {
+        "title": "Type",
+        "description": "The base type a creature has",
         "type": "string",
         "enum": [
-          "advantage on saving throws against",
-          "disadvantage on saving throws against",
-          "immunity",
-          "resistance",
-          "vulnerability"
-        ]
-      }
-    }
-  },
-  "damageTypes-schema": {
-    "$id": "http://localhost/damageTypes",
-    "title": "Damage Types",
-    "description": "A collection of all the damage types",
-    "type": "array",
-    "items": {
-      "$ref": "http://localhost/damageTypes#/definitions/damageType"
-    },
-    "definitions": {
-      "damageType": {
-        "title": "Damage Type",
-        "description": "A Specific Damage Type.",
-        "type": "string",
-        "enum": [
-          "acid",
-          "bludgeoning",
-          "cold",
-          "fire",
-          "force",
-          "lightning",
-          "necrotic",
-          "piercing",
-          "poison",
-          "psychic",
-          "radiant",
-          "slashing",
-          "thunder"
-        ]
-      }
-    }
-  },
-  "conditions-schema": {
-    "$id": "http://localhost/conditions",
-    "title": "Conditions",
-    "description": "A collection of all the conditions",
-    "type": "array",
-    "items": {
-      "$ref": "http://localhost/conditions#/definitions/condition"
-    },
-    "definitions": {
-      "condition": {
-        "title": "Condition",
-        "description": "A status effect that alters the behavior of a character or creature.",
-        "type": "string",
-        "enum": [
-          "blinded",
-          "charmed",
-          "deafened",
-          "exhaustion",
-          "fatigued",
-          "frightened",
-          "grappled",
-          "incapacitated",
-          "invisible",
-          "paralyzed",
-          "petrified",
-          "poisoned",
-          "prone",
-          "restrained",
-          "stunned",
-          "unconscious"
+          "abberation",
+          "beast",
+          "celestial",
+          "construct",
+          "dragon",
+          "elemental",
+          "eidolon",
+          "fey",
+          "fiend",
+          "giant",
+          "kinfolk",
+          "monstrosity",
+          "Oooze",
+          "plant",
+          "swarm",
+          "undead"
         ]
       }
     }
@@ -772,176 +958,6 @@
       }
     }
   },
-  "languages-schema": {
-    "$id": "http://localhost/lanugages",
-    "title": "Languages",
-    "description": "A collection of laungaues",
-    "type": "array",
-    "items": {
-      "$ref": "http://localhost/languages#/definitions/language"
-    },
-    "definitions": {
-      "language": {
-        "title": "Language",
-        "description": "A communication form in setting.",
-        "type": "string",
-        "enum": [
-          "abyssal",
-          "aqua-common",
-          "aquan",
-          "auran",
-          "bahbel",
-          "celestial",
-          "common",
-          "draconic",
-          "drow",
-          "drow sign",
-          "dvati",
-          "dwarven",
-          "dwarven gem code",
-          "elven",
-          "elven astrological runes",
-          "gerudo",
-          "giant",
-          "gith",
-          "gnomen",
-          "gnomen flower code",
-          "goblin",
-          "halfling",
-          "hobgoblin sign",
-          "ignan",
-          "infernal",
-          "jäger",
-          "kender knocking",
-          "kotigi",
-          "kuo-toa",
-          "mantid flag",
-          "menta",
-          "odolocation",
-          "pantomime",
-          "pentacalian",
-          "primordial",
-          "sahuagin",
-          "skip",
-          "slaad",
-          "sylvan",
-          "taalese",
-          "terran",
-          "thieves cant",
-          "tuilvalanuue",
-          "undercommon",
-          "xythian",
-          "zilarith"
-        ]
-      }
-    }
-  },
-  "archetypeBlock-schema": {
-    "$id": "http://localhost/monster",
-    "title": "Monsters",
-    "description": "The shape of a given Monster Block for NPCs to have stats",
-    "type": "object",
-    "properties": {
-      "hitDice": {
-        "title": "Hit Dice",
-        "description": "How Many Hit Dice a Monter Has, an array of values for randomization.",
-        "type": "array",
-        "items": {
-          "type": "number"
-        }
-      },
-      "languages": {
-        "title": "Archetypical Languages",
-        "description": "An Array of Languages the archetype always offers.",
-        "type": "array",
-        "items": {
-          "$ref": "http://localhost/languages#/definitions/language"
-        }
-      },
-      "bonusLanguages": {
-        "title": "Archetypical Bonus Languages",
-        "description": "An Array of different numbers of bonus lanuges the architype offers by nature, randomization.",
-        "type": "array",
-        "items": {
-          "type": "number"
-        }
-      },
-      "challenge": {
-        "title": "Challenge Rating",
-        "description": "The challenge rating of the archetype.",
-        "type": "number"
-      },
-      "weaponProficiencies": {
-        "title": "Weapon Proficiencies",
-        "description": "The Weapon Proficiencies provided by the Archetype.",
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      },
-      "shieldProf": {
-        "title": "Shield Proficiency",
-        "description": "Does the archetype provide Shield Proficiency.",
-        "type": "boolean"
-      },
-      "lightArmorProf": {
-        "title": "Light Armor Proficiency",
-        "description": "Does the archetype provide Light Armor Proficiency.",
-        "type": "boolean"
-      },
-      "hvyArmorProf": {
-        "title": "Heavy Armor Proficiency",
-        "description": "Does the archetype provide Heavy Armor Proficiency.",
-        "type": "boolean"
-      },
-      "givenSkills": {
-        "title": "Given Skills",
-        "description": "The Skill and Tool Proficiencies provided by the Archetype that are garunteed.",
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      },
-      "randomSkills": {
-        "title": "Random Skills Number",
-        "description": "An Array of different numbers of skills the architype gains by nature, randomization.",
-        "type": "array",
-        "items": {
-          "type": "number"
-        }
-      },
-      "givenSaves": {
-        "title": "Given Saves",
-        "description": "The Save Proficiencies provided by the Archetype that are garunteed.",
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      },
-      "other": {
-        "title": "Other",
-        "description": "Special Strings to include.",
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      }
-    },
-    "required": [
-      "hitDice",
-      "languages",
-      "bonusLanguages",
-      "challenge",
-      "weaponProficiencies",
-      "shieldProf",
-      "lightArmorProf",
-      "hvyArmorProf",
-      "givenSkills",
-      "randomSkills",
-      "givenSaves",
-      "randomSaves"
-    ]
-  },
   "notesToDO": {
     "notes": [
       "TODO",
@@ -952,8 +968,8 @@
       "* Fix {Name} and {pronoun}",
       "* Knight Archetype needs better weapon proficiencies"
     ],
-    "npcBlocks" : {
-      "note" : "Make these blocks",
+    "npcBlocks": {
+      "note": "Make these blocks",
       "mage": {},
       "martial arts adept": {},
       "noble": {},
