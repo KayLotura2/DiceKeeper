@@ -1,6 +1,7 @@
 var Ajv = require('ajv');
 const schema = require("./JSON/schema.json")
 const ancestry = require("./JSON/ancestry.json")
+const blocks = require("./JSON/archetypeBlock.json")
 var schemaNames = Object.keys(schema)
 
 const ajv = new Ajv({
@@ -10,9 +11,14 @@ const ajv = new Ajv({
   schemas: schema
 });
 
-var valid = ajv.validate('ancestries-schema', ancestry["ancestries"]);
-if (!valid) {
-  console.log(ajv.errors);
-} else {
-  console.log("Success! JSON is Valid.")
+function testSchema(schemaName, jsonObj) {
+  var valid = ajv.validate(schemaName, jsonObj);
+  if (!valid) {
+    console.log(`Errors in ${schemaName}: ${ajv.errors}`);
+  } else {
+    console.log(`Success!${schemaName} is valid!`)
+  }
 }
+
+testSchema('ancestries-schema', ancestry["ancestries"]);
+testSchema('archetypeBlock-schema', blocks["archetypeBlocks"]);

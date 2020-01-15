@@ -791,7 +791,6 @@
           "aquan",
           "auran",
           "bahbel",
-          "cant",
           "celestial",
           "common",
           "draconic",
@@ -828,6 +827,7 @@
           "sylvan",
           "taalese",
           "terran",
+          "thieves cant",
           "tuilvalanuue",
           "undercommon",
           "xythian",
@@ -836,12 +836,148 @@
       }
     }
   },
+  "archetypeBlock-schema": {
+    "$id": "http://localhost/monster",
+    "title": "Monsters",
+    "description": "The shape of a given Monster Block for NPCs to have stats",
+    "type": "object",
+    "properties": {
+      "hitDice": {
+        "title": "Hit Dice",
+        "description": "How Many Hit Dice a Monter Has, an array of values for randomization.",
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      },
+      "languages": {
+        "title": "Archetypical Languages",
+        "description": "An Array of Languages the archetype always offers.",
+        "type": "array",
+        "items": {
+          "$ref": "http://localhost/languages#/definitions/language"
+        }
+      },
+      "bonusLanguages": {
+        "title": "Archetypical Bonus Languages",
+        "description": "An Array of different numbers of bonus lanuges the architype offers by nature, randomization.",
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      },
+      "challenge": {
+        "title": "Challenge Rating",
+        "description": "The challenge rating of the archetype.",
+        "type": "number"
+      },
+      "weaponProficiencies": {
+        "title": "Weapon Proficiencies",
+        "description": "The Weapon Proficiencies provided by the Archetype.",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "shieldProf": {
+        "title": "Shield Proficiency",
+        "description": "Does the archetype provide Shield Proficiency.",
+        "type": "boolean"
+      },
+      "lightArmorProf": {
+        "title": "Light Armor Proficiency",
+        "description": "Does the archetype provide Light Armor Proficiency.",
+        "type": "boolean"
+      },
+      "hvyArmorProf": {
+        "title": "Heavy Armor Proficiency",
+        "description": "Does the archetype provide Heavy Armor Proficiency.",
+        "type": "boolean"
+      },
+      "givenSkills": {
+        "title": "Given Skills",
+        "description": "The Skill and Tool Proficiencies provided by the Archetype that are garunteed.",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "randomSkills": {
+        "title": "Random Skills Number",
+        "description": "An Array of different numbers of skills the architype gains by nature, randomization.",
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      },
+      "givenSaves": {
+        "title": "Given Saves",
+        "description": "The Save Proficiencies provided by the Archetype that are garunteed.",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "other": {
+        "title": "Other",
+        "description": "Special Strings to include.",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "hitDice",
+      "languages",
+      "bonusLanguages",
+      "challenge",
+      "weaponProficiencies",
+      "shieldProf",
+      "lightArmorProf",
+      "hvyArmorProf",
+      "givenSkills",
+      "randomSkills",
+      "givenSaves",
+      "randomSaves"
+    ]
+  },
   "notesToDO": {
     "notes": [
       "TODO",
       "* Ancestral resistances have a damageType-or-Condition and a resistanceLevel to it",
       "* Eventually broaden language to include Alphabet, Inspiration, Internal Name, and secret bool",
-      "* Flesh out weapons schema"
-    ]
+      "* Flesh out weapons schema",
+      "* Weapons would be better defined as a `weapon` with some booleans.",
+      "* Fix {Name} and {pronoun}",
+      "* Knight Archetype needs better weapon proficiencies"
+    ],
+    "npcBlocks" : {
+      "note" : "Make these blocks",
+      "mage": {},
+      "martial arts adept": {},
+      "noble": {},
+      "pirate/smuggler": {},
+      "priest": {},
+      "scout": {},
+      "spy": {},
+      "swashbuckler": {},
+      "thug": {},
+      "veteran": {},
+      "arch druid": {},
+      "arch mage": {},
+      "bard": {},
+      "blackguard": {},
+      "champion": {},
+      "cult high priest": {
+        "notes": [
+          "Kraken Priest"
+        ]
+      },
+      "master thief": {},
+      "war priest": {},
+      "warlock of the fiend": {},
+      "warlord": {}
+    }
   }
 }
