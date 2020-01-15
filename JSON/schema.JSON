@@ -91,10 +91,10 @@
                     "type": "number"
                   }
                 },
-                "required": {
-                  "movetype": true,
-                  "distance": true
-                }
+                "required": [
+                  "movetype",
+                  "distance"
+                ]
               }
             }
           },
@@ -219,10 +219,10 @@
                           "type": "number"
                         }
                       },
-                      "required": {
-                        "sense": true,
-                        "distance": true
-                      }
+                      "required": [
+                        "sense",
+                        "distance"
+                      ]
                     }
                   }
                 },
@@ -240,10 +240,10 @@
                           "type": "number"
                         }
                       },
-                      "required": {
-                        "movetype": true,
-                        "distance": true
-                      }
+                      "required": [
+                        "movetype",
+                        "distance"
+                      ]
                     }
                   }
                 },
@@ -300,10 +300,10 @@
             "ref": "#ability"
           }
         },
-        "required": {
-          "name": true,
-          "abMod": true
-        }
+        "required": [
+          "name",
+          "abMod"
+        ]
       }
     }
   },
@@ -333,10 +333,10 @@
             "type": "string"
           }
         },
-        "required": {
-          "name": true,
-          "abbrev": true
-        }
+        "required": [
+          "name",
+          "abbrev"
+        ]
       }
     }
   },
@@ -616,10 +616,10 @@
             }
           }
         },
-        "required": {
-          "simpleRangedWeapons": true,
-          "simplemeleeWeapons": true
-        }
+        "required": [
+          "simpleRangedWeapons",
+          "simplemeleeWeapons"
+        ]
       },
       "martialWeapons": {
         "id": "#martialWeapons",
@@ -646,10 +646,10 @@
             }
           }
         },
-        "required": {
-          "martialRangedWeapons": true,
-          "martialmeleeWeapons": true
-        }
+        "required": [
+          "martialRangedWeapons",
+          "martialmeleeWeapons"
+        ]
       },
       "naturalWeapons": {
         "id": "#naturalWeapons",
@@ -676,10 +676,10 @@
             }
           }
         },
-        "required": {
-          "naturalRangedWeapons": true,
-          "naturalmeleeWeapons": true
-        }
+        "required": [
+          "naturalRangedWeapons",
+          "naturalmeleeWeapons"
+        ]
       },
       "improvisedWeapons": {
         "id": "#improvisedWeapons",
@@ -706,18 +706,18 @@
             }
           }
         },
-        "required": {
-          "improvisedRangedWeapons": true,
-          "improvisedmeleeWeapons": true
-        }
+        "required": [
+          "improvisedRangedWeapons",
+          "improvisedmeleeWeapons"
+        ]
       }
     },
-    "required": {
-      "simpleWeapons": true,
-      "martialWeapons": true,
-      "naturalWeapons": true,
-      "improvisedWeapons": true
-    }
+    "required": [
+      "simpleWeapons",
+      "martialWeapons",
+      "naturalWeapons",
+      "improvisedWeapons"
+    ]
   },
   "languages-schema": {
     "id": "#lanugages",
