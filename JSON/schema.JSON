@@ -1,15 +1,14 @@
 {
   "ancestries-schema": {
-    "id": "#ancestries",
+    "$id": "http://localhost/ancestries",
     "title": "Ancestries",
     "description": "A collection of valid NPC ancestries",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/ancestry"
+      "$ref": "http://localhost/ancestries#/definitions/ancestry"
     },
     "definitions": {
       "ancestry": {
-        "id": "#ancestry",
         "title": "Ancestry",
         "description": "A detailed description of a NPC's ancestry",
         "type": "object",
@@ -24,19 +23,19 @@
             "description": "The base types of the NPC",
             "type": "array",
             "items": {
-              "$ref": "#/type"
+              "$ref": "http://localhost/types#/definitions/type"
             }
           },
           "subTypes": {
-            "title": "Subtypes",
+            "title": "SubTypes",
             "description": "The base subTypes of the NPC",
             "type": "array",
             "items": {
-              "$ref": "#/subType"
+              "$ref": "http://localhost/subTypes#/definitions/subtype"
             }
           },
           "baseSize": {
-            "$ref": "#/size"
+            "$ref": "http://localhost/sizes#/definitions/size"
           },
           "baseMod": {
             "title": "Base Abiliy Modifier",
@@ -44,7 +43,7 @@
             "type": "object",
             "properties": {
               "ability": {
-                "$ref": "#/ability"
+                "$ref": "http://localhost/abilities#/definitions/ability"
               },
               "bonus": {
                 "type": "number",
@@ -64,7 +63,7 @@
               "senseObj": {
                 "properties": {
                   "sense": {
-                    "$ref": "#/sense"
+                    "$ref": "http://localhost/senses#/definitions/sense"
                   },
                   "distance": {
                     "type": "number"
@@ -85,7 +84,7 @@
               "moveSpeedObj": {
                 "properties": {
                   "movetype": {
-                    "$ref": "#/moveType"
+                    "$ref": "http://localhost/moveTypes#/definitions/moveType"
                   },
                   "distance": {
                     "type": "number"
@@ -103,7 +102,15 @@
             "description": "The base resistances the NPC has for their ancestry",
             "type": "array",
             "items": {
-              "$ref": "#/resistance"
+              "type": "object",
+              "properties": {
+                "resistedSubject": {
+                  "$ref": "http://localhost/damageTypes#/definitions/damageType"
+                },
+                "resistanceLevel": {
+                  "$ref": "http://localhost/resistanceLevels#/definitions/resistanceLevel"
+                }
+              }
             }
           },
           "naturealWeapons": {
@@ -111,7 +118,7 @@
             "description": "The natural wreapons provided by the base ancestry",
             "type": "array",
             "items": {
-              "$ref": "#/naturalWeapon"
+              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
             }
           },
           "weaponProfs": {
@@ -119,7 +126,7 @@
             "description": "Weapon Proficiencies provided by the base ancestry",
             "type": "array",
             "items": {
-              "$ref": "#/weapon"
+              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
             }
           },
           "skillProficiencies": {
@@ -127,7 +134,7 @@
             "description": "The skill and tool proficiencies of the NPC's sub ancestry",
             "type": "array",
             "items": {
-              "ref": "#/skill"
+              "ref": "http://localhost/skills#/definitions/skill"
             }
           },
           "languages": {
@@ -135,7 +142,7 @@
             "description": "Languages granted by baseAncestry",
             "type": "array",
             "items": {
-              "ref": "#/language"
+              "ref": "http://localhost/lamnguages#/definitions/language"
             }
           },
           "other": {
@@ -151,140 +158,136 @@
             "description": "The sub-ancestries available for the given base ancestry",
             "type": "array",
             "items": {
-              "$ref": "#/definitions/subAncestry"
+              "$ref": "http://localhost/ancestries#/definitions/subAncestry"
             }
           }
-        },
-        "definitions": {
-          "subAncestry": {
-            "id": "#subAncestry",
-            "title": "Sub-Ancestry",
-            "description": "A sub-ancestry's values for the given base ancestry",
+        }
+      },
+      "subAncestry": {
+        "title": "Sub-Ancestry",
+        "description": "A sub-ancestry's values for the given base ancestry",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Sub-Ancestry Name",
+            "description": "A sub-ancestry's name, usually a modifer to the base ancestry",
+            "type": "string"
+          },
+          "size": {
+            "title": "Sub-Ancestry Size",
+            "description": "A sub-ancestry's size.",
+            "$ref": "http://localhost/sizes#/definitions/size"
+          },
+          "subMod": {
+            "title": "The Subraces Ability Modifier",
+            "description": "The ability modifier of the NPC's sub ancestry",
             "type": "object",
             "properties": {
-              "name": {
-                "title": "Sub-Ancestry Name",
-                "description": "A sub-ancestry's name, usually a modifer to the base ancestry",
-                "type": "string"
+              "ability": {
+                "$ref": "http://localhost/abilities#/definitions/ability"
               },
-              "size": {
-                "title": "Sub-Ancestry Size",
-                "description": "A sub-ancestry's size.",
-                "$ref": "#/size"
-              },
-              "subMod": {
-                "title": "The Subraces Ability Modifier",
-                "description": "The ability modifier of the NPC's sub ancestry",
-                "type": "object",
-                "properties": {
-                  "ability": {
-                    "$ref": "#/ability"
+              "bonus": {
+                "type": "number",
+                "enum": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            },
+            "skillProficiencies": {
+              "title": "Proficiencies",
+              "description": "The skill and tool proficiencies of the NPC's sub ancestry",
+              "type": "array",
+              "items": {
+                "ref": "http://localhost/skills#/definitions/skill"
+              }
+            },
+            "languages": {
+              "title": "Languages",
+              "description": "Languages granted by subAncestry",
+              "type": "array",
+              "items": {
+                "ref": "http://localhost/languages#/definitions/language"
+              }
+            },
+            "senses": {
+              "title": "Senses",
+              "description": "The senses the NPC has for their subAncestry",
+              "type": "array",
+              "items": {
+                "senseObj": {
+                  "properties": {
+                    "sense": {
+                      "$ref": "http://localhost/senses#/definitions/sense"
+                    },
+                    "distance": {
+                      "type": "number"
+                    }
                   },
-                  "bonus": {
-                    "type": "number",
-                    "enum": [
-                      0,
-                      1,
-                      2
-                    ]
-                  }
-                },
-                "skillProficiencies": {
-                  "title": "Proficiencies",
-                  "description": "The skill and tool proficiencies of the NPC's sub ancestry",
-                  "type": "array",
-                  "items": {
-                    "ref": "#skill"
-                  }
-                },
-                "languages": {
-                  "title": "Languages",
-                  "description": "Languages granted by subAncestry",
-                  "type": "array",
-                  "items": {
-                    "ref": "#language"
-                  }
-                },
-                "senses": {
-                  "title": "Senses",
-                  "description": "The senses the NPC has for their subAncestry",
-                  "type": "array",
-                  "items": {
-                    "senseObj": {
-                      "properties": {
-                        "sense": {
-                          "$ref": "#/sense"
-                        },
-                        "distance": {
-                          "type": "number"
-                        }
-                      },
-                      "required": [
-                        "sense",
-                        "distance"
-                      ]
-                    }
-                  }
-                },
-                "moveSpeeds": {
-                  "title": "Move Speeds",
-                  "description": "The  move speeds the NPC has for their subAncestry",
-                  "type": "array",
-                  "items": {
-                    "moveSpeedObj": {
-                      "properties": {
-                        "movetype": {
-                          "$ref": "#/moveType"
-                        },
-                        "distance": {
-                          "type": "number"
-                        }
-                      },
-                      "required": [
-                        "movetype",
-                        "distance"
-                      ]
-                    }
-                  }
-                },
-                "other": {
-                  "title": "Other Abilities",
-                  "description": "Strings that may be further implimented later, Special Abilities",
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "required": [
+                    "sense",
+                    "distance"
+                  ]
                 }
-              },
-              "required": {
-                "name": true,
-                "subMod": true
+              }
+            },
+            "moveSpeeds": {
+              "title": "Move Speeds",
+              "description": "The  move speeds the NPC has for their subAncestry",
+              "type": "array",
+              "items": {
+                "moveSpeedObj": {
+                  "properties": {
+                    "movetype": {
+                      "$ref": "http://localhost/moveTypes#/definitions/moveType"
+                    },
+                    "distance": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "movetype",
+                    "distance"
+                  ]
+                }
+              }
+            },
+            "other": {
+              "title": "Other Abilities",
+              "description": "Strings that may be further implimented later, Special Abilities",
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             }
           },
           "required": {
-            "rt": true,
-            "types": true,
-            "baseSize": true,
-            "baseMod": true,
-            "moveSpeeds": true,
-            "subs": true
+            "name": true,
+            "subMod": true
           }
         }
+      },
+      "required": {
+        "rt": true,
+        "types": true,
+        "baseSize": true,
+        "baseMod": true,
+        "moveSpeeds": true,
+        "subs": true
       }
     }
   },
   "skills-schema": {
-    "id": "#skills",
+    "$id": "http://localhost/skills",
     "title": "Skills",
     "description": "A collection of skills and tools",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/skill"
+      "$ref": "http://localhost/skills#/definitions/skill"
     },
     "definitions": {
       "skill": {
-        "id": "#skill",
         "title": "Skill",
         "description": "A detailed description of a given skill",
         "type": "object",
@@ -308,16 +311,15 @@
     }
   },
   "abilities-schema": {
-    "id": "#abilities",
+    "$id": "http://localhost/abilities",
     "title": "Abilities",
     "description": "A collection of abilities",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/ability"
+      "$ref": "http://localhost/abilities#/definitions/ability"
     },
     "definitions": {
       "ability": {
-        "id": "#ability",
         "title": "Ability",
         "description": "A detailed description of a given ability",
         "type": "object",
@@ -341,16 +343,15 @@
     }
   },
   "sizes-schema": {
-    "id": "#sizes",
+    "$id": "http://localhost/sizes",
     "title": "Sizes",
     "description": "A collection of sizes",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/size"
+      "$ref": "http://localhost/sizes#/definitions/size"
     },
     "definitions": {
       "size": {
-        "id": "#size",
         "title": "Size",
         "description": "Available sizes",
         "type": "string",
@@ -364,16 +365,15 @@
     }
   },
   "moveTypes-schema": {
-    "id": "#moveTypes",
+    "$id": "http://localhost/moveTypes",
     "title": "Movement Types",
     "description": "A collection of movement types",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/moveType"
+      "$ref": "http://localhost/moveTypes#/definitions/moveType"
     },
     "definitions": {
       "moveSpeed": {
-        "id": "#moveType",
         "title": "Move Type",
         "description": "Available Movement Type",
         "type": "string",
@@ -387,17 +387,16 @@
       }
     }
   },
-  "scenes-schema": {
-    "id": "#senses",
+  "senses-schema": {
+    "$id": "http://localhost/senses",
     "title": "Senses",
     "description": "A collection of senses",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/sense"
+      "$ref": "http://localhost/senses#/definitions/sense"
     },
     "definitions": {
       "sense": {
-        "id": "#sense",
         "title": "Sense",
         "description": "Available Sense",
         "type": "string",
@@ -411,16 +410,15 @@
     }
   },
   "types-schema": {
-    "id": "#types",
+    "$id": "http://localhost/types",
     "title": "Types",
     "description": "A collection of creature types",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/type"
+      "$ref": "http://localhost/types#/definitions/type"
     },
     "definitions": {
       "type": {
-        "id": "#type",
         "title": "Type",
         "description": "The base type a creature has",
         "type": "string",
@@ -431,6 +429,7 @@
           "construct",
           "dragon",
           "elemental",
+          "eidolon",
           "fey",
           "fiend",
           "giant",
@@ -445,16 +444,15 @@
     }
   },
   "subTypes-schema": {
-    "id": "#subTypes",
+    "$id": "http://localhost/subTypes",
     "title": "SubTypes",
-    "description": "A collection of creature subtypes",
+    "description": "A collection of creature subTypes",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/subType"
+      "$ref": "http://localhost/subTypes#/definitions/subtype"
     },
     "definitions": {
-      "type": {
-        "id": "#subType",
+      "subtype": {
         "title": "Subtype",
         "description": "The lesser subtype a creature has",
         "type": "string",
@@ -468,6 +466,8 @@
           "demon",
           "deva",
           "devil",
+          "dragonborn",
+          "dryad",
           "dwarf",
           "earth",
           "elf",
@@ -477,17 +477,22 @@
           "gnome",
           "good",
           "guardinial",
+          "human",
           "halfling",
           "incorporeal",
           "jotborn",
           "lawful",
           "living construct",
+          "merfolk",
           "native",
           "neghezkira",
+          "planarborn",
           "psionic",
           "shadow",
           "shapechanger",
           "titan",
+          "transforged",
+          "vogul",
           "water",
           "yugoloth"
         ]
@@ -495,16 +500,15 @@
     }
   },
   "resistanceLevels-schema": {
-    "id": "#resitanceLevels",
+    "$id": "http://localhost/resistanceLevels",
     "title": "Resistance Levels",
     "description": "A collection of resistance levels",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/resstanceLevel"
+      "$ref": "http://localhost/resistanceLevels#/definitions/resistanceLevel"
     },
     "definitions": {
-      "type": {
-        "id": "#resitanceLevel",
+      "resistanceLevel": {
         "title": "Resistance Level",
         "description": "The level of resistance to a thing a person has.",
         "type": "string",
@@ -519,16 +523,15 @@
     }
   },
   "damageTypes-schema": {
-    "id": "#damageTypes",
+    "$id": "http://localhost/damageTypes",
     "title": "Damage Types",
     "description": "A collection of all the damage types",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/damageType"
+      "$ref": "http://localhost/damageTypes#/definitions/damageType"
     },
     "definitions": {
-      "type": {
-        "id": "#damageType",
+      "damageType": {
         "title": "Damage Type",
         "description": "A Specific Damage Type.",
         "type": "string",
@@ -551,16 +554,15 @@
     }
   },
   "conditions-schema": {
-    "id": "#conditions",
+    "$id": "http://localhost/conditions",
     "title": "Conditions",
     "description": "A collection of all the conditions",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/condition"
+      "$ref": "http://localhost/conditions#/definitions/condition"
     },
     "definitions": {
-      "type": {
-        "id": "#condition",
+      "condition": {
         "title": "Condition",
         "description": "A status effect that alters the behavior of a character or creature.",
         "type": "string",
@@ -586,33 +588,30 @@
     }
   },
   "weapons-schema": {
-    "id": "#weapons",
+    "$id": "http://localhost/weapons",
     "title": "Weapons",
     "description": "All weapons",
     "type": "object",
     "properties": {
       "simpleWeapons": {
-        "id": "#simpleWeapons",
         "title": "Simple Weapons",
         "description": "All Simple Weapons",
         "type": "object",
         "properties": {
           "simpleRangedWeapons": {
-            "id": "#simpleRangedWeapons",
             "title": "Simple Ranged Weapons",
             "description": "All Simple Ranged Weapons",
             "type": "array",
             "items": {
-              "$ref": "#/rangedWeapon"
+              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
             }
           },
           "simplemeleeWeapons": {
-            "id": "#simplemeleeWeapons",
             "title": "Simple Melee Weapons",
             "description": "All Simple Melee Weapons",
             "type": "array",
             "items": {
-              "$ref": "#/meleeWeapon"
+              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
             }
           }
         },
@@ -622,27 +621,24 @@
         ]
       },
       "martialWeapons": {
-        "id": "#martialWeapons",
         "title": "Martial Weapons",
         "description": "All Martial Weapons",
         "type": "object",
         "properties": {
           "martialRangedWeapons": {
-            "id": "#martialRangedWeapons",
             "title": "Martial Ranged Weapons",
             "description": "All Martial Ranged Weapons",
             "type": "array",
             "items": {
-              "$ref": "#/rangedWeapon"
+              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
             }
           },
           "martialmeleeWeapons": {
-            "id": "#martialmeleeWeapons",
             "title": "Martial Melee Weapons",
             "description": "All Martial Melee Weapons",
             "type": "array",
             "items": {
-              "$ref": "#/meleeWeapon"
+              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
             }
           }
         },
@@ -652,27 +648,24 @@
         ]
       },
       "naturalWeapons": {
-        "id": "#naturalWeapons",
         "title": "Natural Weapons",
         "description": "All Natural Weapons",
         "type": "object",
         "properties": {
           "naturalRangedWeapons": {
-            "id": "#naturalRangedWeapons",
             "title": "Natural Ranged Weapons",
             "description": "All Natural Ranged Weapons",
             "type": "array",
             "items": {
-              "$ref": "#/rangedWeapon"
+              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
             }
           },
           "naturalmeleeWeapons": {
-            "id": "#naturalmeleeWeapons",
             "title": "Natural Melee Weapons",
             "description": "All Natural Melee Weapons",
             "type": "array",
             "items": {
-              "$ref": "#/meleeWeapon"
+              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
             }
           }
         },
@@ -682,27 +675,26 @@
         ]
       },
       "improvisedWeapons": {
-        "id": "#improvisedWeapons",
         "title": "Weapons",
         "description": "All Improvised weapons",
         "type": "object",
         "properties": {
           "improvisedRangedWeapons": {
-            "id": "#improvisedRangedWeapons",
+            "$id": "#improvisedRangedWeapons",
             "title": "Improvised Ranged Weapons",
             "description": "All Improvised Ranged Weapons",
             "type": "array",
             "items": {
-              "$ref": "#/rangedWeapon"
+              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
             }
           },
-          "naturalmeleeWeapons": {
-            "id": "#improvisedmeleeWeapons",
+          "improvisedMeleeWeapons": {
+            "$id": "#improvisedmeleeWeapons",
             "title": "Improvised Melee Weapons",
             "description": "All Improvised Melee Weapons",
             "type": "array",
             "items": {
-              "$ref": "#/meleeWeapon"
+              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
             }
           }
         },
@@ -717,19 +709,79 @@
       "martialWeapons",
       "naturalWeapons",
       "improvisedWeapons"
-    ]
+    ],
+    "definitions": {
+      "meleeWeapon": {
+        "title": "Melee Weapon",
+        "description": "A weapon typically desiged for close combat.",
+        "type": "object",
+        "properties": {
+          "damageDieSize": {
+            "type": "number"
+          },
+          "damageType": {
+            "$ref": "http://localhost/damageTypes#/definitions/damageType"
+          },
+          "reach": {
+            "type": "boolean"
+          },
+          "light": {
+            "type": "boolean"
+          },
+          "finesse": {
+            "type": "boolean"
+          },
+          "versatile": {
+            "type": "boolean"
+          },
+          "other": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "rangedWeapon": {
+        "title": "Ranged Weapon",
+        "description": "A weapon typically desiged for distance combat.",
+        "type": "object",
+        "properties": {
+          "damageDieSize": {
+            "type": "number"
+          },
+          "damageType": {
+            "$ref": "http://localhost/damageTypes#/definitions/damageType"
+          },
+          "range1": {
+            "type": "number"
+          },
+          "range2": {
+            "type": "number"
+          },
+          "light": {
+            "type": "boolean"
+          },
+          "other": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
   },
   "languages-schema": {
-    "id": "#lanugages",
+    "$id": "http://localhost/lanugages",
     "title": "Languages",
     "description": "A collection of laungaues",
     "type": "array",
     "items": {
-      "$ref": "#/definitions/language"
+      "$ref": "http://localhost/languages#/definitions/language"
     },
     "definitions": {
-      "type": {
-        "id": "#language",
+      "language": {
         "title": "Language",
         "description": "A communication form in setting.",
         "type": "string",
@@ -788,7 +840,8 @@
     "notes": [
       "TODO",
       "* Ancestral resistances have a damageType-or-Condition and a resistanceLevel to it",
-      "* Eventually broaden language to include Alphabet, Inspiration, Internal Name, and secret bool"
+      "* Eventually broaden language to include Alphabet, Inspiration, Internal Name, and secret bool",
+      "* Flesh out weapons schema"
     ]
   }
 }

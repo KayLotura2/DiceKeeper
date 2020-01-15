@@ -10,18 +10,9 @@ const ajv = new Ajv({
   schemas: schema
 });
 
-// for (let i = 0; i < schemaNames.length - 1; i++) {
-//   let schemaName = schemaNames[i]
-//   ajv.addSchema(schema[`${schemaName}`], schemaName)
-// }
-console.log(schemaNames)
-
-
-// var ajv = new Ajv({schemas: schemasArray});
-// var validate = ajv.compile(schema["ancestries-schema"]);
-// var valid = validate(ancestry);
-// if (!valid) console.log(validate.errors);
-
-console.log(ajv.schemas)
-
-console.log(ajv.validate('ancestries-schema', ancestry), ajv.errors);
+var valid = ajv.validate('ancestries-schema', ancestry["ancestries"]);
+if (!valid) {
+  console.log(ajv.errors);
+} else {
+  console.log("Success! JSON is Valid.")
+}

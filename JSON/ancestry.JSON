@@ -58,7 +58,7 @@
 				},
 				{
 					"name": "petite kobold",
-					"size": "small [powerful build]"
+					"size": "small"
 				},
 				{
 					"name": "prismatic",
@@ -317,7 +317,7 @@
 				},
 				{
 					"name": "tallfellow",
-					"size": "small [powerful build"
+					"size": "small"
 				},
 				{
 					"name": "tinkergnome",
@@ -378,23 +378,23 @@
 			"subTypes": [
 				"jotborn"
 			],
-			"baseSize": "medium [powerful build]",
+			"baseSize": "medium",
 			"subs": [
 				{
 					"name": "goliath",
-					"size": "medium [powerful build]"
+					"size": "medium"
 				},
 				{
 					"name": "goron",
-					"size": "medium [powerful build]"
+					"size": "medium"
 				},
 				{
 					"name": "formian kith",
-					"size": "medium [powerful build]"
+					"size": "medium"
 				},
 				{
 					"name": "varl",
-					"size": "medium [powerful build]"
+					"size": "medium"
 				}
 			]
 		},
@@ -553,7 +553,7 @@
 			"subs": [
 				{
 					"name": "bugbear",
-					"size": "medium [powerful build]"
+					"size": "medium"
 				},
 				{
 					"name": "blue",
@@ -573,7 +573,7 @@
 				},
 				{
 					"name": "troll",
-					"size": "medium [powerful build]"
+					"size": "medium"
 				}
 			]
 		}
