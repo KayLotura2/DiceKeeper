@@ -1,7 +1,9 @@
 var Ajv = require('ajv');
 const schema = require("./JSON/schema.json")
 const ancestry = require("./JSON/ancestry.json")
-const blocks = require("./JSON/archetypeBlock.json")
+const block = require("./JSON/archetypeBlock.json")
+const armor = require("./JSON/armor.json")
+const name = require("./JSON/name.json")
 const personality = require("./JSON/personality.json")
 const weapon = require("./JSON/weapon.json")
 var schemaNames = Object.keys(schema)
@@ -29,6 +31,8 @@ function testSchema(schemaName, jsonObj) {
 
 // List of Validations to run
 testSchema('ancestries-schema', ancestry["ancestries"]);
-testSchema('archetypeBlocks-schema', blocks["archetypeBlocks"]);
+testSchema('archetypeBlocks-schema', block["archetypeBlocks"]);
+testSchema('armors-schema', armor["armors"]);
+testSchema('names-schema', name["names"]);
 testSchema('personality-schema', personality);
 testSchema('weapons-schema', weapon["weapons"]);

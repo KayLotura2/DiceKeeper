@@ -431,6 +431,60 @@
       }
     }
   },
+  "armors-schema": {
+    "$id": "http://localhost/armors",
+    "title": "Armor",
+    "description": "A collection of armors",
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/armors#/definitions/armor"
+    },
+    "definitions": {
+      "armor": {
+        "title": "Armor",
+        "description": "A Description of an armor",
+        "type": "object",
+        "properties": {
+          "proficiency": {
+            "type": "string",
+            "enum": [
+              "light",
+              "heavy",
+              "shield"
+            ]
+          },
+          "armorBonus": {
+            "type": "number"
+          },
+          "armorAb": {
+            "type": "string",
+            "enum": [
+              "strength",
+              "dexterity",
+              "constitution",
+              "intelligence",
+              "wisdom",
+              "charisma",
+              "morale",
+              "-"
+            ]
+          },
+          "names": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "proficiency",
+          "armorBonus",
+          "armorAb",
+          "names"
+        ]
+      }
+    }
+  },
   "personality-schema": {
     "$id": "http://localhost/personality",
     "title": "Personalty",
@@ -732,6 +786,15 @@
       }
     }
   },
+  "names-schema": {
+    "$id": "http://localhost/names",
+    "title": "Character Names",
+    "description": "A collection of thousands of character names",
+    "type": "array",
+    "items": {
+      "type": "string"
+    }
+  },
   "resistanceLevels-schema": {
     "$id": "http://localhost/resistanceLevels",
     "title": "Resistance Levels",
@@ -1025,7 +1088,8 @@
       "* Weapons would be better defined as a `weapon` with some booleans.",
       "* Fix {Name} and {pronoun}",
       "* Knight Archetype needs better weapon proficiencies",
-      "* Add Subjobs to Commonor, Guard, and others"
+      "* Add Subjobs to Commonor, Guard, and others",
+      "* Some of these schema actually want to be classes I think"
     ],
     "npcBlocks": {
       "note": "Make these blocks",
