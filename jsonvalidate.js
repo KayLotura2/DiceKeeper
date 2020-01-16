@@ -3,6 +3,7 @@ const schema = require("./JSON/schema.json")
 const ancestry = require("./JSON/ancestry.json")
 const blocks = require("./JSON/archetypeBlock.json")
 const personality = require("./JSON/personality.json")
+const weapon = require("./JSON/weapon.json")
 var schemaNames = Object.keys(schema)
 
 const ajv = new Ajv({
@@ -30,3 +31,4 @@ function testSchema(schemaName, jsonObj) {
 testSchema('ancestries-schema', ancestry["ancestries"]);
 testSchema('archetypeBlocks-schema', blocks["archetypeBlocks"]);
 testSchema('personality-schema', personality);
+testSchema('weapons-schema', weapon["weapons"]);

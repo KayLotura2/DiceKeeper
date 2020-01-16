@@ -150,7 +150,7 @@
             "description": "The natural wreapons provided by the base ancestry",
             "type": "array",
             "items": {
-              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
+              "$ref": "http://localhost/weapons#/definitions/weapon"
             }
           },
           "weaponProfs": {
@@ -158,7 +158,7 @@
             "description": "Weapon Proficiencies provided by the base ancestry",
             "type": "array",
             "items": {
-              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
+              "$ref": "http://localhost/weapons#/definitions/weapon"
             }
           },
           "skillProficiencies": {
@@ -437,37 +437,53 @@
     "description": "An object personality qualities that an NPC can have.",
     "type": "object",
     "properties": {
-      "genderDescriptors" : {
-        "type" : "array",
-        "items" : { "type": "string"}
+      "genderDescriptors": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       },
-      "genderRoots" : {
-        "type" : "array",
-        "items" : {"$ref": "http://localhost/personality#/definitions/genderRoot"}
+      "genderRoots": {
+        "type": "array",
+        "items": {
+          "$ref": "http://localhost/personality#/definitions/genderRoot"
+        }
       },
-      "pronouns" : {
-        "type" : "array",
-        "items" : {"$ref": "http://localhost/personality#/definitions/pronoun"}
+      "pronouns": {
+        "type": "array",
+        "items": {
+          "$ref": "http://localhost/personality#/definitions/pronoun"
+        }
       },
-      "attractionRoots" : {
-        "type" : "array",
-        "items": { "type": "string"}
+      "attractionRoots": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       },
-      "attractionDescriptors" : {
-        "type" : "array",
-        "items" :  { "type": "string"}
+      "attractionDescriptors": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       },
-      "personalityTraits" : {
-        "type" : "array",
-        "items" : {"type": "string"}
+      "personalityTraits": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       },
-      "ideals" : {
-        "type" : "array",
-        "items" : {"$ref": "http://localhost/personality#/definitions/ideal"}
+      "ideals": {
+        "type": "array",
+        "items": {
+          "$ref": "http://localhost/personality#/definitions/ideal"
+        }
       },
-      "flaws" : {
-        "type" : "array",
-        "items" : {"type": "string"}
+      "flaws": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       }
     },
     "required": [
@@ -480,8 +496,8 @@
       "ideals",
       "flaws"
     ],
-    "definitions" :{
-      "genderRoot" : {
+    "definitions": {
+      "genderRoot": {
         "title": "Gener Root",
         "description": "A Root Gender.",
         "type": "object",
@@ -534,7 +550,7 @@
             "type": "string"
           }
         },
-        "required" : [
+        "required": [
           "key",
           "name",
           "subPrn",
@@ -909,167 +925,39 @@
     "$id": "http://localhost/weapons",
     "title": "Weapons",
     "description": "All weapons",
-    "type": "object",
-    "properties": {
-      "simpleWeapons": {
-        "title": "Simple Weapons",
-        "description": "All Simple Weapons",
-        "type": "object",
-        "properties": {
-          "simpleRangedWeapons": {
-            "title": "Simple Ranged Weapons",
-            "description": "All Simple Ranged Weapons",
-            "type": "array",
-            "items": {
-              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
-            }
-          },
-          "simplemeleeWeapons": {
-            "title": "Simple Melee Weapons",
-            "description": "All Simple Melee Weapons",
-            "type": "array",
-            "items": {
-              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
-            }
-          }
-        },
-        "required": [
-          "simpleRangedWeapons",
-          "simplemeleeWeapons"
-        ]
-      },
-      "martialWeapons": {
-        "title": "Martial Weapons",
-        "description": "All Martial Weapons",
-        "type": "object",
-        "properties": {
-          "martialRangedWeapons": {
-            "title": "Martial Ranged Weapons",
-            "description": "All Martial Ranged Weapons",
-            "type": "array",
-            "items": {
-              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
-            }
-          },
-          "martialmeleeWeapons": {
-            "title": "Martial Melee Weapons",
-            "description": "All Martial Melee Weapons",
-            "type": "array",
-            "items": {
-              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
-            }
-          }
-        },
-        "required": [
-          "martialRangedWeapons",
-          "martialmeleeWeapons"
-        ]
-      },
-      "naturalWeapons": {
-        "title": "Natural Weapons",
-        "description": "All Natural Weapons",
-        "type": "object",
-        "properties": {
-          "naturalRangedWeapons": {
-            "title": "Natural Ranged Weapons",
-            "description": "All Natural Ranged Weapons",
-            "type": "array",
-            "items": {
-              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
-            }
-          },
-          "naturalmeleeWeapons": {
-            "title": "Natural Melee Weapons",
-            "description": "All Natural Melee Weapons",
-            "type": "array",
-            "items": {
-              "$ref": "http://localhost/weapons#/definitions/meleeWeapon"
-            }
-          }
-        },
-        "required": [
-          "naturalRangedWeapons",
-          "naturalmeleeWeapons"
-        ]
-      },
-      "improvisedWeapons": {
-        "title": "Weapons",
-        "description": "All Improvised weapons",
-        "type": "object",
-        "properties": {
-          "improvisedRangedWeapons": {
-            "$id": "#improvisedRangedWeapons",
-            "title": "Improvised Ranged Weapons",
-            "description": "All Improvised Ranged Weapons",
-            "type": "array",
-            "items": {
-              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
-            }
-          },
-          "improvisedMeleeWeapons": {
-            "$id": "#improvisedmeleeWeapons",
-            "title": "Improvised Melee Weapons",
-            "description": "All Improvised Melee Weapons",
-            "type": "array",
-            "items": {
-              "$ref": "http://localhost/weapons#/definitions/rangedWeapon"
-            }
-          }
-        },
-        "required": [
-          "improvisedRangedWeapons",
-          "improvisedmeleeWeapons"
-        ]
-      }
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/weapons#/definitions/weapon"
     },
-    "required": [
-      "simpleWeapons",
-      "martialWeapons",
-      "naturalWeapons",
-      "improvisedWeapons"
-    ],
     "definitions": {
-      "meleeWeapon": {
-        "title": "Melee Weapon",
-        "description": "A weapon typically desiged for close combat.",
+      "weapon": {
+        "title": "Weapon",
+        "description": "A destructive tool of combat",
         "type": "object",
         "properties": {
+          "name": {
+            "type": "string"
+          },
+          "proficiencyType": {
+            "type": "string",
+            "enum": [
+              "natural",
+              "improvised",
+              "simple",
+              "martial"
+            ]
+          },
           "damageDieSize": {
             "type": "number"
           },
           "damageType": {
             "$ref": "http://localhost/damageTypes#/definitions/damageType"
           },
-          "reach": {
+          "melee": {
             "type": "boolean"
           },
-          "light": {
+          "ranged": {
             "type": "boolean"
-          },
-          "finesse": {
-            "type": "boolean"
-          },
-          "versatile": {
-            "type": "boolean"
-          },
-          "other": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      },
-      "rangedWeapon": {
-        "title": "Ranged Weapon",
-        "description": "A weapon typically desiged for distance combat.",
-        "type": "object",
-        "properties": {
-          "damageDieSize": {
-            "type": "number"
-          },
-          "damageType": {
-            "$ref": "http://localhost/damageTypes#/definitions/damageType"
           },
           "range1": {
             "type": "number"
@@ -1077,7 +965,37 @@
           "range2": {
             "type": "number"
           },
+          "ammunition": {
+            "type": "boolean"
+          },
+          "finesse": {
+            "type": "boolean"
+          },
+          "heavy": {
+            "type": "boolean"
+          },
           "light": {
+            "type": "boolean"
+          },
+          "loading": {
+            "type": "boolean"
+          },
+          "reach": {
+            "type": "boolean"
+          },
+          "special": {
+            "type": "string"
+          },
+          "thrown": {
+            "type": "boolean"
+          },
+          "twoHanded": {
+            "type": "boolean"
+          },
+          "versatile": {
+            "type": "boolean"
+          },
+          "polearm": {
             "type": "boolean"
           },
           "other": {
@@ -1086,7 +1004,15 @@
               "type": "string"
             }
           }
-        }
+        },
+        "required": [
+          "name",
+          "proficiencyType",
+          "damageDieSize",
+          "damageType",
+          "melee",
+          "ranged"
+        ]
       }
     }
   },
