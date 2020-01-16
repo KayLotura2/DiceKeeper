@@ -1,0 +1,794 @@
+{
+	"genderDescriptors": [
+		"",
+		"androgynous",
+		"butch",
+		"demi",
+		"femme",
+		"fluid",
+		"hairy",
+		"hard",
+		"masculine",
+		"non-binary",
+		"non-conforming",
+		"masculine",
+		"sparkle",
+		"soft",
+		"trans"
+	],
+	"genderRoots": [
+		{
+			"gen": "agender",
+			"pron": "they"
+		},
+		{
+			"gen": "boy",
+			"pron": "he"
+		},
+		{
+			"gen": "enby",
+			"pron": "they"
+		},
+		{
+			"gen": "epicine",
+			"pron": "they"
+		},
+		{
+			"gen": "girl",
+			"pron": "she"
+		},
+		{
+			"gen": "man",
+			"pron": "he"
+		},
+		{
+			"gen": "nuetrois",
+			"pron": "they"
+		},
+		{
+			"gen": "gender-questioning",
+			"pron": "they"
+		},
+		{
+			"gen": "queer",
+			"pron": "they"
+		},
+		{
+			"gen": "woman",
+			"pron": "she"
+		}
+	],
+	"pronouns": [
+		{
+			"key": "ey",
+			"name": "ey/em",
+			"subPrn": "ey",
+			"objPrn": "em",
+			"possAdj": "eir",
+			"possPrn": "eirs",
+			"rflxPrn": "eirself"
+		},
+		{
+			"key": "gein",
+			"name": 	"gein/gein",
+			"subPrn": "gein",
+			"objPrn": "gein",
+			"possAdj": "geins",
+			"possPrn": "geins",
+			"rflxPrn": "geinself"
+		},
+		{
+			"key": "he",
+			"name": "he/him",
+			"subPrn": "he",
+			"objPrn": "him",
+			"possAdj": "his",
+			"possPrn": "his",
+			"rflxPrn": "himself"
+		},
+		{
+			"key": "she",
+			"name": "she/her",
+			"subPrn": "she",
+			"objPrn": "her",
+			"possAdj": "her",
+			"possPrn": "hers",
+			"rflxPrn": "herself"
+		},
+		{
+			"key": "sie",
+			"name": "sie/sie",
+			"subPrn": "sie",
+			"objPrn": "sie",
+			"possAdj": "hir",
+			"possPrn": "hirs",
+			"rflxPrn": "hirself"
+		},
+		{
+			"key": "tey",
+			"name": "tey/ter",
+			"subPrn": "tey",
+			"objPrn": "ter",
+			"possAdj": "tem",
+			"possPrn": "ters",
+			"rflxPrn": "terself"
+		},
+		{
+			"key": "they",
+			"name": "they/them",
+			"subPrn": "they",
+			"objPrn": "them",
+			"possAdj": "their",
+			"possPrn": "theirs",
+			"rflxPrn": "themself"
+		},
+		{
+			"key": "ve",
+			"name": "ve/ver",
+			"subPrn": "vey",
+			"objPrn": "ver",
+			"possAdj": "vis",
+			"possPrn": "vers",
+			"rflxPrn": "verself"
+		},
+		{
+			"key": "xe",
+			"name": "xe/xem",
+			"subPrn": "xe",
+			"objPrn": "xem",
+			"possAdj": "xyr",
+			"possPrn": "xyrs",
+			"rflxPrn": "xemself"
+		},
+		{
+			"key": "zie",
+			"name": "zie/zim",
+			"subPrn": "zie",
+			"objPrn": "zim",
+			"possAdj": "zir",
+			"possPrn": "zirs",
+			"rflxPrn": "zieself"
+		}
+	],
+	"attractionRoots": [
+		"a",
+		"bi",
+		"hetero",
+		"homo",
+		"pan"
+	],
+	"attractionDescriptors": [
+		" ",
+		" ",
+		" ",
+		"demi-",
+		"fray-",
+		"gray-"
+	],
+	"personalityTraits": [
+	    "I judge people by their actions, not their words.",
+	    "If someone is in trouble, I’m always ready to lend help.",
+	    "When I set my mind to something, I follow through no matter what.",
+	    "I have a strong sense of fair play and always try to find a balance.",
+	    "I’m confident in my selfand do what I can to share that confidence.",
+	    "Thinking is for other people. I prefer action.",
+	    "I misuse long words in an attempt to sound smarter.",
+	    "I get bored easily. When am I going to get on with my destiny?",
+	    "I idolize a particular hero , and constantly refer to that person’s deeds",
+	    "I see omens in every event and action.",
+	    "Nothing can shake my optimistic attitude.",
+	    "I quote (or misquote) sacred texts and proverbs in almost every situation.",
+	    "I am tolerant of other faiths and respect the worship of others.",
+	    "I am intolerant of other faiths and condemn the worship of others.",
+	    "I've enjoyed fine food, drink, and high society among my temple’s elite.",
+	    "I’ve spent so long in the job that I have little practical experience.",
+	    "I fall in and out of love easily, and am always pursuing someone.",
+	    "I have a joke for every occasion, especially when humor is inappropriate.",
+	    "Flattery is my preferred trick for getting what I want.",
+	    "I’m a born gambler who can't resist taking a risk for a potential payoff.",
+	    "I lie about almost everything, even when there’s no good reason to.",
+	    "Sarcasm and insults are my weapons of choice.",
+	    "I keep multiple holy symbols on me and invoke whatever deity I need.",
+	    "I pocket anything I see that might have some value.",
+	    "I always have plan for what to do when things go wrong.",
+	    "I am always stone calm, no matter the situation.",
+	    "The first thing I do in a new place is note the valuables.",
+	    "I am incredibly slow to trust.",
+	    "I don't play attention to the risks in a situation.",
+	    "The best way to get me to do something is to tell me that I can't do it.",
+	    "I blow up at the slightest insult.",
+	    "I know a story relevant to almost every situation.",
+	    "I love to trade local rumors and indulge in gossip.",
+	    "I’m a hopeless romantic, always searching for that special someone.",
+	    "Nobody stays angry at or around me for long, I can defuse any tension.",
+	    "I love a good insult, even one directed at me.",
+	    "I get bitter if I’m not the center of attention.",
+	    "I’ll settle for nothing less than perfection.",
+	    "I change my mood or my mind as quickly as I change key in a song",
+	    "I believe that anything worth doing is worth doing right.",
+	    "I’m a snob who looks down on those who can’t appreciate fine art.",
+	    "I always want to know how things work and what makes people tick.",
+	    "I’m full of witty aphorisms and have a proverb for every occasion.",
+	    "I’m rude to people who lack my commitment to hard work and fair play.",
+	    "I like to talk at length about my profession.",
+	    "I don’t part with my money easily and will haggle tirelessly.",
+	    "I’m well known for my work, I want to make sure everyone appreciates it.",
+	    "I'm always taken aback when people haven’t heard of me.",
+	    "I like my isolation and rarely speak, preferring gestures and grunts.",
+	    "I am utterly serene, even in the face of disaster.",
+	    "I am eager to share the wisdom of my leaders.",
+	    "I feel tremendous empathy for all who suffer.",
+	    "I’m oblivious to etiquette and social expectations.",
+	    "I connect everything that happens to a grand, cosmic plan.",
+	    "I often get lost in my own thoughts, becoming oblivious to my surroundings.",
+	    "I am working on a grand philosophical theory and love sharing my ideas.",
+	    "My flattery makes others feel like the most wonderful person ever.",
+	    "I am beloved for my kindness and generosity.",
+	    "I carry my self as if I were a cut above the unwashed masses.",
+	    "I take great pains to always look my best and follow the latest fashions.",
+	    "I don’t like to get my hands dirty, and I hate unsuitable accommodations.",
+	    "I believe I have a noble birth, but I am quite humble about it.",
+	    "My favor, once lost, is lost forever.",
+	    "If you do me injury, I'll crush you, ruin your name, and salt your fields.",
+	    "I’m driven by a wanderlust that led me away from my original home.",
+	    "I watch over my friends as if they were a litter of newborn pups.",
+	    "I run everywhere I go and enjoy competitive sprinting.",
+	    "I have a lesson for every situation, drawn from observing nature.",
+	    "I place no stock in wealthy or well-mannered folk.",
+	    "I’m always absently fiddling with things, sometimes breaking them.",
+	    "I feel far more comfortable around animals than people.",
+	    "I was, in fact, raised by beasts.",
+	    "1 I use polysyllabic words that convey the impression of great erudition.",
+	    "I like to boast about  every book I've ever read.",
+	    "I am a natural and patient teacher, eager to share my expertise.",
+	    "There’s nothing I like more than a good mystery.",
+	    "I’m willing to listen to every side before I make my own judgment.",
+	    "I . . . speak . . . slowly . . . to . . . everyone.",
+	    "I am horribly, horribly awkward in social situations.",
+	    "I’m convinced that people are always trying to steal my secrets.",
+	    "My friends know they can rely on me, no matter what.",
+	    "I work hard so that I can play hard when the work is done.",
+	    "I enjoy traveling to new places and making new friends over flagons of ale.",
+	    "I stretch the truth for the sake of a good story.",
+	    "To me, a tavern brawl is a nice way to get to know a new city.",
+	    "I never pass up a friendly wager.",
+	    "My language is as foul as an otyugh nest.",
+	    "I like a job well done, especially if I can convince someone else to do it.",
+	    "I'm always polite and respectful.",
+	    "I’m haunted by memories of war. I can’t get the images out of my mind.",
+	    "I’ve lost too many friends, and I’m slow to make new ones.",
+	    "I’m full of inspiring and cautionary tales from my military experiences.",
+	    "I can stare down a hell hound without flinching.",
+	    "I enjoy trying break things, and showing off my physicality.",
+	    "I have a crude sense of humor.",
+	    "I face problems head-on. A direct solution is the best path to success.",
+	    "I hide scraps of food and trinkets away in my pockets.",
+	    "I ask a lot of questions.",
+	    "I like to hide and squeeze into small places.",
+	    "I sleep with one eye open, and keep track of all my things.",
+	    "I eat like a pig and have bad manners.",
+	    "I think anyone who’s nice to me is hiding evil intent.",
+	    "I don’t like to bathe.",
+	    "I bluntly say what other people are hinting at or hiding.",
+	    "I struggle with cultural understandings of personal space.",
+	    "I have my own ideas about what is and is not food.",
+	    "I have a code of honor or sense of propriety that others don't comprehend.",
+	    "I express affection or contempt in ways that are unfamiliar to others.",
+	    "I honor my deities through practices that are foreign to this land.",
+	    "I begin or end my day with small traditional rituals that are unfamiliar.",
+	    "I always have a joke on hand when the mood gets too serious.",
+	    "I use sarcasm and insults to keep a distance between myself and friends.",
+	    "I’ll settle for nothing less than perfection—in myself, and in my friends.",
+	    "I’m focused on the glorious afterlife, nothing in this life can shake me.",
+	    "I enjoy using my skills to help those who lack those same skills.",
+	    "I have strong faith in an afterlife, but I’m not in a hurry to get there.",
+	    "I’m perfectly happy letting others pick up the slack for me.",
+	    "I’m constantly sizing up everyone around me, ready for a fight.",
+	    "Everything I do, I do gracefully and deliberately, and with confidence.",
+	    "Nothing can shake my rock-hard focus.",
+	    "When I am at peace, I am an oasis of perfect calm in the world.",
+	    "When I am roused to anger, I am an embodiment of terror.",
+	    "I enjoy juicy tidbits of knowledge wrapped up in difficult puzzles.",
+	    "I have the utmost faith in myself and my abilities.",
+	    "I get restless when life in the city feels too tame, too safe.",
+	    "I enjoy solitude as an opportunity to plan my victory.",
+	    "I use satire as a way to undermine the teachings of the other gods.",
+	    "I love, fight, and feast with equal zeal.",
+	    "I think of those in my care as my family.",
+	    "I don’t run from evil. Evil runs from me.",
+	    "I like to read and memorize poetry. It keeps me calm",
+	    "I spend money freely and live life to the fullest.",
+	    "I live for the thrill of the hunt.",
+	    "I don’t talk about the things that torment me.",
+	    "I expect danger around every corner.",
+	    "I refuse to become a victim, and I will not allow others to be victimized.",
+	    "I put no trust in divine beings.",
+	    "It will all go smoothly if everyone just does as I say.",
+	    "Despair is an extravagance we can ill afford.",
+	    "I know the writings of my deity backward and forward.",
+	    "I try to see the bright side in the very worst situations.",
+	    "It helps me feel better when others show sympathy or appreciation for me.",
+	    "I prefer to face evil with a strong group of friends in front of me.",
+	    "I want to see the wicked burn for the evil they’ve brought on us.",
+	    "I feel the sin being purged from me as I help cleanse the world."
+	  ],
+	"ideals": [
+	    {
+	      "name": "Respect",
+	      "desc": "People deserve to be treated with dignity and respect."
+	    },
+	    {
+	      "name": "Fairness",
+	      "desc": "No one should get preferential treatment before the law."
+	    },
+	    {
+	      "name": "Freedom",
+	      "desc": "Tyrants must not be allowed to oppress the people."
+	    },
+	    {
+	      "name": "Might",
+	      "desc": "If I become strong, I can take what I want— what I deserve."
+	    },
+	    {
+	      "name": "Sincerity",
+	      "desc": "There’s no good in pretending to be something I’m not."
+	    },
+	    {
+	      "name": "Destiny",
+	      "desc": "Nothing and no one can steer me away from my higher calling."
+	    },
+	    {
+	      "name": "Tradition",
+	      "desc": "The ancient traditions of worship and sacrifice must be preserved."
+	    },
+	    {
+	      "name": "Charity",
+	      "desc": " I always try to help those in need, no matter what the cost."
+	    },
+	    {
+	      "name": "Change",
+	      "desc": "We must help bring about the changes the gods are constantly working in the world."
+	    },
+	    {
+	      "name": "Power",
+	      "desc": "I hope to one day rise to the top of my group's hierarchy."
+	    },
+	    {
+	      "name": "Faith",
+	      "desc": "I trust that my deity will guide my actions, I have faith that if I work hard, things will go well."
+	    },
+	    {
+	      "name": "Aspiration",
+	      "desc": "I seek to prove myself worthy of my god’s favor by matching my actions against their teachings."
+	    },
+	    {
+	      "name": "Independence",
+	      "desc": "I am a free spirit— no one tells me what to do."
+	    },
+	    {
+	      "name": "Fairness",
+	      "desc": "I always help the people who can't afford to get by."
+	    },
+	    {
+	      "name": "Charity",
+	      "desc": "I distribute the money I acquire to the people who really need it."
+	    },
+	    {
+	      "name": "Creativity",
+	      "desc": "I never try the same approach twice."
+	    },
+	    {
+	      "name": "Friendship",
+	      "desc": "Material goods come and go. Bonds of friendship last forever."
+	    },
+	    {
+	      "name": "Aspiration",
+	      "desc": "I’m determined to make something of myself."
+	    },
+	    {
+	      "name": "Honor",
+	      "desc": "My word is my bond, and my people are my family."
+	    },
+	    {
+	      "name": "Freedom",
+	      "desc": "Chains are meant to be broken, as are those who would forge them."
+	    },
+	    {
+	      "name": "Charity",
+	      "desc": "I steal from the wealthy so that I can help people in need."
+	    },
+	    {
+	      "name": "Greed",
+	      "desc": "I will do whatever it takes to become wealthy."
+	    },
+	    {
+	      "name": "People",
+	      "desc": "Friends before morals or ethics. Everyone else can take a leap."
+	    },
+	    {
+	      "name": "Redemption",
+	      "desc": "I walked a dark path, now I seek the spark of good in everyone."
+	    },
+	    {
+	      "name": "Beauty",
+	      "desc": "I want to make the world a better place than it was."
+	    },
+	    {
+	      "name": "Traditions",
+	      "desc": "The stories, legends, and songs of the past must never be forgotten."
+	    },
+	    {
+	      "name": "Creativity",
+	      "desc": "The world is in need of new ideas and bold actions."
+	    },
+	    {
+	      "name": "Greed",
+	      "desc": "I’m only in it for the money and even more for the fame."
+	    },
+	    {
+	      "name": "People",
+	      "desc": "My work is entirely motivated by the smiles on people's faces"
+	    },
+	    {
+	      "name": "Honesty",
+	      "desc": "Art should reflect the soul, it should come from within and reveal who we really are."
+	    },
+	    {
+	      "name": "Community",
+	      "desc": "It is the duty of all civilized people to strengthen the bonds of community."
+	    },
+	    {
+	      "name": "Generosity",
+	      "desc": "My talents were given to me so that I could use them to benefit the world."
+	    },
+	    {
+	      "name": "Freedom",
+	      "desc": "Everyone should be free to pursue their own livelihood."
+	    },
+	    {
+	      "name": "Greed",
+	      "desc": "I want to know everyone's secrets."
+	    },
+	    {
+	      "name": "Dignity",
+	      "desc": "People deserve to be given the chance to hold themself as nobly as they can."
+	    },
+	    {
+	      "name": "Aspiration",
+	      "desc": "One day I will be the best at what I do."
+	    },
+	    {
+	      "name": "Benevolence",
+	      "desc": "My gifts are meant to be shared with all, not used for my own benefit."
+	    },
+	    {
+	      "name": "Logic",
+	      "desc": "Emotions must not cloud our sense of what is right and true."
+	    },
+	    {
+	      "name": "Curiosity",
+	      "desc": "Free thinking and inquiry and are the pillars of progress."
+	    },
+	    {
+	      "name": "Power",
+	      "desc": "Solitude and contemplation are paths toward mystical or magical power."
+	    },
+	    {
+	      "name": "Tranquility",
+	      "desc": "Live and Let Live. Meddling in the affairs of others only causes trouble."
+	    },
+	    {
+	      "name": "Inspiration",
+	      "desc": "If you know yourself, there’s nothing left to know."
+	    },
+	    {
+	      "name": "Authority",
+	      "desc": "Respect is due to those in charge. Pay respect or pay the price."
+	    },
+	    {
+	      "name": "Responsibility",
+	      "desc": "With our stations come obligations that must be met."
+	    },
+	    {
+	      "name": "Independence",
+	      "desc": "I must prove that I can handle myself without the coddling of my family."
+	    },
+	    {
+	      "name": "Independence",
+	      "desc": "I must prove that I can handle myself without the coddling of my family."
+	    },
+	    {
+	      "name": "Power",
+	      "desc": "If I can attain more power, no one will tell me what to do."
+	    },
+	    {
+	      "name": "Family",
+	      "desc": "My direct relatives are more important than anything else to me."
+	    },
+	    {
+	      "name": "Chivalry",
+	      "desc": "It is my duty to protect and care for the people beneath me."
+	    },
+	    {
+	      "name": "Change",
+	      "desc": "Life is like the seasons, in constant change, and we must change with it."
+	    },
+	    {
+	      "name": "Community",
+	      "desc": "Our actions must benefit the people of the society we live in."
+	    },
+	    {
+	      "name": "Honor",
+	      "desc": "If I dishonor myself, I dishonor everything I stand for."
+	    },
+	    {
+	      "name": "Might",
+	      "desc": "The strongest are meant to rule the weak."
+	    },
+	    {
+	      "name": "Nature",
+	      "desc": "The natural world is more important than all the constructs of civilization."
+	    },
+	    {
+	      "name": "Glory",
+	      "desc": "I must earn glory in battle, for everything I stand for."
+	    },
+	    {
+	      "name": "Knowledge",
+	      "desc": "The path to power and self-improvement is through knowledge."
+	    },
+	    {
+	      "name": "Beauty",
+	      "desc": "What is beautiful points us beyond itself toward what is true."
+	    },
+	    {
+	      "name": "Emotions",
+	      "desc": "Our hearts cannot be clouded by stean unfeeling thinking."
+	    },
+	    {
+	      "name": "Potential",
+	      "desc": "Nothing should fetter the infinite possibility inherent in all existence."
+	    },
+	    {
+	      "name": "Cosmetics",
+	      "desc": "I am always the best dressed and the most put together in any room."
+	    },
+	    {
+	      "name": "Enlightenment",
+	      "desc": "The goal of a life of study is the betterment of oneself."
+	    },
+	    {
+	      "name": "Respect",
+	      "desc": "The thing that keeps a ship together is mutual respect between captain and crew."
+	    },
+	    {
+	      "name": "Fairness",
+	      "desc": "We all do the work, so we all share in all rewards."
+	    },
+	    {
+	      "name": "Freedom",
+	      "desc": "The laws of mortals cannot contain the freedom the gods bestowed upon us."
+	    },
+	    {
+	      "name": "Mastery",
+	      "desc": "Every day I wake up, eager to sharpen my skills and hone my ability."
+	    },
+	    {
+	      "name": "Love",
+	      "desc": "There is no force greater than the emotional bond between people."
+	    },
+	    {
+	      "name": "Justice",
+	      "desc": "The strong must protect the weak, and even so, everyone has a place."
+	    },
+	    {
+	      "name": "Loyalty",
+	      "desc": "Our leaders know what is best, and I would lay down my life for them."
+	    },
+	    {
+	      "name": "Obedience",
+	      "desc": "I do what I must, and follow my orders to the letter."
+	    },
+	    {
+	      "name": "Independence",
+	      "desc": "When people follow orders blindly, they embrace tyranny."
+	    },
+	    {
+	      "name": "Might",
+	      "desc": "Life is a war, and the gods are on the side with more strength."
+	    },
+	    {
+	      "name": "Repentance",
+	      "desc": "I seek forgiveness for a greivous sin I have once committed"
+	    },
+	    {
+	      "name": "Nation",
+	      "desc": "My city, nation, or people are all that matter."
+	    },
+	    {
+	      "name": "Solidarity",
+	      "desc": "The worthy must respect the worthy. We're all in this together."
+	    },
+	    {
+	      "name": "Knowledge",
+	      "desc": "We must cultivate nimble minds to perceive the wonders beyond our senses."
+	    },
+	    {
+	      "name": "Endurance",
+	      "desc": "We must withstand the boundless slings and arrows of life."
+	    },
+	    {
+	      "name": "Faith",
+	      "desc": "The worthy shall strive for greatness in the afterlife."
+	    },
+	    {
+	      "name": "Zeal",
+	      "desc": "Passionate energy is the only evidence of conviction."
+	    },
+	    {
+	      "name": "Retribution",
+	      "desc": "None shall harm another, lest they suffer the pain seven-fold."
+	    },
+	    {
+	      "name": "Solidarity",
+	      "desc": "None shall harm another, lest they suffer the pain seven-fold."
+	    },
+	    {
+	      "name": "Honesty",
+	      "desc": "The smallest deception paves the way to grievous sin."
+	    },
+	    {
+	      "name": "Piety",
+	      "desc": "Devotion to the church is all that keeps the world from destruction."
+	    },
+	    {
+	      "name": "Order",
+	      "desc": "The laws we forge are meant to preserve the social order—everything in its proper place."
+	    },
+	    {
+	      "name": "Compassion",
+	      "desc": "Life is to be cherished and preserved against the horrors of the night."
+	    },
+	    {
+	      "name": "Productivity",
+	      "desc": "We all must pitch in and contribute to the creation of our society."
+	    },
+	    {
+	      "name": "Punishment",
+	      "desc": "It is better for the innocent to suffer than for the guilty to escape their due."
+	    },
+	    {
+	      "name": "Curiosity",
+	      "desc": "I am always eager to try new things. Variety is the spice of life."
+	    },
+	    {
+	      "name": "Caution",
+	      "desc": "I would rather be silent, than accidentally say something untoward."
+	    },
+	    {
+	      "name": "Adventure",
+	      "desc": "I yearn for something exciting in my life."
+	    },
+	    {
+	      "name": "Cunning",
+	      "desc": "Strategy and preparation can overcome any odds."
+	    },
+	    {
+	      "name": "Joy",
+	      "desc": "Our brief existences should be over-filled with worldly delights."
+	    },
+	    {
+	      "name": "Preservation",
+	      "desc": "We are fragile creatures, we must be wary of the intentions of others."
+	    }
+	  ],
+	"flaws": [
+	    "I have the enynimity of the local authorities.",
+	    "I’m convinced of the significance of my destiny",
+	    "I have a shameful secret",
+	    "I have a weakness for the vices of the city, especially hard drink.",
+	    "Secretly, I believe that things would be better if I were in charge.",
+	    "I have trouble trusting in my allies.",
+	    "I judge others harshly, and myself even more severely.",
+	    "I put too much trust in those who wield power within my group’s hierarchy.",
+	    "My piety leads me to blindly trust those that profess faith like mine.",
+	    "I am inflexible in my thinking.",
+	    "I am suspicious of strangers and expect the worst of them.",
+	    "Once I pick a goal, I become obsessed to the detriment of all else.",
+	    "I can’t resist a pretty face.",
+	    "I'm always in debt. I spend too much on decadent luxuries.",
+	    "I’m convinced that I'm too clever to be fooled.",
+	    "I’m too greedy for my own good. I can’t resist anything with money involved.",
+	    "I can’t resist swindling people who are more powerful than me.",
+	    "I can’t keep a secret to save my life, or anyone else’s",
+	    "When I see something valuable, I can’t think about anything but stealing it.",
+	    "When faced with a choice between money and friends, I'll choose the money.",
+	    "If there’s a plan, I’ll forget it. If I don’t forget it, I’ll ignore it.",
+	    "I have a “tell” that reveals when I'm lying.",
+	    "An innocent is in prison for a crime that I committed. I’m okay with that.",
+	    "I’ll do anything to win fame and renown.",
+	    "I fall in love to easily, and can be lead astray by a clever wit.",
+	    "A scandal prevents me from ever going home. Trouble seems to follow me.",
+	    "I once angered a noble who still wants my head. I didn't learn my lesson",
+	    "I have trouble keeping my thoughts and feelings to myself.",
+	    "Despite my best efforts, I am unreliable to my friends",
+	    "I’ll do anything to get my hands on something rare or priceless.",
+	    "I’m quick to assume that someone is trying to cheat me.",
+	    "No one must ever learn that I once stole money from guild coffers.",
+	    "I’m never satisfied with what I have— I always want more.",
+	    "I would kill to acquire a noble title.",
+	    "I’m horribly jealous of anyone who can outshine my handiwork.",
+	    "I enjoy worldly delights a little too much.",
+	    "I harbor dark, bloodthirsty thoughts that I cannot quell.",
+	    "I am dogmatic in my thoughts and philosophy.",
+	    "I let my need to win arguments overshadow friendships and harmony.",
+	    "I’d risk too much to uncover a lost bit of knowledge.",
+	    "I like keeping secrets and won’t share them with anyone.",
+	    "I secretly believe that everyone is beneath me.",
+	    "I hide a truly scandalous secret that could ruin my family forevr.",
+	    "I veiled insults and threats in every word, and I’m quick to anger.",
+	    "I have an insatiable desire for carnal pleasures.",
+	    "In fact, the world does revolve around me.",
+	    "By my words and actions, I often bring shame to those around me.",
+	    "I do not understand other's limits or desires well.",
+	    "There’s no room for caution in a life lived to the fullest.",
+	    "I remember every insult I’ve received and nurse a silent heavy grudge.",
+	    "I am slow to trust members of other races, guilds, and societies.",
+	    "Violence is my answer to almost any challenge.",
+	    "I'm an aggressive bigot who believes other cultures are inferior.",
+	    "Don’t expect me to save those who can’t save themselves.",
+	    "I am easily distracted by the promise of information.",
+	    "I am oblivious to danger, and contantly lost in thought.",
+	    "Unlocking an ancient mystery is worth the price of a civilization.",
+	    "I overlook obvious solutions in favor of complicated ones.",
+	    "I speak without really thinking through my words.",
+	    "I follow orders, even if I think they’re wrong.",
+	    "I’ll say anything to avoid having to do extra work.",
+	    "Once someone questions my courage, I never back down no matter what.",
+	    "Once I start drinking, it’s hard for me to stop.",
+	    "I can’t help but pocket loose coins and other trinkets I come across.",
+	    "My pride will probably lead to my destruction",
+	    "I quiver in fear at anything remotely dangerous.",
+	    "I have little respect for anyone who is not a proven warrior.",
+	    "I feel like a complete sham, and have no confidence in anything I do.",
+	    "My hatred of my enemies is blind and unreasoning.",
+	    "I obey the law, even if the law causes misery.",
+	    "I’d rather eat my hat than admit when I’m wrong.",
+	    "I imagine everyone has the best intentions, even if they clearly don't.",
+	    "I follow my religious beliefs to secretive violent extremes",
+	    "I will never fully trust anyone other than myself.",
+	    "I’d rather kill someone in their sleep then fight fair.",
+	    "I cannot remember names, faces, or events.",
+	    " People who can't take care of themselves get what they deserve.",
+	    "I am convinced of the superiority of my own culture over any other",
+	    "I pretend not to understand the local language to avoid interations",
+	    "I find everything around me boring, even in the most exciting times.",
+	    "I have a deeprooted sadness that I struggle with every day",
+	    "I cannot help but babble on about my own special interests",
+	    "My competitive streak is stronger than anyone else's",
+	    "I have certain rituals that I must follow every day.",
+	    "I assume the worst in people, no matter what they've done or said.",
+	    "I feel no compassion for the dead. They’re the lucky ones.",
+	    "I have an addiction to a powerful drug, and will not admit it.",
+	    "I am a purveyor of doom and gloom who lives in a world without hope.",
+	    "I talk to spirits that no one else can see",
+	    "Life is a series of trials and I believe the miserable are the most lucky",
+	    "I wish I was a paladin, and I’m angry at the gods who didn’t choose me.",
+	    "Working for a lifetime to die in the end seems like a big waste of time.",
+	    "I fear an inglorious death will lead to an inglorious afterlife.",
+	    "I have a lasting and vicious grudge against one of my companions.",
+	    "This world is not what it seems, and something dark is going on here.",
+	    "I am hopelessly in love, but this love is thwarted by outside forces.",
+	    "I wish I had been an adventuerer, my life seems so dull in comparison.",
+	    "I question whether the gods care at all about us or what we do.",
+	    "A divine warrior seeks my death in retribution for a past insult.",
+	    "I am deeply ashamed of my herritage, and wish I could hide my ancestry.",
+	    "I secretly hope for a catastrophic end of the world.",
+	    "There is an uncontrollable rage that lurks in my own heart.",
+	    "The very sight of blood or injury makes me horribly sick.",
+	    "I aggresively comment on the physical short-commings of others",
+	    "I have a fondness of small creatures and collect too many pets",
+	    "I might have made a promise to a demon that I can’t keep.",
+	    "I died once, and was resurrected as a fluke. I have no fear of death now."
+	  ]
+}

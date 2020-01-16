@@ -431,6 +431,138 @@
       }
     }
   },
+  "personality-schema": {
+    "$id": "http://localhost/personality",
+    "title": "Personalty",
+    "description": "An object personality qualities that an NPC can have.",
+    "type": "object",
+    "properties": {
+      "genderDescriptors" : {
+        "type" : "array",
+        "items" : { "type": "string"}
+      },
+      "genderRoots" : {
+        "type" : "array",
+        "items" : {"$ref": "http://localhost/personality#/definitions/genderRoot"}
+      },
+      "pronouns" : {
+        "type" : "array",
+        "items" : {"$ref": "http://localhost/personality#/definitions/pronoun"}
+      },
+      "attractionRoots" : {
+        "type" : "array",
+        "items": { "type": "string"}
+      },
+      "attractionDescriptors" : {
+        "type" : "array",
+        "items" :  { "type": "string"}
+      },
+      "personalityTraits" : {
+        "type" : "array",
+        "items" : {"type": "string"}
+      },
+      "ideals" : {
+        "type" : "array",
+        "items" : {"$ref": "http://localhost/personality#/definitions/ideal"}
+      },
+      "flaws" : {
+        "type" : "array",
+        "items" : {"type": "string"}
+      }
+    },
+    "required": [
+      "genderDescriptors",
+      "genderRoots",
+      "pronouns",
+      "attractionRoots",
+      "attractionDescriptors",
+      "personalityTraits",
+      "ideals",
+      "flaws"
+    ],
+    "definitions" :{
+      "genderRoot" : {
+        "title": "Gener Root",
+        "description": "A Root Gender.",
+        "type": "object",
+        "properties": {
+          "gen": {
+            "title": "Gender",
+            "description": "The Name of the Root Gender.",
+            "type": "string"
+          },
+          "pron": {
+            "title": "Pronoun (Typical)",
+            "description": "The typical prnoun associated with the Root Gender, not necisarally the given pronoun.",
+            "type": "string"
+          }
+        }
+      },
+      "pronoun": {
+        "title": "Pronoun",
+        "description": "A pronoun, and it's breakdown.",
+        "type": "object",
+        "properties": {
+          "key": {
+            "title": "Prnoun Key",
+            "description": "The Key of the Pronoun, typically the Subject Prnoun.",
+            "type": "string"
+          },
+          "name": {
+            "title": "Prnoun Name",
+            "description": "The Name of the Pronoun, typically the Subject Pronoun / Object Pronoun.",
+            "type": "string"
+          },
+          "subPrn": {
+            "title": "Subject Pronoun",
+            "type": "string"
+          },
+          "objPrn": {
+            "title": "Object Pronoun",
+            "type": "string"
+          },
+          "possAdj": {
+            "title": "Possesive Adjective",
+            "type": "string"
+          },
+          "possPrn": {
+            "title": "Possesive Pronoun",
+            "type": "string"
+          },
+          "rflxPrn": {
+            "title": "Reflexive Pronoun",
+            "type": "string"
+          }
+        },
+        "required" : [
+          "key",
+          "name",
+          "subPrn",
+          "objPrn",
+          "possAdj",
+          "possPrn",
+          "rflxPrn"
+        ]
+      },
+      "ideal": {
+        "title": "Ideal",
+        "description": "A two part ideal. A Word, and Phrase.",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Ideal Name",
+            "description": "The Name of the Ideal.",
+            "type": "string"
+          },
+          "description": {
+            "title": "description",
+            "description": "A brief description of the ideal.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
   "conditions-schema": {
     "$id": "http://localhost/conditions",
     "title": "Conditions",
@@ -966,7 +1098,8 @@
       "* Flesh out weapons schema",
       "* Weapons would be better defined as a `weapon` with some booleans.",
       "* Fix {Name} and {pronoun}",
-      "* Knight Archetype needs better weapon proficiencies"
+      "* Knight Archetype needs better weapon proficiencies",
+      "* Add Subjobs to Commonor, Guard, and others"
     ],
     "npcBlocks": {
       "note": "Make these blocks",
@@ -993,7 +1126,99 @@
       "master thief": {},
       "war priest": {},
       "warlock of the fiend": {},
-      "warlord": {}
+      "warlord": {},
+      "commonerArchetypes": [
+        "architect",
+        "armorer",
+        "barkeep",
+        "beggar",
+        "cabby",
+        "carpenter",
+        "cartographer",
+        "clerk",
+        "cobbler",
+        "cook",
+        "custodian",
+        "farmer",
+        "gambler",
+        "hairdresser",
+        "launderer",
+        "maid",
+        "midwife",
+        "miner",
+        "mortician",
+        "sailor",
+        "scribe"
+      ],
+      "guardArchetypes": [
+        "captain",
+        "crossbower",
+        "customs",
+        "daywatch",
+        "executor",
+        "gatekeep",
+        "investigator",
+        "jailor",
+        "nightwatch",
+        "oncall",
+        "piker"
+      ],
+      "basicArchetypes": [
+        "acolyte",
+        "apprentice wizard",
+        "archer",
+        "assassin",
+        "bandit captain",
+        "bandit",
+        "berserker",
+        "cult fanatic",
+        "cultist",
+        "druid",
+        "gladiator",
+        "knight",
+        "mage",
+        "martial arts adept",
+        "noble",
+        "pirate/smuggler",
+        "priest",
+        "scout",
+        "spy",
+        "swashbuckler",
+        "thug",
+        "veteran"
+      ],
+      "exceptionalArchetypes": [
+        "arch druid",
+        "arch mage",
+        "bard",
+        "blackguard",
+        "champion",
+        "cult high priest [kraken priest]",
+        "master thief",
+        "war priest",
+        "warlock of the fiend",
+        "warlord"
+      ],
+      "secretMonsters": [
+        "Angel",
+        "Couatl",
+        "Deva",
+        "Djinn",
+        "Doppleganger",
+        "Dragon",
+        "Ghost",
+        "Mind Flayer",
+        "Naga",
+        "Quasit",
+        "Rakshasa",
+        "Sinncubis",
+        "Slaad",
+        "Sphinx",
+        "Unicorn",
+        "Vampire",
+        "Yochol",
+        "Yuan-ti"
+      ]
     }
   }
 }
