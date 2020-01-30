@@ -65,17 +65,12 @@ export function generateBaseArchetype(): string {
 /**
  * Returns Stat Block
  * Currently only returns a commoner's stat block
- * TODO: Flesh Out 
+ * TODO: Flesh Out
  */
 export function generateArchetypeBlock() {
   const block: ArchetypeBlock = {
     name: `${randomizer(names)}  ${randomizer(names)}`,
-    baseArchetype: generateBaseArchetype(),
-    ideal: randomizer(ideals),
-    trait: randomizer(traits),
-    flaw: randomizer(flaws),
-    // This is only one stat block currently
-    stats: stats
+    baseArchetype: generateBaseArchetype()
   }
   return block
 }

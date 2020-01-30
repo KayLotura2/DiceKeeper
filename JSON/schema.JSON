@@ -1,5 +1,5 @@
 {
-  "abilities-schema": {
+  "abilities-enum": {
     "$id": "http://localhost/abilities",
     "title": "Abilities",
     "description": "A collection of abilities",
@@ -11,22 +11,16 @@
       "ability": {
         "title": "Ability",
         "description": "A detailed description of a given ability",
-        "type": "object",
-        "properties": {
-          "name": {
-            "title": "Name",
-            "description": "name of ability",
-            "type": "string"
-          },
-          "abbrev": {
-            "title": "Abbreviation",
-            "description": "abbreveiation of ability",
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "abbrev"
+        "type": "string",
+        "enum": [
+          "STR",
+          "DEX",
+          "CON",
+          "INT",
+          "WIS",
+          "CHA",
+          "MRL",
+          "HNR"
         ]
       }
     }
@@ -633,7 +627,7 @@
       }
     }
   },
-  "conditions-schema": {
+  "conditions-enum": {
     "$id": "http://localhost/conditions",
     "title": "Conditions",
     "description": "A collection of all the conditions",
@@ -667,7 +661,7 @@
       }
     }
   },
-  "damageTypes-schema": {
+  "damageTypes-enum": {
     "$id": "http://localhost/damageTypes",
     "title": "Damage Types",
     "description": "A collection of all the damage types",
@@ -698,7 +692,7 @@
       }
     }
   },
-  "languages-schema": {
+  "languages-enum": {
     "$id": "http://localhost/languages",
     "title": "Languages",
     "description": "A collection of laungaues",
@@ -763,7 +757,7 @@
       }
     }
   },
-  "moveTypes-schema": {
+  "moveTypes-enum": {
     "$id": "http://localhost/moveTypes",
     "title": "Movement Types",
     "description": "A collection of movement types",
@@ -795,7 +789,7 @@
       "type": "string"
     }
   },
-  "resistanceLevels-schema": {
+  "resistanceLevels-enum": {
     "$id": "http://localhost/resistanceLevels",
     "title": "Resistance Levels",
     "description": "A collection of resistance levels",
@@ -833,14 +827,10 @@
         "type": "object",
         "properties": {
           "name": {
-            "title": "name",
-            "description": "name of given tool or skill",
             "type": "string"
           },
           "abMod": {
-            "title": "Ability Modifier",
-            "description": "The related Ability Modifier for the skill or tool.",
-            "ref": "#ability"
+            "$ref": "http://localhost/abilities#/definitions/ability"
           }
         },
         "required": [
@@ -980,6 +970,173 @@
           "plant",
           "swarm",
           "undead"
+        ]
+      }
+    }
+  },
+  "templates-schema": {
+    "$id": "http://localhost/templates",
+    "title": "Templates",
+    "description": "A collection of potential NPC ancestry modifiers",
+    "type": "array",
+    "items": {
+      "$ref": "http://localhost/templates#/definitions/template"
+    },
+    "definitions": {
+      "template": {
+        "title": "Template",
+        "description": "A detailed description of a NPC's ancestry modifier",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Template Name",
+            "description": "The prefix applied to the base ancestry's name",
+            "type": "string"
+          },
+          "newTypes": {
+            "title": "New Types",
+            "description": "The new types of the NPC",
+            "type": "array",
+            "items": {
+              "$ref": "http://localhost/types#/definitions/type"
+            }
+          },
+          "newSubTypes": {
+            "title": "New SubTypes",
+            "description": "SubTypes to be added to the NPC",
+            "type": "array",
+            "items": {
+              "$ref": "http://localhost/subTypes#/definitions/subtype"
+            }
+          },
+          "sizeModifier": {
+            "title": "Size Modifier",
+            "description": "The Size Modifier applied to the NPC",
+            "type": "string",
+            "enum": [
+              "powerful build",
+              "slender build"
+            ]
+
+          },
+          "templateABMod": {
+            "title": "Template Abiliy Modifier",
+            "description": "The  ability modifier of the NPC's ancestry from the template",
+            "type": "object",
+            "properties": {
+              "ability": {
+                "$ref": "http://localhost/abilities#/definitions/ability"
+              },
+              "bonus": {
+                "type": "number",
+                "enum": [
+                  1,
+                  2
+                ]
+              }
+            }
+          },
+          "newSenses": {
+            "title": "New Senses",
+            "description": "The neew senses the NPC has for their template",
+            "type": "array",
+            "items": {
+              "senseObj": {
+                "properties": {
+                  "sense": {
+                    "$ref": "http://localhost/senses#/definitions/sense"
+                  },
+                  "distance": {
+                    "type": "number"
+                  }
+                },
+                "required": {
+                  "sense": true,
+                  "distance": true
+                }
+              }
+            }
+          },
+          "newMoveSpeeds": {
+            "title": "New Move Speeds",
+            "description": "The new move speeds the NPC has for their template",
+            "type": "array",
+            "items": {
+              "moveSpeedObj": {
+                "properties": {
+                  "movetype": {
+                    "$ref": "http://localhost/moveTypes#/definitions/moveType"
+                  },
+                  "distance": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "movetype",
+                  "distance"
+                ]
+              }
+            }
+          },
+          "newResistances": {
+            "title": "New Resistances",
+            "description": "The new resistances the NPC has for their template",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "resistedSubject": {
+                  "$ref": "http://localhost/damageTypes#/definitions/damageType"
+                },
+                "resistanceLevel": {
+                  "$ref": "http://localhost/resistanceLevels#/definitions/resistanceLevel"
+                }
+              }
+            }
+          },
+          "newNaturealWeapons": {
+            "title": "New Natural Weapons",
+            "description": "The natural wreapons provided by the template",
+            "type": "array",
+            "items": {
+              "$ref": "http://localhost/weapons#/definitions/weapon"
+            }
+          },
+          "newWeaponProfs": {
+            "title": "New Weapon Proficiencies",
+            "description": "Weapon Proficiencies provided by the template",
+            "type": "array",
+            "items": {
+              "$ref": "http://localhost/weapons#/definitions/weapon"
+            }
+          },
+          "newSkillProficiencies": {
+            "title": "New Skill Proficiencies",
+            "description": "The skill and tool proficiencies of the NPC's template",
+            "type": "array",
+            "items": {
+              "ref": "http://localhost/skills#/definitions/skill"
+            }
+          },
+          "newLanguages": {
+            "title": "New Languages",
+            "description": "New Languages granted by the Template",
+            "type": "array",
+            "items": {
+              "ref": "http://localhost/lamnguages#/definitions/language"
+            }
+          },
+          "other": {
+            "title": "Other Abilities",
+            "description": "Strings that may be further implimented later, Special Abilities",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name"
         ]
       }
     }
