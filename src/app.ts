@@ -149,18 +149,7 @@ export class NPC {
     this.challenge = 0
     this.actions = []
 
+  }
 }
 
-
-
-
-// export function generateNPC(): NPC {
-//   const ancestry: FullAncestry = generateAncestry()
-//   const archetype: ArchetypeBlock = generateArchetypeBlock()
-//   const gender: string = generatePersonality()
-//   return {
-//     "ancestry": ancestry,
-//     "archetype": archetype,
-//     "gender": gender
-//   }
-// }
+export const  newNpc = new NPC()
